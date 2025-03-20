@@ -1,959 +1,962 @@
-body {
-    font: 400 15px Lato, sans-serif;
-    line-height: 1.8;
-    color: #818181;
-}
-/* myPage */
-h1 {
-    font-size: 40px;
-}
-h2 {
-    font-size: 40px;
-    text-transform: uppercase;
-    color: #303030;
-    font-weight: 600;
-    margin-bottom: 30px;
-}
-h4 {
-    font-size: 19px;
-    line-height: 1.375em;
-    color: #303030;
-    font-weight: 400;
-    margin-bottom: 30px;
-}
-/*Navbar*/
-.navbar {
-    margin-bottom: 0;
-    background-color: white;
-    z-index: 9999;
-    border: 0;
-    font-size: 12px !important;
-    line-height: 1.42857143 !important;
-    letter-spacing: 2px;
-    border-radius: 0;
-    font-family: Montserrat, sans-serif;
-    height: 70px;
-}
-.navbar-brand{
-    margin-top: -40px;
-}
-#myNavbar{
-    margin-top: 10px;
-    background-color: #fff;
-}
-.navbar li a, .navbar {
-    color: #303030 !important;
-}
-.navbar-nav li a:hover, .navbar-nav li.inicio a {
-    color: #E8A844 !important;
-}
-.btn:active{
-    background:transparent;
-    box-shadow: none;
-}
-.inicio {
-    color: #E8A844 !important;
-}
-.navbar-default .navbar-toggle {
-    border-color: transparent;
-    color: white !important;
-    background-color: #fff;
-}
-.icon-bar{
-    color: transparent !important;
-}
-/*About-Index*/
-#about {
-    background-color: #FFC107;
-    color: #242424;
-    padding: 100px 50px;
-    font-family: Montserrat, sans-serif;
-    text-align: justify;
-}
-#about h1{
-    color: #fff;
-}
-#about .btn{
-    color: #fff;
-}
-#about img {
-    width: 70%;
-    padding: 20px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-#about img:hover {
-    transform: scale(1.1);
-}
-#about p strong {
-    color: #303030;
-}
-.container-fluid {
-    padding: 60px 50px;
-}
-.container-fluid p {
-    font-size: 16px;
-}
-.bg-grey {
-    background-color: #f6f6f6;
-}
-.logo-small {
-    color: #E49B21;
-    font-size: 50px;
-}
-.logo {
-    color: #FFC107;
-    font-size: 200px;
-    align-items: center;
-    margin-left: 5vw;
-}
-/*Carousel*/
-.thumbnail {
-    padding: 0 0 0px 0;
-    border: none;
-    border-radius: 0;
-}
-.thumbnail img {
-    width: 100%;
-    height: 100%;
-    margin-bottom: 0px;
-}
-.carousel-control.right, .carousel-control.left {
-    background-image: none;
-    color: #fff;
-}
-.carousel-indicators li {
-    border-color: #fff;
-}
-.carousel-indicators li.active {
-    background-color: #fff;
-}
-.slide1{
-    color: white;
-    font-weight: bold;
-    text-align: left !important;
-    padding-bottom: 10vw;
-}
-.slide1 h3 {
-    color: #E8A844;
-    font-family:Arial, Helvetica, sans-serif;
-}
-#grupo{
-    color: #242424;
-}
-.slide2{
-    color: black;
-    text-align: right !important;
-    padding-bottom: 15vw;
-}
-.slide3{
-    color: white;
-    text-align: center !important;
-    padding-bottom: 15vw;
-}
-.carousel-caption h3{
-    font-size: 4.5vw;
-}
-.carousel-caption p{
-    font-size: 2.5vw;
-}
-.slide3 p{
-    font-size: 3vw !important;
-}
-.carousel-inner img{
-    width: auto;
-    height: auto;
-}
-.item-principal h4 {
-    font-size: 19px;
-    line-height: 1.375em;
-    font-weight: 400;
-    font-style: italic;
-    margin: 70px 0;
-}
-.item-principal span {
-    font-style: normal;
-}
-.elegirnos{
-    text-align: justify;
-}
-.elegirnos img {
-    width: 99%;
-    padding: 20px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-.questions {
-    background-image: url(../images/Fondo_preguntas2.png);
-    height: 100px;
-}
-.questions h4{
-    color: #fff;
-    -webkit-text-fill-color: #fff;
-    -webkit-text-stroke: 0.5px #303030;
-    font-size: 40px;
-    font-style: italic;
-}
-#services {
-    padding-bottom: 110px;
-}
-.btn{
-    color: #242424;
-    cursor: pointer;
-}
-.btn:hover {
-    font-weight: bold;
-    transform: translateX(10px);
-}
-.btn:active {
-    border: none;
-    border-radius: 0px;
-    transform: scale(0.98);
-    font-weight: bold;
-}
-/*Footer*/
-footer {
-    background-color: #303030;
-    margin-left: 50px;
-    margin-right: 50px;
-    padding-top: 35px !important;
-    padding-bottom: 0px !important;
-    border-top: 2px solid black;
-}
-footer img {
-    width: 50%;
-    margin-top: 30px;
-}
-footer img:hover {
-    transform: scale(1.1);
-}
-footer h4 {
-    color: #a8a5a5 !important;
-    font-size: 15px !important;
-    margin-bottom: 7px !important;
-}
-footer p {
-    color: #a8a5a5 !important;
-    font-size: 13px !important;
-}
-footer .postal {
-    margin-left: 25px !important;
-    margin-top: -15px !important;
-}
-footer .mapa {
-    margin-left: 45px !important;
-}
-.logo-footer {
-    color: #FFC107;
-    font-size: 15px;
-    margin: 5px;
-}
-.logo-location {
-    position: absolute;
-    margin-top: 5px;
-    margin-left: -20px;
-}
-footer a {
-    color: #FFC107;
-}
-footer a:hover {
-    color: #fff;
-    text-decoration: none;
-}
-.end {
-    background-color: #242424;
-    margin: 0px -50px;
-    padding: 10px 20px;
-    border-top: 1px solid black;
-}
-.politica {
-    padding-left: 0px;
-    color: #a8a5a5;
-}
-.social {     /*logos redes sociales*/
-    width: 6%;
-    padding: 0;
-    margin: 0;
-}
-.social-insta {
-    width: 7%;
-    padding: 0;
-    margin: 0;
-}
-.menu-foot {
-    margin-left: 30px;
-    padding-bottom: 0px;
-}
-.contact-foot {
-    padding-left: 6vw;
-}
-.menu-political {
-    margin-left: 45px;
-}
-.SL {
-    position: relative;
-    margin-top: -2vw;
-    margin-left: 25vw;
-}
-/*----SLIDEANIME----*/
-.slideanim {visibility:hidden;}
-.slide {
-    animation-name: slide;
-    -webkit-animation-name: slide;
-    animation-duration: 1s;
-    -webkit-animation-duration: 1s;
-    visibility: visible;
-}
-/* Aboutus */
-.about-us{
-    width: 100%;
-    height: 600px;
-    background: #303030;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #303030, hsla(60, 2%, 25%, 0.664)), url(../images/portada.png);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, hsla(40, 8%, 16%, 0.459), hsla(48, 6%, 15%, 0.664)), url(../images/portada.png);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    background-size: cover;
-    background-attachment: fixed;
-    position: relative;
-}
-.wave{
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-}
-.textos-header h1 {
-    color: #fff;
-    padding-top: 125px;
-    font-size: 80px;
-}
-#sobre-nosotros {
-    margin-left: 50px;
-}
-#historia {
-    margin-right: 50px;
-}
-.about h1 {
-    color: #FFC107;
-}
-.about p {
-    color: #242424;
-    font-size: 20px;
-    text-align: justify !important;
-}
-.clientes {
-    color: #818181 !important  ;
-}
-.image {
-    box-shadow: 5px 0px 40px rgba(0,0,0, .2);
-    border-radius:0 !important;
-    transition: box-shadow 0.5s;
-    width: 67%;
-}
-.border-r {
-    border-right: 10px solid #FFC107;
-}
-.border-l {
-    border-left: 10px solid #FFC107;
-}
-#values {
-    background-color: #FFC107;
-}
-#values h2{
-    color: #fff;
-}
-#values h1{
-    color: #303030;
-    font-style: oblique;
-}
-.panel {
-    border: 1px solid #303030; 
-    border-radius: 5px !important;
-    transition: box-shadow 0.5s;
-    height: 500px;
-}
-.panel:hover {
-    box-shadow: 5px 0px 40px rgba(0,0,0, .2);
-}
-.panel-heading {
-    color: #fff !important;
-    background-color: #fff !important;
-    padding: 25px;
-}
-.panel-body {
-    color: #303030;
-    margin: 30px;
-    text-align: justify;
-    padding-bottom: 20px;
-}
-/* Sistema de Trabajo */
-.sistem-work{
-    width: 100%;
-    height: 600px;
-    background: #fff;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #303030, hsla(60, 2%, 25%, 0.664)), url(../images/manos.png);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, hsla(40, 8%, 16%, 0.459), hsla(48, 6%, 15%, 0.664)), url(../images/manos.png);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    background-size: cover;
-    background-attachment: fixed;
-    position: relative;
-}
-.panel-system {
-    border: 1px solid #303030; 
-    border-radius: 5px !important;
-    transition: box-shadow 0.5s;
-    background-color: #ffc851d2;
-    margin: 10px 15vw;
-}
-.panel-system:hover {
-    box-shadow: 5px 0px 40px rgba(0,0,0, .2);
-}
-.panel-system .panel-body {
-    color: #303030;
-    margin: 2% 0px;
-    padding-bottom: 0px;
-}
-.cert {
-    border: 1px solid black;
-}
-.icon-system {
-    text-align: center !important;
-    margin-left: 20px;
-}
-/* Comercial Pasos a Seguir */
-.pasos-a-seguir{
-    width: 100%;
-    height: 600px;
-    background: #fff;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #303030, hsla(60, 2%, 25%, 0.664)), url(../images/pasosaseguir.png);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, hsla(40, 8%, 16%, 0.459), hsla(48, 6%, 15%, 0.664)), url(../images/pasosaseguir.png);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    background-size: cover;
-    background-attachment: fixed;
-    position: relative;
-}
-.contenido-textos {
-    margin: 2vw 15vw;
-}
-.contenido-textos h3{
-    margin-bottom: 15px;
-}
-.contenido-textos h3 span{
-    background: #FFC107;
-    color: #fff;
-    border-radius: 50%;
-    display: inline-block;
-    text-align: center;
-    width: 30px;
-    height: 30px;
-    padding: 2px;
-    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
-    margin-right: 10px;
-}
-/* Servicios */
-.services{
-    width: 100%;
-    height: 600px;
-    background: #303030;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #303030, hsla(60, 2%, 25%, 0.664)), url(../images/portada-servicios.png);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, hsla(40, 8%, 16%, 0.459), hsla(48, 6%, 15%, 0.664)), url(../images/portada-servicios.png);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    background-size: cover;
-    background-attachment: fixed;
-    position: relative;
-}
-.galeria-port{
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-}
-.imagen-port{
-    width: 30%;
-    margin-bottom: 10px;
-    overflow: hidden;
-    position: relative;
-    cursor: pointer;
-    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
-}
-.imagen-port > img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-.galeria-index{
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    margin-top: -25px;
-    margin-bottom: -150px;
-}
-.imagen-index{
-    width:15%;
-    position: relative;
-    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
-}
-.imagen-index > img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-.hover-galeria{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    transform: scale(0);
-    background: rgba(255, 166, 0, 0.7);
-    transition: transform .5s;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-.hover-galeria img{
-    width: 50px;
-}
-.hover-galeria p{
-    color: #303030;
-    font-weight: bold;
-    font-size: 20px;
-    text-transform: uppercase;
-}
-.imagen-port:hover .hover-galeria{
-    transform: scale(1);
-}
-.head-service {
-    margin: 0px 17vw;
-    color: #242424;
-}
-#servi p {
-    color: #646464;
-    font-size: 16px;
-    text-align: justify !important;
-}
-.servi {
-    margin-bottom: 10vw;
-}
-.servici-r {
-    padding-left: 10vw;
-}
-.servici-r h1{
-    color: #242424;
-    text-align: left;
-}
-.servici-r hr{
-    width: 20%;
-    height: 3px;
-    margin-left: 0%;
-    background-color: #FFC107;
-}
-.servici-l {
-    padding-right: 10vw;
-}
-.servici-l h1{
-    color: #242424;
-    text-align: right;
-}
-.servici-l hr{
-    width: 20%;
-    height: 3px;
-    margin-right: 0%;
-    background-color: #FFC107;
-}
-/* Contact */
-.contact{
-    width: 100%;
-    height: 600px;
-    background: #303030;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #303030, hsla(60, 2%, 25%, 0.664)), url(../images/contact-us.png);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, hsla(40, 8%, 16%, 0.459), hsla(48, 6%, 15%, 0.664)), url(../images/contact-us.png);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    background-size: cover;
-    background-attachment: fixed;
-    position: relative;
-}
-.direccion p{
-    text-align: left !important;
-}
-.direccion span{
-    font-size: 15px;
-}
-.email {
-    color: #FFC107;
-}
-.phonemap {
-    width: 50%;
-}
-/* Almacen */
-.almacen{
-    width: 100%;
-    height: 600px;
-    background: #303030;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #303030, hsla(60, 2%, 25%, 0.664)), url(../images/almacen.png);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, hsla(40, 8%, 16%, 0.459), hsla(48, 6%, 15%, 0.664)), url(../images/almacen.png);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    background-size: cover;
-    background-attachment: fixed;
-    position: relative;
-}
-.image-al {
-    box-shadow: 5px 0px 40px rgba(0,0,0, .2);
-    border-radius:0 !important;
-    transition: box-shadow 0.5s;
-    width: 100%;
-}
-.image-al:hover {
-    transform: scale(1.1);
-}
-.border-al {
-    border-bottom: 10px solid #FFC107;
-}
-.border-altop {
-    border-top: 10px solid #FFC107;
-}
-/* Aviso Legal */
-.legal{
-    width: 100%;
-    height: 600px;
-    background: #303030;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #303030, hsla(60, 2%, 25%, 0.664)), url(../images/legal.jpg);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, hsla(40, 8%, 16%, 0.459), hsla(48, 6%, 15%, 0.664)), url(../images/legal.jpg);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    background-size: cover;
-    background-attachment: fixed;
-    position: relative;
-}
-#legal {
-    margin: 0% 10%;
-}
-#legal h2 {
-    font-size: 30px;
-}
-#legal li {
-    font-size: 30px;
-    color: #242424;
-}
-#legal strong {
-    color: #242424;
-}
-#legal ul li{
-    color: #818181;
-    font-size: 15px;
-}
-
-@keyframes slide {
-    0% {
-        opacity: 0;
-        transform: translateY(70%);
-    } 
-    100% {
-        opacity: 1;
-        transform: translateY(0%);
-    }
-}
-@-webkit-keyframes slide {
-    0% {
-        opacity: 0;
-        -webkit-transform: translateY(70%);
-    } 
-    100% {
-        opacity: 1;
-        -webkit-transform: translateY(0%);
-    }
-}
-
-@media screen and (max-width: 1024px) {
-    .navbar {
-        font-size: 10px !important;
-    }
-    .navbar-brand {
-        font-size: 15px;
-        margin-left: 20%;
-    }
-    .brand{
-        position: relative;
-        left: -240px;  
-        margin: 0;
-    }
-    #about img {
-        width: 90%;
-        padding: 20px;
-        padding-top: 50px;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .logo {
-        margin-left: 0vw !important;
-    }
-    .menu-foot {
-        margin-left: 0px !important;
-    }
-    .menu-political {
-        margin-left: 0px !important;
-    }
-    .end {
-        background-color: #242424;
-        margin: 0px -50px !important;
-        padding: 0px 20px !important;
-        border-top: 1px solid black;
-    }
-    .panel {
-        height: 600px;
-    }
-    .pasos-a-seguir{
-        width: 100%;
-        height: 470px;
-        background: -webkit-linear-gradient(to right, #303030, hsla(60, 2%, 25%, 0.664)), url(../images/pasosaseguir-tablet.png) !important;
-        background: linear-gradient(to right, hsla(40, 8%, 16%, 0.459), hsla(48, 6%, 15%, 0.664)), url(../images/pasosaseguir-tablet.png) !important;
-    }
-    
-}
-@media screen and (max-width: 768px) {
-    .col-sm-4 {
-        text-align: center;
-        margin: 25px 0;
-    }
-    .btn-lg {
-        width: 100%;
-        margin-bottom: 0px;
-    }
-    .navbar-brand{
-        margin-left: 10%;
-    }
-    .carousel-caption{
-        font-size: 2vw;
-        padding-bottom: 10vw;
-    }
-    .carousel-caption h3{
-        font-size: 4vw;
-    }
-    .panel-heading {
-        color: #fff !important;
-        background-color: #fff !important;
-        padding: 10px;
-    }
-    .panel {
-        height: 800px;
-    }
-    .questions h4{
-        color: #fff;
-        font-size: 30px;
-        font-style: italic;
-    }
-    .imagen-port p{
-        font-size: 15px;
-    }
-}
-@media screen and (max-width: 480px) {
-    .logo {
-        font-size: 150px;
-    }
-    /*Carousel-Index-Phone*/
-    .carousel {
-        margin-top: 20vw !important;
-    }
-    .carousel img {
-        transform: scale(5);
-    }
-    .carousel-indicators {
-        transform: scale(0.7);
-    }
-    .navbar-brand{
-        margin-left: 15%;
-    }
-    .slid1{
-        padding-top: 70vw !important;
-    }
-    .slid2{
-        padding-top: 60vw !important;
-    }
-    .slid3{
-        padding-top: 45vw !important;
-    }
-    .carousel-caption h3{
-        font-size: 10vw;
-    }
-    .carousel-caption p{
-        font-size: 5vw;
-    }
-    .slide3 p{
-        font-size: 5.1vw !important;
-    }
-    .slide3{
-        padding-top: 20vw !important;
-    }
-    .slide3 h3{
-        font-size: 12vw;
-    }
-    .carousel-inner{
-        height: 150vw;    
-    }
-    .elegirnos h2{
-        text-align: left;
-    }
-    .jumbotron {
-        background-color: #FFC107;
-        color: #fff;
-        padding: 100px 25px 30px 25px;
-        font-family: Montserrat, sans-serif;
-    }
-    .textos-header h1 {
-        color: #fff;
-        padding-top: 40px;
-        font-size: 50px;
-    }
-    .panel-system {
-        margin: 10px 7vw !important;
-    }
-    .about p {
-        color: #242424;
-        font-size: 20px;
-        text-align: left !important;
-    }
-    /*About us */
-    .about-us{
-        width: 100%;
-        height: 400px;
-        background: -webkit-linear-gradient(to right, #303030, hsla(60, 2%, 25%, 0.664)), url(../images/nosotros-movil.png) !important;
-        background: linear-gradient(to right, hsla(40, 8%, 16%, 0.459), hsla(48, 6%, 15%, 0.664)), url(../images/nosotros-movil.png) !important;
-    }
-    #sobre-nosotros {
-        margin-left: 0px !important;
-    }
-    #historia {
-        margin-right: 0px !important;
-    }
-    .image {
-        box-shadow: 5px 0px 40px rgba(0,0,0, .2);
-        border-radius:0 !important;
-        transition: box-shadow 0.5s;
-        width: 100%;
-        margin-top: 10px !important;
-    }
-    .panel {
-        height: auto;
-    }
-    /* Sistema de trabajo */
-    .sistem-work{
-        width: 100%;
-        height: 400px;
-        background: -webkit-linear-gradient(to right, #303030, hsla(60, 2%, 25%, 0.664)), url(../images/manos-movil.png) !important;
-        background: linear-gradient(to right, hsla(40, 8%, 16%, 0.459), hsla(48, 6%, 15%, 0.664)), url(../images/manos-movil.png) !important;
-    }
-    .sistem-work{
-        height: 450px;
-    }
-    /* Pasos a seguir */
-    .pasos-a-seguir{
-        height: 450px;
-    }
-    .fondo-servicios {
-        margin: 0%;
-    }
-    .pasos-a-seguir{
-        width: 100%;
-        height: 400px;
-        background: -webkit-linear-gradient(to right, #303030, hsla(60, 2%, 25%, 0.664)), url(../images/pasosaseguir-movil.png) !important;
-        background: linear-gradient(to right, hsla(40, 8%, 16%, 0.459), hsla(48, 6%, 15%, 0.664)), url(../images/pasosaseguir-movil.png) !important;
-    }
-    #system img{
-        position: relative;
-        width: 140%;
-        margin-left: -15vw;
-        margin-bottom: -17vw;
-    }
-    /* Comercial pasos a aseguir*/
-    #pasos h2 {
-        margin-left: -5vw;
-        margin-right: -5vw;
-    }
-    #pasos h3 {
-        margin-left: -12vw;
-        margin-right: -12vw;
-        font-size: 20px;
-    }
-    #pasos img{
-        position: relative;
-        width: 130%;
-        margin-left: -11vw;
-        margin-bottom: -14vw;
-    }
-    /* Service */
-    .services{
-        width: 100%;
-        height: 400px;
-        background: -webkit-linear-gradient(to right, #303030, hsla(60, 2%, 25%, 0.664)), url(../images/servicios-movil.png) !important;
-        background: linear-gradient(to right, hsla(40, 8%, 16%, 0.459), hsla(48, 6%, 15%, 0.664)), url(../images/servicios-movil.png) !important;
-    }    
-    .servicios-portafolio {
-        display: none;
-    }
-    .galeria-index{
-        display: none;
-    }
-    .servici-l {
-        padding-right: 0vw;
-    }
-    .servici-r {
-        padding-left: 5vw;
-    }
-    .servi h1{
-        font-size: 30px;
-    }
-    /* Contact */
-    .contact{
-        width: 100%;
-        height: 400px;
-        background: -webkit-linear-gradient(to right, #303030, hsla(60, 2%, 25%, 0.664)), url(../images/contact-us-movil.png) !important;
-        background: linear-gradient(to right, hsla(40, 8%, 16%, 0.459), hsla(48, 6%, 15%, 0.664)), url(../images/contact-us-movil.png) !important;
-    }
-    .direccion {
-        margin-left: 10px;
-    }
-    /* Legal */
-    .legal{
-        width: 100%;
-        height: 400px;
-        background: -webkit-linear-gradient(to right, #303030, hsla(60, 2%, 25%, 0.664)), url(../images/legal-movil.png) !important;
-        background: linear-gradient(to right, hsla(40, 8%, 16%, 0.459), hsla(48, 6%, 15%, 0.664)), url(../images/legal-movil.png) !important;
-    }
-    #legal {
-        margin: 0% !important;
-    }
-    /* Almacenes */
-    .almacen{
-        width: 100%;
-        height: 400px;
-        background: -webkit-linear-gradient(to right, #303030, hsla(60, 2%, 25%, 0.664)), url(../images/almacen-movil.png) !important;
-        background: linear-gradient(to right, hsla(40, 8%, 16%, 0.459), hsla(48, 6%, 15%, 0.664)), url(../images/almacen-movil.png) !important;
-    }
-    /*Footer*/
-    .social {     /*logos redes sociales*/
-        width: 11%;
-        padding: 0;
-        margin: 0;
-    }
-    .social-insta {
-        width: 12%;
-        padding: 0;
-        margin: 0;
-    }
-}  
+body {
+    font: 400 15px Lato, sans-serif;
+    line-height: 1.8;
+    color: #818181;
+}
+/* myPage */
+h1 {
+    font-size: 40px;
+}
+h2 {
+    font-size: 40px;
+    text-transform: uppercase;
+    color: #303030;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    color: #303030;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+/*Navbar*/
+.navbar {
+    margin-bottom: 0;
+    background-color: white;
+    z-index: 9999;
+    border: 0;
+    font-size: 12px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 2px;
+    border-radius: 0;
+    font-family: Montserrat, sans-serif;
+    height: 70px;
+}
+.navbar-brand{
+    margin-top: -40px;
+}
+#myNavbar{
+    margin-top: 10px;
+    background-color: #fff;
+}
+.navbar li a, .navbar {
+    color: #303030 !important;
+}
+.navbar-nav li a:hover, .navbar-nav li.inicio a {
+    color: #E8A844 !important;
+
+}
+.btn:active{
+    background:transparent;
+    box-shadow: none;
+
+}
+.inicio {
+    color: #E8A844 !important;
+}
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: white !important;
+    background-color: #fff;
+}
+.icon-bar{
+    color: transparent !important;
+
+}
+/*About-Index*/
+#about {
+    background-color: #FFC107;
+    color: #242424;
+    padding: 100px 50px;
+    font-family: Montserrat, sans-serif;
+    text-align: justify;
+}
+#about h1{
+    color: #fff;
+}
+#about .btn{
+    color: #fff;
+}
+#about img {
+    width: 70%;
+    padding: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#about img:hover {
+    transform: scale(1.1);
+}
+#about p strong {
+    color: #303030;
+}
+.container-fluid {
+    padding: 60px 50px;
+}
+.container-fluid p {
+    font-size: 16px;
+}
+.bg-grey {
+    background-color: #f6f6f6;
+}
+.logo-small {
+    color: #E49B21;
+    font-size: 50px;
+}
+.logo {
+    color: #FFC107;
+    font-size: 200px;
+    align-items: center;
+    margin-left: 5vw;
+}
+/*Carousel*/
+.thumbnail {
+    padding: 0 0 0px 0;
+    border: none;
+    border-radius: 0;
+}
+.thumbnail img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 0px;
+}
+.carousel-control.right, .carousel-control.left {
+    background-image: none;
+    color: #fff;
+}
+.carousel-indicators li {
+    border-color: #fff;
+}
+.carousel-indicators li.active {
+    background-color: #fff;
+}
+.slide1{
+    color: white;
+    font-weight: bold;
+    text-align: left !important;
+    padding-bottom: 10vw;
+}
+.slide1 h3 {
+    color: #E8A844;
+    font-family:Arial, Helvetica, sans-serif;
+}
+#grupo{
+    color: #242424;
+}
+.slide2{
+    color: black;
+    text-align: right !important;
+    padding-bottom: 15vw;
+}
+.slide3{
+    color: white;
+    text-align: center !important;
+    padding-bottom: 15vw;
+}
+.carousel-caption h3{
+    font-size: 4.5vw;
+}
+.carousel-caption p{
+    font-size: 2.5vw;
+}
+.slide3 p{
+    font-size: 3vw !important;
+}
+.carousel-inner img{
+    width: auto;
+    height: auto;
+}
+.item-principal h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    font-weight: 400;
+    font-style: italic;
+    margin: 70px 0;
+}
+.item-principal span {
+    font-style: normal;
+}
+.elegirnos{
+    text-align: justify;
+}
+.elegirnos img {
+    width: 99%;
+    padding: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.questions {
+    background-image: url(../images/Fondo_preguntas2.png);
+    height: 100px;
+}
+.questions h4{
+    color: #fff;
+    -webkit-text-fill-color: #fff;
+    -webkit-text-stroke: 0.5px #303030;
+    font-size: 40px;
+    font-style: italic;
+}
+#services {
+    padding-bottom: 110px;
+}
+.btn{
+    color: #242424;
+    cursor: pointer;
+}
+.btn:hover {
+    font-weight: bold;
+    transform: translateX(10px);
+}
+.btn:active {
+    border: none;
+    border-radius: 0px;
+    transform: scale(0.98);
+    font-weight: bold;
+}
+/*Footer*/
+footer {
+    background-color: #303030;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding-top: 35px !important;
+    padding-bottom: 0px !important;
+    border-top: 2px solid black;
+}
+footer img {
+    width: 50%;
+    margin-top: 30px;
+}
+footer img:hover {
+    transform: scale(1.1);
+}
+footer h4 {
+    color: #a8a5a5 !important;
+    font-size: 15px !important;
+    margin-bottom: 7px !important;
+}
+footer p {
+    color: #a8a5a5 !important;
+    font-size: 13px !important;
+}
+footer .postal {
+    margin-left: 25px !important;
+    margin-top: -15px !important;
+}
+footer .mapa {
+    margin-left: 45px !important;
+}
+.logo-footer {
+    color: #FFC107;
+    font-size: 15px;
+    margin: 5px;
+}
+.logo-location {
+    position: absolute;
+    margin-top: 5px;
+    margin-left: -20px;
+}
+footer a {
+    color: #FFC107;
+}
+footer a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+.end {
+    background-color: #242424;
+    margin: 0px -50px;
+    padding: 10px 20px;
+    border-top: 1px solid black;
+}
+.politica {
+    padding-left: 0px;
+    color: #a8a5a5;
+}
+.social {     /*logos redes sociales*/
+    width: 6%;
+    padding: 0;
+    margin: 0;
+}
+.social-insta {
+    width: 7%;
+    padding: 0;
+    margin: 0;
+}
+.menu-foot {
+    margin-left: 30px;
+    padding-bottom: 0px;
+}
+.contact-foot {
+    padding-left: 6vw;
+}
+.menu-political {
+    margin-left: 45px;
+}
+.SL {
+    position: relative;
+    margin-top: -2vw;
+    margin-left: 60vw;
+}
+/*----SLIDEANIME----*/
+.slideanim {visibility:hidden;}
+.slide {
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    visibility: visible;
+}
+/* Aboutus */
+.about-us{
+    width: 100%;
+    height: 600px;
+    background: #303030;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #303030, hsla(60, 2%, 25%, 0.664)), url(../images/portada.png);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, hsla(40, 8%, 16%, 0.459), hsla(48, 6%, 15%, 0.664)), url(../images/portada.png);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+.wave{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+.textos-header h1 {
+    color: #fff;
+    padding-top: 125px;
+    font-size: 80px;
+}
+#sobre-nosotros {
+    margin-left: 50px;
+}
+#historia {
+    margin-right: 50px;
+}
+.about h1 {
+    color: #FFC107;
+}
+.about p {
+    color: #242424;
+    font-size: 20px;
+    text-align: justify !important;
+}
+.clientes {
+    color: #818181 !important  ;
+}
+.image {
+    box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+    border-radius:0 !important;
+    transition: box-shadow 0.5s;
+    width: 67%;
+}
+.border-r {
+    border-right: 10px solid #FFC107;
+}
+.border-l {
+    border-left: 10px solid #FFC107;
+}
+#values {
+    background-color: #FFC107;
+}
+#values h2{
+    color: #fff;
+}
+#values h1{
+    color: #303030;
+    font-style: oblique;
+}
+.panel {
+    border: 1px solid #303030;
+    border-radius: 5px !important;
+    transition: box-shadow 0.5s;
+    height: 500px;
+}
+.panel:hover {
+    box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+}
+.panel-heading {
+    color: #fff !important;
+    background-color: #fff !important;
+    padding: 25px;
+}
+.panel-body {
+    color: #303030;
+    margin: 30px;
+    text-align: justify;
+    padding-bottom: 20px;
+}
+/* Sistema de Trabajo */
+.sistem-work{
+    width: 100%;
+    height: 600px;
+    background: #fff;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #303030, hsla(60, 2%, 25%, 0.664)), url(../images/manos.png);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, hsla(40, 8%, 16%, 0.459), hsla(48, 6%, 15%, 0.664)), url(../images/manos.png);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+.panel-system {
+    border: 1px solid #303030;
+    border-radius: 5px !important;
+    transition: box-shadow 0.5s;
+    background-color: #ffc851d2;
+    margin: 10px 15vw;
+}
+.panel-system:hover {
+    box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+}
+.panel-system .panel-body {
+    color: #303030;
+    margin: 2% 0px;
+    padding-bottom: 0px;
+}
+.cert {
+    border: 1px solid black;
+}
+.icon-system {
+    text-align: center !important;
+    margin-left: 20px;
+}
+/* Comercial Pasos a Seguir */
+.pasos-a-seguir{
+    width: 100%;
+    height: 600px;
+    background: #fff;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #303030, hsla(60, 2%, 25%, 0.664)), url(../images/pasosaseguir.png);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, hsla(40, 8%, 16%, 0.459), hsla(48, 6%, 15%, 0.664)), url(../images/pasosaseguir.png);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+.contenido-textos {
+    margin: 2vw 15vw;
+}
+.contenido-textos h3{
+    margin-bottom: 15px;
+}
+.contenido-textos h3 span{
+    background: #FFC107;
+    color: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    padding: 2px;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+    margin-right: 10px;
+}
+/* Servicios */
+.services{
+    width: 100%;
+    height: 600px;
+    background: #303030;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #303030, hsla(60, 2%, 25%, 0.664)), url(../images/portada-servicios.png);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, hsla(40, 8%, 16%, 0.459), hsla(48, 6%, 15%, 0.664)), url(../images/portada-servicios.png);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+.galeria-port{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.imagen-port{
+    width: 30%;
+    margin-bottom: 10px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+}
+.imagen-port > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.galeria-index{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: -25px;
+    margin-bottom: -150px;
+}
+.imagen-index{
+    width:15%;
+    position: relative;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+}
+.imagen-index > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.hover-galeria{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    transform: scale(0);
+    background: rgba(255, 166, 0, 0.7);
+    transition: transform .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.hover-galeria img{
+    width: 50px;
+}
+.hover-galeria p{
+    color: #303030;
+    font-weight: bold;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+.imagen-port:hover .hover-galeria{
+    transform: scale(1);
+}
+.head-service {
+    margin: 0px 17vw;
+    color: #242424;
+}
+#servi p {
+    color: #646464;
+    font-size: 16px;
+    text-align: justify !important;
+}
+.servi {
+    margin-bottom: 10vw;
+}
+.servici-r {
+    padding-left: 10vw;
+}
+.servici-r h1{
+    color: #242424;
+    text-align: left;
+}
+.servici-r hr{
+    width: 20%;
+    height: 3px;
+    margin-left: 0%;
+    background-color: #FFC107;
+}
+.servici-l {
+    padding-right: 10vw;
+}
+.servici-l h1{
+    color: #242424;
+    text-align: right;
+}
+.servici-l hr{
+    width: 20%;
+    height: 3px;
+    margin-right: 0%;
+    background-color: #FFC107;
+}
+/* Contact */
+.contact{
+    width: 100%;
+    height: 600px;
+    background: #303030;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #303030, hsla(60, 2%, 25%, 0.664)), url(../images/contact-us.png);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, hsla(40, 8%, 16%, 0.459), hsla(48, 6%, 15%, 0.664)), url(../images/contact-us.png);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+.direccion p{
+    text-align: left !important;
+}
+.direccion span{
+    font-size: 15px;
+}
+.email {
+    color: #FFC107;
+}
+.phonemap {
+    width: 50%;
+}
+/* Almacen */
+.almacen{
+    width: 100%;
+    height: 600px;
+    background: #303030;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #303030, hsla(60, 2%, 25%, 0.664)), url(../images/almacen.png);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, hsla(40, 8%, 16%, 0.459), hsla(48, 6%, 15%, 0.664)), url(../images/almacen.png);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+.image-al {
+    box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+    border-radius:0 !important;
+    transition: box-shadow 0.5s;
+    width: 100%;
+}
+.image-al:hover {
+    transform: scale(1.1);
+}
+.border-al {
+    border-bottom: 10px solid #FFC107;
+}
+.border-altop {
+    border-top: 10px solid #FFC107;
+}
+/* Aviso Legal */
+.legal{
+    width: 100%;
+    height: 600px;
+    background: #303030;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #303030, hsla(60, 2%, 25%, 0.664)), url(../images/legal.jpg);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, hsla(40, 8%, 16%, 0.459), hsla(48, 6%, 15%, 0.664)), url(../images/legal.jpg);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+#legal {
+    margin: 0% 10%;
+}
+#legal h2 {
+    font-size: 30px;
+}
+#legal li {
+    font-size: 30px;
+    color: #242424;
+}
+#legal strong {
+    color: #242424;
+}
+#legal ul li{
+    color: #818181;
+    font-size: 15px;
+}
+
+@keyframes slide {
+    0% {
+        opacity: 0;
+        transform: translateY(70%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+@-webkit-keyframes slide {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(70%);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0%);
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .navbar {
+        font-size: 10px !important;
+    }
+    .navbar-brand {
+        font-size: 15px;
+        margin-left: 20%;
+    }
+    .brand{
+        position: relative;
+        left: -240px;
+        margin: 0;
+    }
+    #about img {
+        width: 90%;
+        padding: 20px;
+        padding-top: 50px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .logo {
+        margin-left: 0vw !important;
+    }
+    .menu-foot {
+        margin-left: 0px !important;
+    }
+    .menu-political {
+        margin-left: 0px !important;
+    }
+    .end {
+        background-color: #242424;
+        margin: 0px -50px !important;
+        padding: 0px 20px !important;
+        border-top: 1px solid black;
+    }
+    .panel {
+        height: 600px;
+    }
+    .pasos-a-seguir{
+        width: 100%;
+        height: 470px;
+        background: -webkit-linear-gradient(to right, #303030, hsla(60, 2%, 25%, 0.664)), url(../images/pasosaseguir-tablet.png) !important;
+        background: linear-gradient(to right, hsla(40, 8%, 16%, 0.459), hsla(48, 6%, 15%, 0.664)), url(../images/pasosaseguir-tablet.png) !important;
+    }
+}
+@media screen and (max-width: 768px) {
+    .col-sm-4 {
+        text-align: center;
+        margin: 25px 0;
+    }
+    .btn-lg {
+        width: 100%;
+        margin-bottom: 0px;
+    }
+    .navbar-brand{
+        margin-left: 10%;
+    }
+    .carousel-caption{
+        font-size: 2vw;
+        padding-bottom: 10vw;
+    }
+    .carousel-caption h3{
+        font-size: 4vw;
+    }
+    .panel-heading {
+        color: #fff !important;
+        background-color: #fff !important;
+        padding: 10px;
+    }
+    .panel {
+        height: 800px;
+    }
+    .questions h4{
+        color: #fff;
+        font-size: 30px;
+        font-style: italic;
+    }
+    .imagen-port p{
+        font-size: 15px;
+    }
+
+}
+@media screen and (max-width: 480px) {
+    .logo {
+        font-size: 150px;
+    }
+    /*Carousel-Index-Phone*/
+    .carousel {
+        margin-top: 20vw !important;
+    }
+    .carousel img {
+        transform: scale(5);
+    }
+    .carousel-indicators {
+        transform: scale(0.7);
+    }
+    .navbar-brand{
+        margin-left: 15%;
+    }
+    .slid1{
+        padding-top: 70vw !important;
+    }
+    .slid2{
+        padding-top: 60vw !important;
+    }
+    .slid3{
+        padding-top: 45vw !important;
+    }
+    .carousel-caption h3{
+        font-size: 10vw;
+    }
+    .carousel-caption p{
+        font-size: 5vw;
+    }
+    .slide3 p{
+        font-size: 5.1vw !important;
+    }
+    .slide3{
+        padding-top: 20vw !important;
+    }
+    .slide3 h3{
+        font-size: 12vw;
+    }
+    .carousel-inner{
+        height: 150vw;
+    }
+    .elegirnos h2{
+        text-align: left;
+    }
+    .jumbotron {
+        background-color: #FFC107;
+        color: #fff;
+        padding: 100px 25px 30px 25px;
+        font-family: Montserrat, sans-serif;
+    }
+    .textos-header h1 {
+        color: #fff;
+        padding-top: 40px;
+        font-size: 50px;
+    }
+    .panel-system {
+        margin: 10px 7vw !important;
+    }
+    .about p {
+        color: #242424;
+        font-size: 20px;
+        text-align: left !important;
+    }
+    /*About us */
+    .about-us{
+        width: 100%;
+        height: 400px;
+        background: -webkit-linear-gradient(to right, #303030, hsla(60, 2%, 25%, 0.664)), url(../images/nosotros-movil.png) !important;
+        background: linear-gradient(to right, hsla(40, 8%, 16%, 0.459), hsla(48, 6%, 15%, 0.664)), url(../images/nosotros-movil.png) !important;
+    }
+    #sobre-nosotros {
+        margin-left: 0px !important;
+    }
+    #historia {
+        margin-right: 0px !important;
+    }
+    .image {
+        box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+        border-radius:0 !important;
+        transition: box-shadow 0.5s;
+        width: 100%;
+        margin-top: 10px !important;
+    }
+    .panel {
+        height: auto;
+    }
+    /* Sistema de trabajo */
+    .sistem-work{
+        width: 100%;
+        height: 400px;
+        background: -webkit-linear-gradient(to right, #303030, hsla(60, 2%, 25%, 0.664)), url(../images/manos-movil.png) !important;
+        background: linear-gradient(to right, hsla(40, 8%, 16%, 0.459), hsla(48, 6%, 15%, 0.664)), url(../images/manos-movil.png) !important;
+    }
+    .sistem-work{
+        height: 450px;
+    }
+    /* Pasos a seguir */
+    .pasos-a-seguir{
+        height: 450px;
+    }
+    .fondo-servicios {
+        margin: 0%;
+    }
+    .pasos-a-seguir{
+        width: 100%;
+        height: 400px;
+        background: -webkit-linear-gradient(to right, #303030, hsla(60, 2%, 25%, 0.664)), url(../images/pasosaseguir-movil.png) !important;
+        background: linear-gradient(to right, hsla(40, 8%, 16%, 0.459), hsla(48, 6%, 15%, 0.664)), url(../images/pasosaseguir-movil.png) !important;
+    }
+    #system img{
+        position: relative;
+        width: 140%;
+        margin-left: -15vw;
+        margin-bottom: -17vw;
+    }
+    /* Comercial pasos a aseguir*/
+    #pasos h2 {
+        margin-left: -5vw;
+        margin-right: -5vw;
+    }
+    #pasos h3 {
+        margin-left: -12vw;
+        margin-right: -12vw;
+        font-size: 20px;
+    }
+    #pasos img{
+        position: relative;
+        width: 130%;
+        margin-left: -11vw;
+        margin-bottom: -14vw;
+    }
+    /* Service */
+    .services{
+        width: 100%;
+        height: 400px;
+        background: -webkit-linear-gradient(to right, #303030, hsla(60, 2%, 25%, 0.664)), url(../images/servicios-movil.png) !important;
+        background: linear-gradient(to right, hsla(40, 8%, 16%, 0.459), hsla(48, 6%, 15%, 0.664)), url(../images/servicios-movil.png) !important;
+    }
+    .servicios-portafolio {
+        display: none;
+    }
+    .galeria-index{
+        display: none;
+    }
+    .servici-l {
+        padding-right: 0vw;
+    }
+    .servici-r {
+        padding-left: 5vw;
+    }
+    .servi h1{
+        font-size: 30px;
+    }
+    /* Contact */
+    .contact{
+        width: 100%;
+        height: 400px;
+        background: -webkit-linear-gradient(to right, #303030, hsla(60, 2%, 25%, 0.664)), url(../images/contact-us-movil.png) !important;
+        background: linear-gradient(to right, hsla(40, 8%, 16%, 0.459), hsla(48, 6%, 15%, 0.664)), url(../images/contact-us-movil.png) !important;
+    }
+    .direccion {
+        margin-left: 10px;
+    }
+    /* Legal */
+    .legal{
+        width: 100%;
+        height: 400px;
+        background: -webkit-linear-gradient(to right, #303030, hsla(60, 2%, 25%, 0.664)), url(../images/legal-movil.png) !important;
+        background: linear-gradient(to right, hsla(40, 8%, 16%, 0.459), hsla(48, 6%, 15%, 0.664)), url(../images/legal-movil.png) !important;
+    }
+    #legal {
+        margin: 0% !important;
+    }
+    /* Almacenes */
+    .almacen{
+        width: 100%;
+        height: 400px;
+        background: -webkit-linear-gradient(to right, #303030, hsla(60, 2%, 25%, 0.664)), url(../images/almacen-movil.png) !important;
+        background: linear-gradient(to right, hsla(40, 8%, 16%, 0.459), hsla(48, 6%, 15%, 0.664)), url(../images/almacen-movil.png) !important;
+    }
+    /*Footer*/
+    .social {     /*logos redes sociales*/
+        width: 11%;
+        padding: 0;
+        margin: 0;
+    }
+    .social-insta {
+        width: 12%;
+        padding: 0;
+        margin: 0;
+    }
+}
