@@ -87,17 +87,53 @@ h4 {
     background-color: #fff;
 
 }
-
-/* Cambiar color del botón del menú al pasar el cursor */
-.navbar-nav > li > a:hover {
-    color: #E8A844 !important; /* Cambia el color al que desees */
-    background-color: transparent !important; /* Para evitar cambios de fondo */
+.dropdown-toggle{
+    font-size: larger;
 }
+
+/* Estilos generales del navbar */
+.navbar-nav > li > a {
+    position: relative;
+    color: #303030 !important;
+    padding: 10px 15px;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Línea inferior animada en los botones principales */
+.navbar-nav > li > a::after,
+.dropdown-menu > li > a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 3px; /* Grosor de la línea */
+    background-color: #E8A844; /* Color de la línea */
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+/* Cuando el usuario pasa el cursor, la línea se expande desde el centro */
+.navbar-nav > li > a:hover::after,
+.dropdown-menu > li > a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+/* Estilos para el menú desplegable */
+.dropdown-menu {
+    background-color: white; /* Fondo del menú desplegable */
+    border: none;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    display: none; /* Ocultar por defecto */
+}
+
 /* Mostrar el menú desplegable al pasar el cursor */
 .navbar-nav li.dropdown:hover .dropdown-menu {
     display: block;
     animation: fadeIn 0.3s ease-in-out;
 }
+
 /* Efecto de entrada suave */
 @keyframes fadeIn {
     from {
@@ -109,22 +145,33 @@ h4 {
         transform: translateY(0);
     }
 }
-/* Estilizar el menú desplegable */
-.dropdown-menu {
-    background-color: white; /* Fondo del menú desplegable */
-    border: none;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-}
-/* Estilizar los elementos del menú desplegable */
+
+/* Estilos de los enlaces dentro del menú desplegable */
 .dropdown-menu > li > a {
-    color: #303030 !important;
+    position: relative;
     padding: 10px 20px;
+    color: #303030 !important;
+    transition: color 0.3s ease-in-out;
 }
-/* Cambiar color al pasar el mouse por los elementos del menú desplegable */
-.dropdown-menu > li > a:hover {
-    background-color: #E8A844 !important;
-    color: white !important;
+
+/* Ajustar espaciado en el dropdown */
+.dropdown-menu > li {
+    position: relative;
 }
+
+/* Estilo del ícono de flecha */
+.dropdown-icon {
+    font-size: 14px; /* Tamaño del ícono */
+    color: #E8A844; /* Color de la flecha */
+    margin-left: 5px; /* Espaciado entre texto e ícono */
+    transition: transform 0.3s ease-in-out; /* Animación de giro */
+}
+
+/* Girar la flecha cuando el menú está abierto */
+.navbar-nav li.dropdown:hover .dropdown-icon {
+    transform: rotate(180deg);
+}
+
 
 
 
@@ -161,12 +208,83 @@ h4 {
 
 
 }
+/* 🔹 Hero: Cubre toda la pantalla */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Ocupa toda la pantalla */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* 🔹 Video de fondo */
+.hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 🔹 Capa oscura para mejorar la legibilidad */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Ajusta la opacidad según necesites */
+}
+
+/* 🔹 Contenido del Hero */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    max-width: 800px;
+    padding: 20px;
+}
+
+/* 🔹 Estilos del texto */
+.hero h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.hero h2 {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    color: #E8A844;
+}
+
+/* 🔹 Botón Hero */
+.btn-hero {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 14px 28px;
+    font-size: 1.2rem;
+    background-color: #E8A844;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+}
+
+.btn-hero:hover {
+    background-color: #d18a35;
+}
 
 /*About-Index*/
 
 #about {
 
-    background-color: #FFC107;
+    background-color: #E8A844;
 
     color: #242424;
 
@@ -1490,6 +1608,21 @@ footer a:hover {
 
 @media screen and (max-width: 768px) {
 
+    /* Responsividad: Ajustar tamaños en pantallas más pequeñas hero */
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero h2 {
+        font-size: 1.2rem;
+    }
+
+    .btn-hero {
+        padding: 12px 24px;
+        font-size: 1rem;
+    }
+
     .col-sm-4 {
 
         text-align: center;
@@ -1564,6 +1697,24 @@ footer a:hover {
 
 @media screen and (max-width: 480px) {
 
+    /* Responsividad: Ajustar tamaños en pantallas más pequeñas hero */
+    .hero-video {
+        display: none;
+    }
+    .hero {
+        background: url('images/hero-bg.jpg') center/cover no-repeat; /* Imagen en móviles */
+    }
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+    .hero h2 {
+        font-size: 1rem;
+    }
+    .btn-hero {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+    
     .logo {
 
         font-size: 150px;
