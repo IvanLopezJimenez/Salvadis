@@ -3,7 +3,6 @@ body {
     font-weight: 400; /* O usa cualquier otro peso de la fuente */
     line-height: 1.8;
     color: #818181;
-
 }
 
 h1, h2, h3, h4 {
@@ -24,14 +23,17 @@ h2 {
 
     font-size: 40px;
 
-    text-transform: uppercase;
-
     color: #303030;
 
     font-weight: 600;
 
     margin-bottom: 30px;
 
+}
+
+h3{
+    text-transform: uppercase;
+    font-size: 20px;
 }
 
 h4 {
@@ -208,7 +210,7 @@ h4 {
 
 
 }
-/* 🔹 Hero: Cubre toda la pantalla */
+/* Hero: Cubre toda la pantalla */
 .hero {
     position: relative;
     width: 100%;
@@ -220,7 +222,7 @@ h4 {
     text-align: center;
 }
 
-/* 🔹 Video de fondo */
+/* Video de fondo */
 .hero-video {
     position: absolute;
     top: 50%;
@@ -231,7 +233,7 @@ h4 {
     object-fit: cover;
 }
 
-/* 🔹 Capa oscura para mejorar la legibilidad */
+/* Capa oscura para mejorar la legibilidad */
 .overlay {
     position: absolute;
     top: 0;
@@ -241,7 +243,7 @@ h4 {
     background: rgba(0, 0, 0, 0.5); /* Ajusta la opacidad según necesites */
 }
 
-/* 🔹 Contenido del Hero */
+/* Contenido del Hero */
 .hero-content {
     position: relative;
     z-index: 2;
@@ -250,7 +252,7 @@ h4 {
     padding: 20px;
 }
 
-/* 🔹 Estilos del texto */
+/* Estilos del texto */
 .hero h1 {
     font-size: 4rem;
     font-weight: bold;
@@ -263,42 +265,82 @@ h4 {
     color: #E8A844;
 }
 
-/* 🔹 Botón Hero */
+/* Botón circular con borde y fondo transparente */
 .btn-hero {
-    display: inline-block;
+    display: inline-flex; /* Permite alinear texto e icono */
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Espacio entre el texto y el icono */
     margin-top: 20px;
     padding: 14px 28px;
     font-size: 1.2rem;
-    background-color: #E8A844;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background 0.3s ease-in-out;
+    color: #fff; /* Color del texto e icono */
+    background: transparent;
+    border: 2px solid #fff; /* Borde del botón */
+    border-radius: 50px; /* Hace el botón más redondo */
+    text-decoration: none !important;
+    transition: all 0.3s ease-in-out;
+}
+.btn-hero span {
+    text-decoration: none !important;
+    display: inline-block; /* Asegura que se comporte bien */
 }
 
-.btn-hero:hover {
-    background-color: #d18a35;
+/* Evitar que el subrayado aparezca solo en el texto */
+.btn-text {
+    display: inline-block;
+    position: relative;
 }
+
+/* Efecto hover en el texto: subrayado animado */
+.btn-hero:hover .btn-text::after {
+    width: 100%;
+    left: 0;
+}
+
+/* Evitar que el icono sea clickeable y evitar el subrayado */
+.btn-hero .material-symbols-outlined {
+    font-size: 1.5rem; /* Tamaño del icono */
+    transition: color 0.3s ease-in-out; /* Transición de color */
+    pointer-events: none; /* Evita que el icono sea clickeable */
+    text-decoration: none !important; /* Asegurar que el icono no se subraye */
+}
+
+/* Efecto hover: cambia el color del botón y del icono */
+.btn-hero:hover {
+    background-color: #E8A844;
+    color: white;
+    border-color: #E8A844;
+}
+
+.btn-hero:hover .material-symbols-outlined {
+    color: white; /* Cambia el color del icono en hover */
+}
+
+
 
 /*About-Index*/
 
 #about {
 
-    background-color: #E8A844;
-
-    color: #242424;
-
-    padding: 100px 50px;
-
+    background-color: #303030;
+    color: #fff;
+    padding: 100px 100px;
     font-family: "Work Sans", sans-serif;
-
-    text-align: justify;
+    margin: 0 auto;
+    box-sizing: border-box;
 
 }
 
-#about h1{
+#about h2{
 
     color: #fff;
+
+}
+
+#about h3{
+
+    color: #E8A844;
 
 }
 
@@ -1623,6 +1665,10 @@ footer a:hover {
         font-size: 1rem;
     }
 
+    .btn-hero .material-symbols-outlined {
+        font-size: 1.3rem;
+    }
+
     .col-sm-4 {
 
         text-align: center;
@@ -1713,6 +1759,9 @@ footer a:hover {
     .btn-hero {
         padding: 10px 20px;
         font-size: 0.9rem;
+    }
+    .btn-hero .material-symbols-outlined {
+        font-size: 1.2rem;
     }
     
     .logo {
