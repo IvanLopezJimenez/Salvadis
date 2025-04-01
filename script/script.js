@@ -44,3 +44,25 @@ window.onload = function() {
         iframe.src = src + "&autoplay=1";  // Añadir autoplay después de un retraso
     }, 1000);  // 1 segundo de retraso
 };
+
+document.addEventListener("DOMContentLoaded", () => {
+    const counters = document.querySelectorAll(".num");
+    const speed = 200; // Velocidad de la animación (menor número = más rápido)
+
+    counters.forEach(counter => {
+        const updateCount = () => {
+            const target = +counter.getAttribute("data-target"); // Obtiene el valor final
+            const count = +counter.innerText;
+            const increment = target / speed;
+
+            if (count < target) {
+                counter.innerText = Math.ceil(count + increment);
+                setTimeout(updateCount, 20); // Controla la velocidad de incremento
+            } else {
+                counter.innerText = target; // Asegura que el número final se establezca correctamente
+            }
+        };
+
+        updateCount();
+    });
+});
