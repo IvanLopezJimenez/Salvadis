@@ -3,9 +3,7 @@ html {
 }
 body {
     font-family: 'Work Sans', sans-serif;
-    font-weight: 400; /* O usa cualquier otro peso de la fuente */
     line-height: 1.8;
-    color: #818181;
 }
 
 h1, h2, h3, h4 {
@@ -330,7 +328,6 @@ h4 {
 }
 #about {
     color: #fff;
-    font-family: "Work Sans", sans-serif;
     margin: 0 auto;
     box-sizing: border-box;
     height: auto;
@@ -342,6 +339,12 @@ h4 {
 }
 
 #about .btn{
+
+    color: #fff;
+
+}
+
+#about p{
 
     color: #fff;
 
@@ -398,7 +401,7 @@ h4 {
 
 /* SALVADIS EN CIFRAS */
 .stats-section {
-    background-color: #feebda; /* Fondo similar al de la imagen */
+    background-color: #feddb6; /* Fondo similar al de la imagen */
     padding: 60px 20px;
     display: flex;
     align-items: flex-start !important; /* Alinea la primera columna arriba */
@@ -449,6 +452,7 @@ h4 {
 .stats-content p {
     margin-top: 10px;
     color: #303030;
+    font-size: 16px;
     
 }
 
@@ -480,50 +484,68 @@ h4 {
     text-transform: uppercase;
 }
 
-
-.item-principal h4 {
-
-    font-size: 19px;
-
-    line-height: 1.375em;
-
-    font-weight: 400;
-
-    font-style: italic;
-
-    margin: 70px 0;
-
+/*VALOR SOBRE NOSOTROS*/
+.valor-section {
+    background-color: #fff;
+    padding: 40px 0;
 }
 
-.item-principal span {
-
-    font-style: normal;
-
+#valor {
+    max-width: 1300px;
+    margin: 0 auto;
 }
 
-.elegirnos{
-
-    text-align: justify;
-
+/* Imagen */
+.valor-img img {
+    width: 100%;
+    padding: 20px;
+    display: block;
+    margin: auto;
 }
 
-.elegirnos h2{
+/* Lista de características */
+.features-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    font-size: 16px;
+}
+
+.features-list li {
+    display: flex;
+    align-items: flex-start; /* Alineación superior */
+    gap: 15px; /* Espacio entre el icono y el texto */
+    margin-bottom: 20px;
+    color: #303030;
+    line-height: 1.5;
+}
+
+.valor-text h2{
     color: #303030;
 }
 
-.elegirnos img {
-
-    width: 99%;
-
-    padding: 20px;
-
-    display: block;
-
-    margin-left: auto;
-
-    margin-right: auto;
-
+.feature-icon {
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0; /* Evita que el icono se reduzca */
 }
+
+.feature-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.features-list strong {
+    margin-bottom: 5px; /* Espaciado entre título y texto */
+    font-size: 17px;
+}
+
+.features-list span {
+    font-size: 16px;
+    color: #505050;
+}
+
+
 
 .questions {
 
@@ -1713,8 +1735,6 @@ footer a:hover {
 }
 
 
-
-}
 
 @media screen and (max-width: 480px) {
 
