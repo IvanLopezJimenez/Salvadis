@@ -549,30 +549,45 @@ h4 {
 
 .questions {
 
-    background-image: url(../images/Fondo_preguntas2.png);
-
-    height: 100px;
-
+    background-image: url(../images/fondo-preguntas.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 50px 0;
+    height: 100vh;
+    
+}
+.carousel-inner{
+    max-width: 1300px;
+    margin: 0 auto;
 }
 
 .questions h4{
 
     color: #fff;
-
     -webkit-text-fill-color: #fff;
+    font-size: 2rem;
+    text-align: center;
+    opacity: 0; /* Comienza con el texto invisible */
+    transform: translateY(30px); /* Comienza 30px debajo de su posición original */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Animación suave */
 
-    -webkit-text-stroke: 0.5px #303030;
-
-    font-size: 40px;
-
-    font-style: italic;
-
+}
+.visible {
+    opacity: 1;
+    transform: translateY(0); /* El texto se mueve a su posición original */
 }
 
 #services {
 
     padding-bottom: 110px;
+    background-color: #fff;
 
+}
+
+#services h2 {
+    color: #303030;
 }
 
 .btn{

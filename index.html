@@ -97,7 +97,8 @@
             <!-- Video de fondo -->
             <video autoplay muted loop playsinline class="hero-video">
                 <source src="videos/video-hero.mp4" type="video/mp4">
-                Tu navegador no soporta videos en HTML5.
+                <!-- Si el video no se carga, se muestra esta imagen -->
+                <img src="images/video-hero.jpg" alt="Imagen alternativa para el video" class="video-fallback">
             </video>
         
             <!-- Capa oscura para mejorar la legibilidad del texto -->
@@ -187,7 +188,7 @@
                 <div class="row slideanim">
                     <!-- Imagen -->
                     <div class="col-sm-4 valor-img">
-                        <img src="images/salvadis-accion.png" alt="Salvadis en acción" />
+                        <img src="images/gestion-rapida.png" alt="Salvadis en acción" />
                     </div>
         
                     <!-- Texto y lista -->
@@ -221,26 +222,36 @@
         <!-- Questions -->
 
         <div id="myCarousel" class="carousel slide text-center questions" data-ride="carousel">
-
+            
             <!-- Wrapper for slides -->
-
+            <div class="overlay"></div>
             <div class="carousel-inner" role="listbox">
 
                 <div class="item active">
 
-                    <h4>¿Tu mercancía ha sufrido un siniestro?</h4>
+                    <h4>¿Tienes productos químicos inmovilizados tras un siniestro?</h4>
 
                 </div>
 
                 <div class="item">
 
-                    <h4>¿Necesitas recuperar productos inmobilizados?</h4>
+                    <h4>¿Tu empresa necesita actuar rápido ante una emergencia química?</h4>
 
                 </div>
 
                 <div class="item">
 
-                    <h4>¿Necesitas servicios de logística?</h4>
+                    <h4>¿Buscas recuperar mercancías y cumplir la normativa a tiempo?</h4>
+
+                </div>
+                <div class="item">
+
+                    <h4>¿Requieres apoyo logístico inmediato y especializado?</h4>
+
+                </div>
+                <div class="item">
+
+                    <h4>¿Quieres minimizar paradas operativas por productos siniestrados?</h4>
 
                 </div>
 
@@ -256,7 +267,7 @@
 
             <h2 class="slideanim">SERVICIOS</h2>
 
-            <h4 class="slideanim">Qué ofrecemos</h4>
+            <h3 class="slideanim">Qué ofrecemos</h3>
 
             <br>
 
@@ -319,50 +330,6 @@
             </div>
 
             <br><a href="servicios.html" class="btn text-center slideanim" role="button">Saber más &#8250;</a>
-
-            <div class="container-fluid text-center">
-
-                <div class="galeria-index">
-
-                    <div class="imagen-index slideanim">
-
-                        <img src="images/servicios/1.jpg" alt="">
-
-                    </div>
-
-                    <div class="imagen-index slideanim">
-
-                        <img src="images/servicios/4.jpg" alt="">
-
-                    </div>
-
-                    <div class="imagen-index slideanim">
-
-                        <img src="images/servicios/2.jpg" alt="">
-
-                    </div>
-
-                    <div class="imagen-index slideanim">
-
-                        <img src="images/servicios/3.jpg" alt="">
-
-                    </div>
-
-                    <div class="imagen-index slideanim">
-
-                        <img src="images/servicios/5.jpg" alt="">
-
-                    </div>
-
-                    <div class="imagen-index slideanim">
-
-                        <img src="images/servicios/7.png" alt="">
-
-                    </div>
-
-                </div>
-
-            </div>
 
         </div>
 
@@ -477,6 +444,9 @@
 
         <script src="script/script.js"></script>
         <script type="text/javascript">
+            // Llamamos a la función cuando la página se carga y cuando se hace scroll
+            window.addEventListener('scroll', checkVisibility);
+            window.addEventListener('load', checkVisibility);
 
             
 

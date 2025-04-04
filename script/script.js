@@ -66,3 +66,19 @@ document.addEventListener("DOMContentLoaded", () => {
         updateCount();
     });
 });
+// Detectamos todos los elementos h4 dentro de .questions
+const textElements = document.querySelectorAll('.questions h4');
+
+// Función que verifica si el elemento está en la vista
+function checkVisibility() {
+    const windowHeight = window.innerHeight;
+
+    textElements.forEach(element => {
+        const elementTop = element.getBoundingClientRect().top;
+
+        if (elementTop < windowHeight - 100) {
+            // Si el elemento está cerca de la parte visible de la ventana, se agrega la clase 'visible'
+            element.classList.add('visible');
+        }
+    });
+}
