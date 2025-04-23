@@ -66,19 +66,62 @@ document.addEventListener("DOMContentLoaded", () => {
         updateCount();
     });
 });
-// Detectamos todos los elementos h4 dentro de .questions
-const textElements = document.querySelectorAll('.questions h4');
+// window.addEventListener('scroll', checkVisibility);
+// window.addEventListener('load', checkVisibility);
 
-// Función que verifica si el elemento está en la vista
-function checkVisibility() {
-    const windowHeight = window.innerHeight;
+// document.addEventListener('DOMContentLoaded', function () {
+//     const slides = document.querySelectorAll('.questions-slide');
 
-    textElements.forEach(element => {
-        const elementTop = element.getBoundingClientRect().top;
+//     const observer = new IntersectionObserver((entries, observer) => {
+//         entries.forEach(entry => {
+//             if (entry.isIntersecting) {
+//                 entry.target.classList.add('visible');
+//                 observer.unobserve(entry.target); // Deja de observar una vez que se ha hecho visible
+//             }
+//         });
+//     }, {
+//         threshold: 0.1 // Ajusta este valor según sea necesario
+//     });
 
-        if (elementTop < windowHeight - 100) {
-            // Si el elemento está cerca de la parte visible de la ventana, se agrega la clase 'visible'
-            element.classList.add('visible');
-        }
-    });
-}
+//     slides.forEach(slide => {
+//         observer.observe(slide);
+//     });
+// });
+// document.addEventListener('DOMContentLoaded', () => {
+//     const items = document.querySelectorAll('.m-item');
+//     let current = 0;
+//     const observerOptions = {
+//     root: null,
+//     threshold: 0.5,
+//     };
+  
+//     function showNext() {
+//     if (current < items.length) {
+//         items[current].classList.add('visible');
+//         current++;
+//         }
+//     }
+  
+//     function onScroll() {
+//         const scrollY = window.scrollY;
+//         const step = window.innerHeight;
+  
+//         let index = Math.floor(scrollY / step);
+//         if (index !== current && index < items.length) {
+//         showNext();
+//         }
+//     }
+  
+//     window.addEventListener('scroll', onScroll);
+  
+//     showNext(); // Mostrar el primero al cargar
+// });
+  
+
+  
+  
+  
+  
+  
+
+

@@ -270,7 +270,7 @@ h4 {
     line-height: 4rem;
 }
 
-/* Botón circular con borde y fondo transparente */
+/* Botón circular con borde BLANCO y fondo transparente */
 .btn-hero {
     display: inline-flex; /* Permite alinear texto e icono */
     align-items: center;
@@ -321,6 +321,65 @@ h4 {
 .btn-hero:hover .material-symbols-outlined {
     color: white; /* Cambia el color del icono en hover */
 }
+
+
+
+
+
+
+
+/* Botón circular con borde OSCURO y fondo transparente */
+.btn-black {
+    display: inline-flex; /* Permite alinear texto e icono */
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Espacio entre el texto y el icono */
+    margin-top: 20px;
+    padding: 14px 28px;
+    font-size: 1rem;
+    color: #303030; /* Color del texto e icono */
+    background: transparent;
+    border: 2px solid #303030; /* Borde del botón */
+    border-radius: 50px; /* Hace el botón más redondo */
+    text-decoration: none !important;
+    transition: all 0.3s ease-in-out;
+}
+.btn-black span {
+    text-decoration: none !important;
+    display: inline-block; /* Asegura que se comporte bien */
+}
+
+/* Evitar que el subrayado aparezca solo en el texto */
+.btn-text {
+    display: inline-block;
+    position: relative;
+}
+
+/* Efecto hover en el texto: subrayado animado */
+.btn-black:hover .btn-text::after {
+    width: 100%;
+    left: 0;
+}
+
+/* Evitar que el icono sea clickeable y evitar el subrayado */
+.btn-black .material-symbols-outlined {
+    font-size: 1.5rem; /* Tamaño del icono */
+    transition: color 0.3s ease-in-out; /* Transición de color */
+    pointer-events: none; /* Evita que el icono sea clickeable */
+    text-decoration: none !important; /* Asegurar que el icono no se subraye */
+}
+
+/* Efecto hover: cambia el color del botón y del icono */
+.btn-black:hover {
+    background-color: #E8A844;
+    color: white;
+    border-color: #E8A844;
+}
+
+.btn-black:hover .material-symbols-outlined {
+    color: white; /* Cambia el color del icono en hover */
+}
+
 
 /*ABOUT SALVADIS*/
 .about-section{
@@ -547,37 +606,120 @@ h4 {
 
 
 
-.questions {
-
-    background-image: url(../images/fondo-preguntas.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    padding: 50px 0;
+/* .questions {
     height: 100vh;
-    
-}
-.carousel-inner{
-    max-width: 1300px;
-    margin: 0 auto;
-}
-
-.questions h4{
-
-    color: #fff;
-    -webkit-text-fill-color: #fff;
-    font-size: 2rem;
+    background-image: url('../images/fondo-preguntas.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
     text-align: center;
-    opacity: 0; /* Comienza con el texto invisible */
-    transform: translateY(30px); /* Comienza 30px debajo de su posición original */
-    transition: opacity 0.5s ease, transform 0.5s ease; /* Animación suave */
-
+    padding: 0 2rem;
 }
-.visible {
+  
+.questions-carousel {
+    width: 100%;
+    max-width: 1000px;
+    position: relative;
+    height: 200px;
+}
+  
+.question {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    max-width: 1000px;
+    transform: translate(-50%, 50px);
+    opacity: 0;
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    z-index: 1;
+    pointer-events: none;
+}
+  
+.question.active {
+    transform: translate(-50%, -50%);
     opacity: 1;
-    transform: translateY(0); /* El texto se mueve a su posición original */
+    z-index: 2;
+    pointer-events: auto;
+} */
+
+/* body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    scroll-behavior: smooth;
 }
+
+.mdl-storytelling {
+position: relative;
+height: 400vh;
+background: #000;
+color: white;
+font-family: 'Helvetica Neue', sans-serif;
+}
+
+.m-bg {
+background-image: url('../images/fondo-preguntas.jpg');
+background-size: cover;
+background-position: center;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+z-index: -1;
+}
+
+.story-wrapper {
+position: sticky;
+top: 0;
+height: 100vh;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+.m-item {
+font-size: 2.5rem;
+max-width: 800px;
+text-align: center;
+opacity: 0;
+transform: translateY(50px);
+transition: all 0.8s ease-out;
+position: absolute;
+}
+
+.m-item.visible {
+opacity: 1;
+transform: translateY(0);
+}
+
+.m-item em {
+color: #b3a369;
+} */
+  
+.questions-aos-section {
+    background-image: url('../images/fondo-preguntas.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 120px 20px;
+    text-align: center;
+}
+
+.question-aos {
+font-size: 2rem;
+color: white;
+margin-bottom: 60px;
+}
+  
+
+
 
 #services {
 
@@ -617,6 +759,64 @@ h4 {
     font-weight: bold;
 
 }
+
+/* Industrias */
+.industrias-section {
+    background-color: #303030;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.industrias-section h2 {
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+.subtitle {
+    color: #E8A844;
+    margin-bottom: 40px;
+    font-size: 1.2rem;
+}
+
+.industrias-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.industria-box {
+    flex: 1 1 calc(33.333% - 30px);
+    background: #f9f9f9;
+    padding: 30px 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.industria-box:hover {
+    transform: translateY(-5px);
+}
+
+.industria-box img {
+    width: 60px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.industria-box h3 {
+    font-size: 1.3rem;
+    color: #E8A844;
+    margin-bottom: 15px;
+}
+
+.industria-box p {
+    color: #505050;
+    font-size: 1rem;
+}
+
+
 
 /*Footer*/
 
