@@ -772,12 +772,6 @@ margin-bottom: 60px;
     color: #fff;
 }
 
-.subtitle {
-    color: #E8A844;
-    margin-bottom: 40px;
-    font-size: 1.2rem;
-}
-
 .industrias-grid {
     display: flex;
     justify-content: space-between;
@@ -787,13 +781,37 @@ margin-bottom: 60px;
 }
 
 .industria-box {
-    flex: 1 1 calc(33.333% - 30px);
-    background: #f9f9f9;
+    flex: 1 1 calc(22.222% - 20px);
+    position: relative;
     padding: 30px 20px;
     border-radius: 12px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.05);
+    overflow: hidden;
+    color: white !important; 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
     transition: transform 0.3s ease;
 }
+.industria-box h4,
+.industria-box p {
+  color: #fff !important;
+  z-index: 2;
+  position: relative;
+}
+
+.ind-quimica{
+    background-image: url('../images/industria/ind-quimica.jpg');
+}
+.industria-box::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.4); /* opacidad ajustable */
+    z-index: 1;
+    transition: background 0.3s ease;
+  }
 
 .industria-box:hover {
     transform: translateY(-5px);
