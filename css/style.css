@@ -803,6 +803,15 @@ margin-bottom: 60px;
 .ind-quimica{
     background-image: url('../images/industria/ind-quimica.jpg');
 }
+.ind-logistica{
+    background-image: url('../images/industria/transporte.jpg');
+}
+.ind-alimentaria{
+    background-image: url('../images/industria/agroquimica.jpg');
+}
+.ind-limpieza{
+    background-image: url('../images/industria/limpieza.jpg');
+}
 .industria-box::before {
     content: "";
     position: absolute;
