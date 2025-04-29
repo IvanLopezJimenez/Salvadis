@@ -3,7 +3,7 @@ html {
 }
 body {
     font-family: 'Work Sans', sans-serif;
-    line-height: 1.8;
+    line-height: 1.5;
 }
 
 h1, h2, h3, h4 {
@@ -18,7 +18,7 @@ h1 {
 
     font-size: 3rem;
     font-weight: bold;
-    
+    line-height: 1.5;
 
 }
 
@@ -39,6 +39,7 @@ h3{
     margin-top: 10px;
     text-transform: uppercase;
     color: #E8A844;
+    line-height: 1.5;
 }
 
 h4 {
@@ -511,7 +512,7 @@ h4 {
 .stats-content p {
     margin-top: 10px;
     color: #303030;
-    font-size: 16px;
+    font-size: 1rem;
     
 }
 
@@ -842,12 +843,185 @@ margin-bottom: 60px;
     color: #505050;
     font-size: 1rem;
 }
+/* Seguridad y Sostenibilidad */
+.sostenibilidad-section {
+    position: relative;
+    background-color: #feddb6;
+    background-position: center;
+    padding: 100px 20px;
+    color: #303030;
+}
+
+.sostenibilidad-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.sostenibilidad-left {
+    flex: 1 1 45%;
+}
+
+.sostenibilidad-left h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #303030;
+}
+.sostenibilidad-left h2 em {
+    font-family: 'Parisienne', cursive;
+    font-size: 4rem;
+    color: #E8A844; /* Color del texto en cursiva */
+}
+
+.sostenibilidad-left p {
+    font-size: 1rem;
+    color: #303030;
+}
+
+.sostenibilidad-right {
+    flex: 1 1 45%;
+}
+
+.checklist {
+    list-style: none;
+    padding: 0;
+}
+
+.checklist li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+.checklist img {
+    width: 24px;
+    margin-right: 15px;
+}
+
+
+/*Call to action*/
+.cta-section {
+    position: relative;
+    background-image: url('../images/fondo-preguntas.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 80px 20px;
+    text-align: center;
+    color: white;
+}
+  
+.cta-overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Oscurece fondo para que el texto destaque */
+    z-index: 1;
+}
+  
+.cta-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    margin: 0 auto;
+}
+  
+.cta-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #E8A844;
+}
+  
+.cta-text p {
+    font-size: 1rem;
+    margin-bottom: 30px;
+    color: #fff;
+}
+  
 
 
 
 /*Footer*/
 
-footer {
+.footer {
+    background-color: #fff;
+    color: #303030;
+    padding: 70px 190px 50px;
+    line-height: 1.2;
+}
+  
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-top: 1px solid #818181;
+}
+  
+.footer-column {
+    flex: 1 1 20%;
+    margin: 20px 0;
+    padding: 20px;
+}
+  
+.footer-column img {
+    width: 95%;
+    margin-bottom: 15px;
+}
+.footer-column-ind img {
+    width: 20%;
+    margin-bottom: 15px;
+}
+.footer-column h4 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #E8A844;
+  }
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+  
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+  
+.footer a {
+    color: #303030;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+  
+.footer a:hover {
+    color: #E8A844;
+}
+
+.footer-column-ind{
+    border-top: 1px solid #818181;
+    padding: 10px;
+}
+  
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #818181;
+    margin-top: 20px;
+    font-size: 0.7rem;
+    color: #cccccc;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+
+
+/*footer {
 
     background-color: #303030;
 
@@ -963,7 +1137,7 @@ footer a:hover {
 
 }
 
-.social {     /*logos redes sociales*/
+.social {     
 
     width: 6%;
 
@@ -1011,7 +1185,7 @@ footer a:hover {
 
     margin-left: 60vw;
 
-}
+}*/
 
 /*----SLIDEANIME----*/
 
@@ -1890,6 +2064,40 @@ footer a:hover {
         font-size: 1.3rem;
     }
 
+    h3{
+        line-height: 1.2;
+    }
+
+   
+    .sostenibilidad-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .sostenibilidad-left, .sostenibilidad-right {
+        flex: 1 1 100%;
+    }
+
+    .cta-text h2 {
+        font-size: 2rem;
+    }
+
+    .cta-text p {
+        font-size: 1rem;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .footer-column {
+        flex: 1 1 100%;
+        text-align: center;
+    }
+    
+    
+
     .col-sm-4 {
 
         text-align: center;
@@ -2000,30 +2208,17 @@ footer a:hover {
     .btn-hero .material-symbols-outlined {
         font-size: 1.2rem;
     }
+    h1{
+        line-height: 1.2;
+    }
+
+    h3{
+        line-height: 1.2;
+    }
     
     .logo {
 
         font-size: 150px;
-
-    }
-
-    /*Carousel-Index-Phone*/
-
-    .carousel {
-
-        margin-top: 20vw !important;
-
-    }
-
-    .carousel img {
-
-        transform: scale(5);
-
-    }
-
-    .carousel-indicators {
-
-        transform: scale(0.7);
 
     }
 
