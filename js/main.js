@@ -5,6 +5,34 @@ $(document).ready(function () {
     })
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    const dropdowns = document.querySelectorAll(".navbar-nav .dropdown");
+  
+    dropdowns.forEach(dropdown => {
+        const toggle = dropdown.querySelector(".dropdown-toggle");
+        const menu = dropdown.querySelector(".dropdown-menu");
+    
+        toggle.addEventListener("click", function (e) {
+            if (window.innerWidth < 992) {
+            e.preventDefault(); // solo en móviles
+    
+            // Alternar visibilidad del submenú
+            const isVisible = menu.style.display === "block";
+            document.querySelectorAll(".dropdown-menu").forEach(m => m.style.display = "none");
+            if (!isVisible) menu.style.display = "block";
+            }
+        });
+    });
+  
+    // Cerrar todos los menús al hacer clic fuera
+    document.addEventListener("click", function (e) {
+        const isClickInside = e.target.closest(".navbar-nav .dropdown");
+        if (!isClickInside) {
+            document.querySelectorAll(".dropdown-menu").forEach(m => m.style.display = "none");
+        }
+    });
+});
+
 $(window).scroll(function () {
     // Sólo aparecerá cuando se haga scroll y se vea en la pantalla.
     $(".slideanim").each(function () {
@@ -66,62 +94,6 @@ document.addEventListener("DOMContentLoaded", () => {
         updateCount();
     });
 });
-// window.addEventListener('scroll', checkVisibility);
-// window.addEventListener('load', checkVisibility);
-
-// document.addEventListener('DOMContentLoaded', function () {
-//     const slides = document.querySelectorAll('.questions-slide');
-
-//     const observer = new IntersectionObserver((entries, observer) => {
-//         entries.forEach(entry => {
-//             if (entry.isIntersecting) {
-//                 entry.target.classList.add('visible');
-//                 observer.unobserve(entry.target); // Deja de observar una vez que se ha hecho visible
-//             }
-//         });
-//     }, {
-//         threshold: 0.1 // Ajusta este valor según sea necesario
-//     });
-
-//     slides.forEach(slide => {
-//         observer.observe(slide);
-//     });
-// });
-// document.addEventListener('DOMContentLoaded', () => {
-//     const items = document.querySelectorAll('.m-item');
-//     let current = 0;
-//     const observerOptions = {
-//     root: null,
-//     threshold: 0.5,
-//     };
-  
-//     function showNext() {
-//     if (current < items.length) {
-//         items[current].classList.add('visible');
-//         current++;
-//         }
-//     }
-  
-//     function onScroll() {
-//         const scrollY = window.scrollY;
-//         const step = window.innerHeight;
-  
-//         let index = Math.floor(scrollY / step);
-//         if (index !== current && index < items.length) {
-//         showNext();
-//         }
-//     }
-  
-//     window.addEventListener('scroll', onScroll);
-  
-//     showNext(); // Mostrar el primero al cargar
-// });
-  
-
-  
-  
-  
-  
-  
-
-
+src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js">
+    AOS.init();
+    

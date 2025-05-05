@@ -48,6 +48,7 @@
         <link href="css/style.css" rel="stylesheet">
         <!-- AOS CSS -->
         <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
         <!-- Scripts (jQuery y Bootstrap) -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
@@ -57,11 +58,29 @@
 
     <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
         
+        <!-- Top Bar -->
+        <div class="top-bar">
+            <div class="container-topbar">
+            <div class="topbar-left">
+                <span><i class="fas fa-envelope"></i> sdpq@sdpq.es</span>
+                <span><i class="fas fa-phone-alt"></i> +34 935 950 110</span>
+            </div>
+            <div class="topbar-right">
+                <a href="https://www.instagram.com/gruposalvadis/" target="_blank" aria-label="Instagram Salvadis">
+                <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://es.linkedin.com/company/salvadis" target="_blank" aria-label="LinkedIn Salvadis">
+                <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+            </div>
+        </div>
+        <!-- NavBar -->
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
                     <a class="navbar-brand" href="index.html">
-                        <img src="images/GS-sinfondo.png" alt="Logo Grupo Salvadis" height="120">
+                    <img src="images/GS-sinfondo.png" alt="Logo Grupo Salvadis" height="120">
                     </a>
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
                         <span class="icon-bar"></span>
@@ -69,30 +88,31 @@
                         <span class="icon-bar"></span>
                     </button>
                 </div>
+            
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav navbar-right">
                         <li class="dropdown">
-                            <a class="dropdown-toggle" data-toggle="dropdown">Sobre Salvadis
-                                <i class="fa fa-chevron-down dropdown-icon"></i>
+                            <a href="#" class="dropdown-toggle">Quiénes Somos<i class="fa fa-chevron-down dropdown-icon"></i></a>
                             <ul class="dropdown-menu">
-                                <li><a href="sobre-salvadis.html">Sobre Salvadis</a></li>
-                                <li><a href="sistema-de-trabajo.html">Nuestro Sistema de Trabajo</a></li>
-                                <li><a href="comercial-pasos-a-seguir.html">Comercial: Pasos a Seguir</a></li>
+                            <li><a href="sobre-salvadis.html">Sobre Salvadis</a></li>
+                            <li><a href="sistema-de-trabajo.html">Sistema de Trabajo</a></li>
+                            <li><a href="proceso-de-colaboracion.html">Proceso de Colaboración</a></li>
                             </ul>
                         </li>
                         <li class="dropdown">
-                            <a class="dropdown-toggle" data-toggle="dropdown">Servicios
-                                <i class="fa fa-chevron-down dropdown-icon"></i>
+                            <a href="#" class="dropdown-toggle">Servicios <i class="fa fa-chevron-down dropdown-icon"></i></a>
                             <ul class="dropdown-menu">
-                                <li><a href="servicios.html">Servicios</a></li>
-                                <li><a href="almacenes.html">Almacenes</a></li>
+                            <li><a href="servicios.html">Servicios</a></li>
+                            <li><a href="almacenamiento-seguro.html">Almacenamiento Seguro</a></li>
                             </ul>
                         </li>
-                        <li><a class="dropdown-toggle" href="contacto.html">Contacto</a></li>
+                        <li><a href="industrias.html">Industrias</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
+          
 
         <!-- HERO -->
         <section class="hero">
@@ -219,36 +239,27 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section>  
 
         <!-- Questions -->
-        <!-- <section class="questions">
-            <div class="questions-carousel">
-              <div class="question active">¿Tienes productos químicos inmovilizados tras un siniestro?</div>
-              <div class="question">¿Tu empresa necesita actuar rápido ante una emergencia química?</div>
-              <div class="question">¿Buscas recuperar mercancías y cumplir la normativa a tiempo?</div>
-              <div class="question">¿Requieres apoyo logístico inmediato y especializado?</div>
-              <div class="question">¿Quieres minimizar paradas operativas por productos siniestrados?</div>
+        <div id="myCarousel" class="carousel slide text-center questions" data-ride="carousel">
+            <div class="cta-overlay"></div>
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <h4>¿Tienes productos químicos inmovilizados tras un siniestro?</h4>
+                </div>
+                <div class="item">
+                    <h4>¿Buscas recuperar mercancías y cumplir la normativa a tiempo?</h4>
+                </div>
+                <div class="item">
+                    <h4>¿Requieres apoyo logístico inmediato y especializado?</h4>
+                </div>
+                <div class="item">
+                    <h4>¿Quieres minimizar paradas operativas por productos siniestrados?</h4>
+                </div>
             </div>
-        </section> -->
-        <!-- <section class="mdl-storytelling">
-            <div class="m-bg"></div>
-            <div class="story-wrapper">
-              <article class="m-item">Una isla única</article>
-              <article class="m-item">Un viaje sublime</article>
-              <article class="m-item">Ritmo natural, cultural e interior. Una experiencia inolvidable.</article>
-            </div>
-        </section> -->
-        <!--<section class="questions-aos-section">
-            <div class="question-aos" data-aos="fade-left">¿Tienes productos químicos inmovilizados tras un siniestro?</div>
-            <div class="question-aos" data-aos="fade-left" data-aos-delay="100">¿Tu empresa necesita actuar rápido ante una emergencia química?</div>
-            <div class="question-aos" data-aos="fade-left" data-aos-delay="200">¿Buscas recuperar mercancías y cumplir la normativa a tiempo?</div>
-            <div class="question-aos" data-aos="fade-left" data-aos-delay="300">¿Requieres apoyo logístico inmediato y especializado?</div>
-            <div class="question-aos" data-aos="fade-left" data-aos-delay="400">¿Quieres minimizar paradas operativas por productos siniestrados?</div>
-        </section>-->
-        
-           
-
+        </div>
 
 
         <!-- Container (Services Section) -->
@@ -418,17 +429,19 @@
                     <h4>Info</h4>
                     <div class="footer-column-ind">
                         <ul>
-                            <li><a href="/sobre-nosotros">Sobre Nosotros</a></li>
-                            <li><a href="/servicios">Servicios</a></li>
-                            <li><a href="/contacto">Contacto</a></li>
+                            <li><a href="sistema-de-trabajo.html">Sistema de Trabajo</a></li>
+                            <li><a href="proceso-de-colaboracion.html">Proceso de Colaboración</a></li>
+                            <li><a href="servicios.html">Servicios</a></li>
+                            <li><a href="industrias.html">Industrias</a></li>
+                            <li><a href="faqs.html">Preguntas Frecuentes (FAQS)</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="footer-column">
                     <h4>Social</h4>
                     <div class="footer-column-ind">
-                        <ul>
-                            <li><a href="https://www.instagram.com/gruposalvadis/" target="_blank"><img src="icons/instagram.svg" alt="Logo Instagram"/></a></li>
+                        <ul class="social-icons">
+                            <li><a href="https://www.instagram.com/gruposalvadis/" target="_blank"><img src="icons/instagram.svg" alt="Logo Instagram" class="insta"/></a></li>
                             <li><a href="https://es.linkedin.com/company/salvadis" target="_blank"><img src="icons/linkedin.svg" alt="Logo LinkedIn"/></a></li>
                         </ul>
                     </div>
@@ -447,121 +460,9 @@
                 <p>&copy; 2025 Salvamento y Distribución de Productos Químicos. Todos los derechos reservados.</p>
             </div>
         </footer>
-          
-        <!--<footer class="container-fluid">
-
-            <div class="row menu-foot">
-
-                <div class="col-sm-4">
-
-                    <h4>GRUPO SALVADIS</h4>
-
-                    <div class="col-sm-6">
-
-                        <p><a href="sobre-nosotros.html" title="Sobre Nosotros">Sobre Nosotros</a></p>
-
-                        <p><a href="sistema-de-trabajo.html" title="Sistema de Trabajo">Nuestro Sistema de Trabajo</a></p>
-
-                        <p><a href="comercial-pasos-a-seguir.html" title="Comercial">Comercial: Pasos a seguir</a></p>
-
-                    </div>
-
-                    <div class="col-sm-6">
-
-                        <p><a href="servicios.html" title="Servicios">Servicios</a></p>
-
-                        <p><a href="almacenes.html" title="Almacenes">Almacenes</a></p>
-
-                        <p><a href="contacto.html" title="Contacto">Contacto</a></p>
-
-                    </div>
-
-                </div>
-
-                <div class="col-sm-4 contact-foot">
-
-                    <h4>CONTACTA CON NOSOTROS</h4>
-
-                    <p><span><i class="material-icons logo-footer">location_on</i></span>Carrer dels Filadors, 35-41, 3º6ª
-
-                    </p>
-
-                    <p class="postal">08208 Sabadell, Barcelona</p>
-
-                    <p class="postal mapa"><i class="material-icons logo-footer logo-location">share_location</i><a
-
-                            href="https://n9.cl/go4w6" title="Location Salvadis" target="_blank">Ver Mapa</a></p>
-
-                    <p><span><i class="material-icons logo-footer">phone</i></span>Tel: +34 935 950 110</p>
-
-                    <p><span><i class="material-icons logo-footer">email</i></span>Email: sdpq@sdpq.es</p>
-
-                </div>
-
-                <div class="col-sm-4 text-center">
-
-                    <img src="images/GS-white-sinfondo.png" alt="Logo Salvadis" />
-
-                </div>
-
-            </div>
-
-            <div class="row end">
-
-                <div class="col-sm-4 menu-political">
-
-                    <div class="col-sm-4">
-
-                        <p><a href="aviso-legal.html" title="Aviso Legal" class="politica">Aviso Legal</a></p>
-
-                    </div>
-
-                    <div class="col-sm-4">
-
-                        <p><a href="politica-privacidad.html" title="Política Privacidad" class="politica">Política
-
-                                Privacidad</a></p>
-
-                    </div>
-
-                    <div class="col-sm-4">
-
-                        <p><a href="cookies.html" title="Política Cookies" class="politica">Política Cookies</a></p>
-
-                    </div>
-
-                </div>
-
-                <div class="col-sm-4 text-center">
-
-                    <a href="https://es.linkedin.com/company/salvadis" target="_blank"><img src="images/linkedin.png"
-
-                            alt="Logo Linkedin" class="social" /></a>
-
-                    <a href="https://www.instagram.com/gruposalvadis/" target="_blank"><img src="images/instagram.png"
-
-                            alt="Logo Instagram" class="social-insta" /></a>
-
-                </div>
-
-                <div class="col-sm-4 SL text-right">
-
-                    <p>© SALVAMENTO Y DISTRIBUCIÓN DE PRODUCTOS QUÍMICOS, SL.</p>
-
-                </div>
-
-            </div>
-
-        </footer>-->
 
 
         <script src="js/main.js"></script>
-        <!-- AOS JS -->
-        <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-        <script>
-            AOS.init();
-        </script>
-
     </body>
 
 </html>
