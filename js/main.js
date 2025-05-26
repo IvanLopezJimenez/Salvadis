@@ -94,6 +94,19 @@ document.addEventListener("DOMContentLoaded", () => {
         updateCount();
     });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const slides = document.querySelectorAll(".carousel-slide");
+    let current = 0;
+    function showNextSlide() {
+        slides[current].classList.remove("active");
+        current = (current + 1) % slides.length;
+        slides[current].classList.add("active");
+    }
+    setInterval(showNextSlide, 4000); // cambia cada 4 segundos
+});
 src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js">
     AOS.init();
-    
+
+
+
