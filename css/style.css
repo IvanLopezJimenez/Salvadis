@@ -65,6 +65,8 @@ h4 {
     justify-content: space-between;
     align-items: center;
     position: fixed;
+    flex-wrap: wrap;
+    gap: 16px;
     top: 0;
     left: 0;
     width: 100%;
@@ -80,19 +82,19 @@ h4 {
     align-items: center;
 }
   
-.topbar-left span, .topbar-right a {
+.topbar-left span, .topbar-left a, .topbar-right a {
     margin-right: 20px;
     color: #fff;
     text-decoration: none;
 }
   
-.topbar-right a i {
+.topbar-right a i, .topbar-left a i {
     font-size: 16px;
     margin-left: 10px;
     color: #fff;
 }
   
-.topbar-right a:hover i {
+.topbar-right a:hover i, .topbar-left a:hover i, .topbar-left a:hover {
     color: #303030;
 }
   
@@ -344,12 +346,6 @@ h4 {
 .btn-hero:hover .material-symbols-outlined {
     color: white; /* Cambia el color del icono en hover */
 }
-
-
-
-
-
-
 
 /* Botón circular con borde OSCURO y fondo transparente */
 .btn-black {
@@ -986,175 +982,6 @@ h4 {
     justify-content: space-between;
 }
 
-
-
-
-
-/*footer {
-
-    background-color: #303030;
-
-    margin-left: 50px;
-
-    margin-right: 50px;
-
-    padding-top: 35px !important;
-
-    padding-bottom: 0px !important;
-
-    border-top: 2px solid black;
-
-}
-
-footer img {
-
-    width: 50%;
-
-    margin-top: 30px;
-
-}
-
-footer img:hover {
-
-    transform: scale(1.1);
-
-}
-
-footer h4 {
-
-    color: #a8a5a5 !important;
-
-    font-size: 15px !important;
-
-    margin-bottom: 7px !important;
-
-}
-
-footer p {
-
-    color: #a8a5a5 !important;
-
-    font-size: 13px !important;
-
-}
-
-footer .postal {
-
-    margin-left: 25px !important;
-
-    margin-top: -15px !important;
-
-}
-
-footer .mapa {
-
-    margin-left: 45px !important;
-
-}
-
-.logo-footer {
-
-    color: #FFC107;
-
-    font-size: 15px;
-
-    margin: 5px;
-
-}
-
-.logo-location {
-
-    position: absolute;
-
-    margin-top: 5px;
-
-    margin-left: -20px;
-
-}
-
-footer a {
-
-    color: #FFC107;
-
-}
-
-footer a:hover {
-
-    color: #fff;
-
-    text-decoration: none;
-
-}
-
-.end {
-
-    background-color: #242424;
-
-    margin: 0px -50px;
-
-    padding: 10px 20px;
-
-    border-top: 1px solid black;
-
-}
-
-.politica {
-
-    padding-left: 0px;
-
-    color: #a8a5a5;
-
-}
-
-.social {     
-
-    width: 6%;
-
-    padding: 0;
-
-    margin: 0;
-
-}
-
-.social-insta {
-
-    width: 7%;
-
-    padding: 0;
-
-    margin: 0;
-
-}
-
-.menu-foot {
-
-    margin-left: 30px;
-
-    padding-bottom: 0px;
-
-}
-
-.contact-foot {
-
-    padding-left: 6vw;
-
-}
-
-.menu-political {
-
-    margin-left: 45px;
-
-}
-
-.SL {
-
-    position: relative;
-
-    margin-top: -2vw;
-
-    margin-left: 60vw;
-
-}*/
 
 /*----SLIDEANIME----*/
 
@@ -1921,14 +1748,23 @@ footer a:hover {
 
 /* iPAD Pro */
 @media screen and (max-width: 1024px) {
+    .slideanim {
+        visibility: visible !important;
+        opacity: 1 !important;
+        transform: none !important;
+        animation: none !important;
+    }
 
-
+  .slide {
+        visibility: visible !important;
+        opacity: 1 !important;
+        transform: none !important;
+        animation: none !important;
+    }
     .navbar-brand img {
         margin-left: 0px;
 
     }
-
-
 
     h1{
         line-height: 1.2;
@@ -1938,20 +1774,12 @@ footer a:hover {
         line-height: 1.2;
     }
 
-    #about img {
+    .section-text {
+        padding-right: 0px !important;
+    }
 
-        width: 90%;
-
-        padding: 20px;
-
-        padding-top: 50px;
-
-        display: block;
-
-        margin-left: auto;
-
-        margin-right: auto;
-
+    .text-left img {
+        padding-right: 10px;
     }
 
     .carousel-slide {
@@ -1976,161 +1804,69 @@ footer a:hover {
 
 }
 
-@media screen and (max-width: 768px) {
 
-    /* Top bar, navbar*/
-    .topbar-left, .topbar-right {
-        margin: 5px 0;
-    }
 
-    .container-topbar {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
+/*MOBILE*/
+@media screen and (max-width: 480px) {
     
-    .topbar-left, .topbar-right {
-        margin: 3px 0;
-    }
-    
-    .topbar-left span {
-        display: block;
-    }
-    .navbar{
-        margin-top: 64px;
-    }
-    .dropdown-menu {
-        display: none;
-        position: static;
-        float: none;
-        width: 100%;
-        box-shadow: none;
-        background-color: #fff;
-        padding-left: 20px;
-    }
-    
-    .dropdown-menu > li > a {
-        padding: 10px 0;
-    }
-    .hero h1 {
-        font-size: 2.2rem;
-    }
-
-    .hero h2 {
-        font-size: 1.2rem;
-    }
-
-    .btn-hero {
-        padding: 12px 24px;
-        font-size: 1rem;
-    }
-
-    .btn-hero .material-symbols-outlined {
-        font-size: 1.3rem;
-    }
-
-    h3{
-        line-height: 1.2;
-    }
-
-   
-    .sostenibilidad-content {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .sostenibilidad-left, .sostenibilidad-right {
-        flex: 1 1 100%;
-    }
-
-    .cta-text h2 {
-        font-size: 2rem;
-    }
-
-    .cta-text p {
-        font-size: 1rem;
-    }
-
-    .footer-container {
-        flex-direction: column;
+    .container-topbar{
         align-items: center;
     }
-    
-    .footer-column {
-        flex: 1 1 100%;
-        text-align: center;
+
+    .navbar{
+        margin-top: 45px;
     }
     
-    
-
-    .col-sm-4 {
-
-        text-align: center;
-
-        margin: 25px 0;
-
-    }
-
-    .btn-lg {
-
-        width: 100%;
-
-        margin-bottom: 0px;
-
-    }
-
     .navbar-brand img{
 
         margin-left: -50px;
 
     }
+    
+    .hero {
+        background: url('images/hero-bg.jpg') center/cover no-repeat; /* Imagen en móviles */
+    }
+    .hero h1 {
+        font-size: 1.8rem;
+        line-height: 1.2;
+    }
+    .hero h2 {
+        font-size: 1rem;
+    }
+    .btn-hero {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+        margin-bottom: 30px;
+    }
+    .btn-hero .material-symbols-outlined {
+        font-size: 1.2rem;
+    }
 
-    .carousel-caption{
+    .navbar-brand{
 
-        font-size: 2vw;
-
-        padding-bottom: 10vw;
+        margin-left: 15%;
 
     }
 
-    .carousel-caption h3{
+    .jumbotron {
 
-        font-size: 4vw;
-
-    }
-
-    .panel-heading {
-
-        color: #fff !important;
-
-        background-color: #fff !important;
-
-        padding: 10px;
-
-    }
-
-    .panel {
-
-        height: 800px;
-
-    }
-
-    .questions h4{
+        background-color: #FFC107;
 
         color: #fff;
 
-        font-size: 30px;
+        padding: 100px 25px 30px 25px;
 
-        font-style: italic;
-
-    }
-
-    .imagen-port p{
-
-        font-size: 15px;
+        font-family: "Work Sans", sans-serif;
 
     }
 
+    .image-text-right img {
+        padding: 0px;
+    }
+    .text-left img {
+        padding: 0px;
+    }
+    
     .stats-container {
         flex-direction: column;
         text-align: center;
@@ -2147,141 +1883,23 @@ footer a:hover {
     .stats-grid {
         justify-content: center;
     }
-}
+    .carousel-questions {
+        height: 160px;
+    }
+
+    .carousel-questions h4{
+        font-size: 30px;
+    }
 
 
-
-@media screen and (max-width: 480px) {
-
-    /* Responsividad: Ajustar tamaños en pantallas más pequeñas hero */
-    .hero-video {
-        display: none;
-    }
-    .hero {
-        background: url('images/hero-bg.jpg') center/cover no-repeat; /* Imagen en móviles */
-    }
-    .hero h1 {
-        font-size: 1.8rem;
-    }
-    .hero h2 {
-        font-size: 1rem;
-    }
-    .btn-hero {
-        padding: 10px 20px;
-        font-size: 0.9rem;
-    }
-    .btn-hero .material-symbols-outlined {
-        font-size: 1.2rem;
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
     }
     
-    .logo {
-
-        font-size: 150px;
-
-    }
-
-    .navbar-brand{
-
-        margin-left: 15%;
-
-    }
-
-    .slid1{
-
-        padding-top: 70vw !important;
-
-    }
-
-    .slid2{
-
-        padding-top: 60vw !important;
-
-    }
-
-    .slid3{
-
-        padding-top: 45vw !important;
-
-    }
-
-    .carousel-caption h3{
-
-        font-size: 10vw;
-
-    }
-
-    .carousel-caption p{
-
-        font-size: 5vw;
-
-    }
-
-    .slide3 p{
-
-        font-size: 5.1vw !important;
-
-    }
-
-    .slide3{
-
-        padding-top: 20vw !important;
-
-    }
-
-    .slide3 h3{
-
-        font-size: 12vw;
-
-    }
-
-    .carousel-inner{
-
-        height: 150vw;
-
-    }
-
-    .elegirnos h2{
-
-        text-align: left;
-
-    }
-
-    .jumbotron {
-
-        background-color: #FFC107;
-
-        color: #fff;
-
-        padding: 100px 25px 30px 25px;
-
-        font-family: "Work Sans", sans-serif;
-
-    }
-
-    .textos-header h1 {
-
-        color: #fff;
-
-        padding-top: 40px;
-
-        font-size: 50px;
-
-    }
-
-    .panel-system {
-
-        margin: 10px 7vw !important;
-
-    }
-
-    .about p {
-
-        color: #242424;
-
-        font-size: 20px;
-
-        text-align: left !important;
-
+    .footer-column {
+        flex: 1 1 100%;
+        text-align: center;
     }
 
     /*About us */
