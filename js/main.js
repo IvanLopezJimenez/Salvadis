@@ -33,6 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+
 $(window).scroll(function () {
     // Sólo aparecerá cuando se haga scroll y se vea en la pantalla.
     $(".slideanim").each(function () {

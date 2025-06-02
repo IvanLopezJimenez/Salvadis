@@ -214,6 +214,10 @@ h4 {
 .navbar-nav li.dropdown:hover .dropdown-icon {
     transform: rotate(180deg);
 }
+.navbar-nav li.dropdown:hover .dropdown-menu {
+  display: block;
+  position: absolute; /* Este sigue funcionando en desktop */
+}
 
 .btn:active{
 
@@ -717,7 +721,6 @@ h4 {
 
 .cards-grid {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
     gap: 30px;
     margin-bottom: 40px;
@@ -1809,19 +1812,28 @@ h4 {
 /*MOBILE*/
 @media screen and (max-width: 480px) {
     
+    
     .container-topbar{
         align-items: center;
     }
+    .topbar-left span, .topbar-left a, .topbar-right a {
+        margin-right: 0px;
+    }
+    
+    .topbar-right a i, .topbar-left a i {
+        margin-left: 0px;
+        padding-left: 5px;
+    }
 
     .navbar{
-        margin-top: 45px;
+        margin-top: 36px;
     }
     
     .navbar-brand img{
 
         margin-left: -50px;
-
     }
+
     
     .hero {
         background: url('images/hero-bg.jpg') center/cover no-repeat; /* Imagen en móviles */
@@ -1874,14 +1886,15 @@ h4 {
 
     .stats-title h2 {
         text-align: center;
+        padding: 0px;
     }
-
-    .stats-content {
-        text-align: center;
+    .cards-grid {
+        flex-direction: column;
+        margin-top: 50px;
     }
-
-    .stats-grid {
-        justify-content: center;
+    .card-box {
+        flex: 1 1 100%;
+        width: 100%;
     }
     .carousel-questions {
         height: 160px;
@@ -1889,6 +1902,13 @@ h4 {
 
     .carousel-questions h4{
         font-size: 30px;
+    }
+    .stats-content {
+        text-align: center;
+    }
+
+    .stats-grid {
+        justify-content: center;
     }
 
 
@@ -1900,6 +1920,7 @@ h4 {
     .footer-column {
         flex: 1 1 100%;
         text-align: center;
+        padding: 0px;
     }
 
     /*About us */
