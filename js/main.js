@@ -7,31 +7,35 @@ $(document).ready(function () {
 
 document.addEventListener("DOMContentLoaded", function () {
     const dropdowns = document.querySelectorAll(".navbar-nav .dropdown");
-  
+
     dropdowns.forEach(dropdown => {
         const toggle = dropdown.querySelector(".dropdown-toggle");
         const menu = dropdown.querySelector(".dropdown-menu");
-    
+
         toggle.addEventListener("click", function (e) {
             if (window.innerWidth < 992) {
-            e.preventDefault(); // solo en móviles
-    
-            // Alternar visibilidad del submenú
-            const isVisible = menu.style.display === "block";
-            document.querySelectorAll(".dropdown-menu").forEach(m => m.style.display = "none");
-            if (!isVisible) menu.style.display = "block";
+                e.preventDefault(); // solo en móviles
+
+                // Alternar clase para mostrar/ocultar el submenú
+                dropdown.classList.toggle("show-submenu");
             }
         });
     });
-  
-    // Cerrar todos los menús al hacer clic fuera
+
+    // Cerrar todos los submenús al hacer clic fuera
     document.addEventListener("click", function (e) {
-        const isClickInside = e.target.closest(".navbar-nav .dropdown");
-        if (!isClickInside) {
-            document.querySelectorAll(".dropdown-menu").forEach(m => m.style.display = "none");
+        if (window.innerWidth < 992) {
+            const isClickInside = e.target.closest(".navbar-nav .dropdown");
+            if (!isClickInside) {
+                dropdowns.forEach(dropdown => {
+                    dropdown.classList.remove("show-submenu");
+                });
+            }
         }
     });
 });
+
+
 
 
 $(window).scroll(function () {
