@@ -1169,32 +1169,16 @@ h4 {
     color: white;
 }
 
-/* Sistema de Trabajo */
+/* ------------------ SISTEMA DE TRABAJO --------------- */
 
-.sistem-work{
-
-    width: 100%;
-
-    height: 600px;
-
-    background: #fff;
-
-    /* fallback for old browsers */
-
-    background: -webkit-linear-gradient(to right, #303030, hsla(60, 2%, 25%, 0.664)), url(../images/manos.png);
-
-    /* Chrome 10-25, Safari 5.1-6 */
-
-    background: linear-gradient(to right, hsla(40, 8%, 16%, 0.459), hsla(48, 6%, 15%, 0.664)), url(../images/manos.png);
-
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-    background-size: cover;
-
-    background-attachment: fixed;
-
-    position: relative;
-
+#texto-seo > .container {
+    max-width: 900px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+#texto-seo p{
+    color: #242424;
+    text-align: center;
 }
 
 .panel-system {
