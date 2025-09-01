@@ -71,12 +71,13 @@ h4 {
     left: 0;
     width: 100%;
     z-index: 10000; /* MÁS alto que el navbar */
+    padding-right: 30px;
 }
   
 .container-topbar {
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    width: 1200px;
     max-width: 1300px;
     margin: 0 auto;
     align-items: center;
@@ -119,8 +120,8 @@ h4 {
 
 .navbar-brand img{
 
-    margin-top: -40px;
-    margin-left: -40px;
+    margin-top: -15px;
+    margin-left: -30px;
 
 }
 
@@ -1218,7 +1219,7 @@ h4 {
   padding-left: 2rem;
 }
 
-.timeline::before {
+.timeline::before { /* línea */
   content: "";
   position: absolute;
   left: 50%;
@@ -1231,24 +1232,24 @@ h4 {
 
 .timeline-item {
   position: relative;
-  width: 50%;
-  padding: 0.7rem 2rem;
+  width: 40%;
+  padding: 1.5rem 2rem;
   box-sizing: border-box;
 }
 
 .timeline-item.left {
-  left: 0;
+  left: 10%;
   text-align: right;
 }
 
 .timeline-item.right {
-  left: 50%;
+  left: 47.2%;
   text-align: left;
 }
 
 .timeline-content {
   background-color: #ffc986;
-  padding: 1.5rem;
+  padding: 1rem;
   border-radius: 8px;
 }
 .title-timeline{
@@ -1273,11 +1274,11 @@ h4 {
 }
 
 .timeline-item.left::after {
-  right: -8px;
+  right: 8px;
 }
 
 .timeline-item.right::after {
-  left: -8px;
+  left: 7.2px;
 }
 
 #cta-system-work {
@@ -1854,9 +1855,28 @@ h4 {
 
     }
 
+    .timeline-item.right {
+    left: 46.5%;
+    text-align: left;
+    }
+
+    .timeline-item.right::after {
+    left: 8px;
+    }
+
 }
 
+/* iPAD Air */
+@media screen and (max-width: 820px) {
+    .timeline-item.right {
+    left: 45.5%;
+    text-align: left;
+    }
 
+    .timeline-item.right::after {
+    left: 7px;
+    }
+}
 
 /*MOBILE*/
 @media screen and (max-width: 480px) {
@@ -1978,7 +1998,7 @@ h4 {
     /*Sistema de trabajo */
 
     .timeline::before {
-        left: 8px;
+        left: 47px;
     }
     .timeline-item,
     .timeline-item.left,
@@ -1989,7 +2009,7 @@ h4 {
         text-align: left;
     }
     .timeline-item::after {
-        left: 0;
+        left: 8px;
     }
 
     /* Pasos a seguir */
