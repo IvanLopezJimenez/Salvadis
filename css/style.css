@@ -1056,7 +1056,7 @@ h4 {
     left: 0;
     right: 0;
     max-width: 1300px;
-    padding: 0 20px;
+    padding: 0 50px;
     margin: 0 auto;
     z-index: 2;
     color: white;
@@ -1075,7 +1075,7 @@ h4 {
     max-width: 1300px;
     margin: 0 auto; /* Centra horizontalmente */
     font-size: 0.9rem;
-    padding: 10px 20px;
+    padding: 10px 50px;
     margin-top: 10px;
     
 }
@@ -1181,6 +1181,12 @@ h4 {
 #texto-seo p{
     color: #242424;
     text-align: center;
+}
+
+#texto-seo h2{
+    color: #242424;
+    text-align: center;
+    font-size: 2rem;
 }
 
 .system{
@@ -1292,68 +1298,59 @@ h4 {
 }
 
 
-/* Comercial Pasos a Seguir */
+/* Proceso de Colaboración */
 
-.pasos-a-seguir{
+#cards-section-orange {
+    background-color: #E8A844;
+}
+#cards-section-orange h2 {
+    color: #303030;
+}
+#cards-section-orange h4{
+    font-size: 1.2rem;
+}
 
-    width: 100%;
+#cards-section-orange img{
+    width: 15%;
+}
 
-    height: 600px;
 
-    background: #fff;
-
-    /* fallback for old browsers */
-
-    background: -webkit-linear-gradient(to right, #303030, hsla(60, 2%, 25%, 0.664)), url(../images/pasosaseguir.png);
-
-    /* Chrome 10-25, Safari 5.1-6 */
-
-    background: linear-gradient(to right, hsla(40, 8%, 16%, 0.459), hsla(48, 6%, 15%, 0.664)), url(../images/pasosaseguir.png);
-
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-    background-size: cover;
-
-    background-attachment: fixed;
-
+.ventaja-proceso{
+    flex: 1 1 calc(22.222% - 10px);
     position: relative;
+    padding: 30px 20px;
+    border-radius: 12px;
+    overflow: hidden;
+    color: #E8A844 !important; 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: transform 0.3s ease;
+    background-color: #E8A844;
 
 }
 
-.contenido-textos {
-
-    margin: 2vw 15vw;
-
+.ventaja-proceso::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: 1;
+    transition: background 0.3s ease;
 }
 
-.contenido-textos h3{
-
-    margin-bottom: 15px;
-
+.ventaja-proceso:hover {
+    transform: translateY(-5px);
+}
+.ventaja-proceso p , .mvv li p{
+    color: #242424;
+}
+.ventaja-proceso h4{
+    font-size: 3rem;
 }
 
-.contenido-textos h3 span{
-
-    background: #FFC107;
-
-    color: #fff;
-
-    border-radius: 50%;
-
-    display: inline-block;
-
-    text-align: center;
-
-    width: 30px;
-
-    height: 30px;
-
-    padding: 2px;
-
-    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
-
-    margin-right: 10px;
-
+.ventaja-proceso img{
+    width: 30%;
 }
 
 /* Servicios */
