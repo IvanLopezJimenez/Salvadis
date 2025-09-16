@@ -1414,9 +1414,14 @@ h4 {
 .ventaja-proceso h4{
     font-size: 3rem;
 }
-
-.ventaja-proceso img{
-    width: 30%;
+.ventaja-proceso span {
+    display: inline-block;
+}
+.ventaja-proceso img {
+    width: 100px !important;
+    height: auto !important;
+    margin-top: 30px;
+    margin-bottom: 40px;
 }
 
 /* Servicios */
