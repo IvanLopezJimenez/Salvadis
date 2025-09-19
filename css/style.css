@@ -1384,7 +1384,7 @@ h4 {
 .ventaja-proceso{
     flex: 1 1 calc(22.222% - 10px);
     position: relative;
-    padding: 30px 20px;
+    padding: 30px 20px 0px;
     border-radius: 12px;
     overflow: hidden;
     color: #ffc986 !important; 
@@ -1424,70 +1424,40 @@ h4 {
     margin-bottom: 40px;
 }
 
-/* Servicios */
-
-.services{
-
-    width: 100%;
-
-    height: 600px;
-
-    background: #303030;
-
-    /* fallback for old browsers */
-
-    background: -webkit-linear-gradient(to right, #303030, hsla(60, 2%, 25%, 0.664)), url(../images/portada-servicios.png);
-
-    /* Chrome 10-25, Safari 5.1-6 */
-
-    background: linear-gradient(to right, hsla(40, 8%, 16%, 0.459), hsla(48, 6%, 15%, 0.664)), url(../images/portada-servicios.png);
-
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-    background-size: cover;
-
-    background-attachment: fixed;
-
+#cta-proceso-colaboracion {
     position: relative;
-
+    background-image: url('../images/cta-proceso-colaboracion.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 80px 20px;
+    text-align: center;
+    color: white;
 }
 
+
+/* ------------------ SERVICIOS --------------- */
+
+
 .galeria-port{
-
     display: flex;
-
     justify-content: space-evenly;
-
     flex-wrap: wrap;
-
 }
 
 .imagen-port{
-
     width: 30%;
-
     margin-bottom: 10px;
-
     overflow: hidden;
-
     position: relative;
-
     cursor: pointer;
-
     box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
-
 }
 
 .imagen-port > img{
-
     width: 100%;
-
     height: 100%;
-
     object-fit: cover;
-
     display: block;
-
 }
 
 .galeria-index{
