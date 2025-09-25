@@ -804,8 +804,9 @@ h4 {
     position: relative;
     background-color: #feddb6;
     background-position: center;
-    padding: 80px 20px;
+    padding: 80px;
     color: #303030;
+    
 }
 
 .stats-list-content {
@@ -815,11 +816,16 @@ h4 {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 10px;
+    max-width: 1300px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    height: auto;
 }
 
 .stats-list-left {
-    flex: 1 1 45%;
+    flex: 1 1 50%;
+    margin-left: -15px;
+    padding-right: 15px;
 }
 
 .stats-list-left h2 {
@@ -839,8 +845,9 @@ h4 {
 }
 
 .stats-list-right {
-    flex: 1 1 45%;
+    flex: 1 1 50%;
     text-align: center;
+    padding-left: 15px;
 }
 
 .checklist {
@@ -853,7 +860,7 @@ h4 {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
 .checklist img {
@@ -1507,6 +1514,21 @@ h4 {
 
     color: #242424;
 
+}
+
+
+.stats-list-section-black {
+    background-color: #303030 !important;
+    color: #fff !important;
+    
+}
+
+.stats-list-section-black p{
+    color: #fff !important;
+}
+
+.stats-list-section-black h2{
+    color: #E8A844 !important;
 }
 
 #servi p {
