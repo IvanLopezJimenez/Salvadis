@@ -1557,6 +1557,16 @@ h4 {
     padding-right: 20px;
 }
 
+#cta-servicios {
+    position: relative;
+    background-image: url('../images/oficinas.png');
+    background-size: cover;
+    background-position: center;
+    padding: 80px 20px;
+    text-align: center;
+    color: white;
+}
+
 
 /* Contact */
 
@@ -1934,12 +1944,41 @@ h4 {
     .stats-container {
         flex-direction: column;
         text-align: center;
+        padding: 0px;
+        margin: 0px;
+    }
+    .stats-list-section{
+        padding: 20px;
+    }
+    .stats-list-left {
+        margin-left: 0px !important;
+        padding-right: 0px !important;
     }
 
     .stats-title h2 {
         text-align: center;
         padding: 0px;
+        margin: 0px;
     }
+    .stats-list-section-white{
+        flex-direction: column-reverse !important;
+    }
+
+    .stats-list-right-white{
+        margin: 0px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }    
+    .stats-list-right{
+        margin: 0px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+    
     .cards-grid {
         flex-direction: column;
         margin-top: 50px;
@@ -1980,7 +2019,9 @@ h4 {
     }
 
     /*Sistema de trabajo */
-
+    #texto-seo{
+        padding: 20px 20px !important;
+    }
     .timeline::before {
         left: 47px;
     }
