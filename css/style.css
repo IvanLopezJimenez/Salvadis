@@ -623,7 +623,7 @@ h4 {
 .carousel-questions {
     position: relative;
     overflow: hidden;
-    background-image: url('../images/background_questions.jpg');
+    background-image: url('../images/background_questions.png');
     background-size: cover;
     background-position: center;
     height: 150px;
@@ -1442,20 +1442,20 @@ h4 {
 }
 
 
-/* ------------------ SERVICIOS --------------- */
+/* --------------------------- SERVICIOS ----------------------------- */
 
 
 .galeria-port{
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    max-width: 900px;
+    max-width: 1100px;
     margin: 0 auto;
 }
 
 .imagen-port{
     width: 30%;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
     overflow: hidden;
     position: relative;
     cursor: pointer;
@@ -1478,10 +1478,11 @@ h4 {
     background: rgba(255, 166, 0, 0.7);
     transition: transform .5s;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: end;
+    align-items: flex-start; /* Alinea a la izquierda */
     flex-direction: column;
-    padding: 15px;
+    padding: 30px;
+    text-align: left; /* Alinea el texto a la izquierda */
 
 }
 
@@ -1497,7 +1498,7 @@ h4 {
 
     font-weight: bold;
 
-    font-size: 20px;
+    font-size: 1.5rem;
 
 
 }
@@ -1508,14 +1509,25 @@ h4 {
 
 }
 
-.head-service {
-
-    margin: 0px 17vw;
-
-    color: #242424;
-
+.stats-list-content-services {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1300px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    height: auto;
 }
 
+.stats-list-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
 
 .stats-list-section-black {
     background-color: #303030 !important;
@@ -1549,12 +1561,26 @@ h4 {
 .stats-list-left-white {
     flex: 1 1 50%;
     padding-left: 20px;
+    min-width: 300px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .stats-list-right-white{
     flex: 1 1 50%;
     text-align: center;
     padding-right: 20px;
+    min-width: 300px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.stats-list-left, 
+.stats-list-right {
+  flex: 1 1 50%;
+  min-width: 300px; /* Permite que rompa antes */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 #cta-servicios {
@@ -1947,6 +1973,7 @@ h4 {
         padding: 0px;
         margin: 0px;
     }
+    
     .stats-list-section{
         padding: 20px;
     }
@@ -1960,8 +1987,13 @@ h4 {
         padding: 0px;
         margin: 0px;
     }
-    .stats-list-section-white{
+    .stats-list-content-services{
         flex-direction: column-reverse !important;
+        flex: 1 1 100%;
+        min-width: auto;
+    }
+    .stats-list-content{
+        flex-direction: column;
     }
 
     .stats-list-right-white{
@@ -1977,6 +2009,17 @@ h4 {
         margin-bottom: 20px;
         padding-left: 0px !important;
         padding-right: 0px !important;
+    }
+
+
+    .stats-list-left,
+    .stats-list-right {
+        flex: 1 1 100%;
+        min-width: auto;
+    }
+
+    .stats-list-left-white{
+        padding-left: 0px !important;
     }
     
     .cards-grid {
@@ -2039,46 +2082,12 @@ h4 {
 
     /* Service */
 
-    .services{
-
-        width: 100%;
-
-        height: 400px;
-
-        background: -webkit-linear-gradient(to right, #303030, hsla(60, 2%, 25%, 0.664)), url(../images/servicios-movil.png) !important;
-
-        background: linear-gradient(to right, hsla(40, 8%, 16%, 0.459), hsla(48, 6%, 15%, 0.664)), url(../images/servicios-movil.png) !important;
-
-    }
-
     .servicios-portafolio {
-
         display: none;
-
     }
 
     .galeria-index{
-
         display: none;
-
-    }
-
-    .servici-l {
-
-        padding-right: 0vw;
-
-    }
-
-    .servici-r {
-
-        padding-left: 5vw;
-
-    }
-
-    .servi h1{
-
-        font-size: 30px;
-
     }
 
     /* Contact */
