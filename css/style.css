@@ -187,6 +187,8 @@ h4 {
     padding: 10px 20px;
     color: #303030 !important;
     transition: color 0.3s ease-in-out;
+    white-space: normal; /* Permite que el texto largo se ajuste en varias líneas */
+    text-align: left;
 }
 
 /* Ajustar espaciado en el dropdown */
@@ -211,6 +213,15 @@ h4 {
   position: absolute; /* Este sigue funcionando en desktop */
 }
 
+.navbar-nav li.dropdown .dropdown-menu {
+  left: 0;          /* Alinea el menú con el inicio del toggle */
+  right: auto;       /* Asegura que no quede forzado a la derecha */
+  top: 100%;         /* Lo coloca justo debajo del enlace */
+  transform: none;   /* Evita desplazamientos */
+  text-align: left;  /* Texto alineado a la izquierda */
+  min-width: 220px;  /* Asegura que no se colapse con textos largos */
+}
+
 .btn:active{
 
     background:transparent;
@@ -232,8 +243,6 @@ h4 {
 .icon-bar{
 
     color: transparent !important;
-
-
 
 }
 /* Hero: Cubre toda la pantalla */
