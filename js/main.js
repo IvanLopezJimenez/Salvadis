@@ -5,6 +5,8 @@ $(document).ready(function () {
     })
 });
 
+
+
 document.addEventListener("DOMContentLoaded", function () {
     const dropdowns = document.querySelectorAll(".navbar-nav .dropdown");
 
@@ -112,6 +114,32 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js">
     AOS.init();
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const slides = document.querySelector(".slides");
+  const slideImages = document.querySelectorAll(".slides img");
+  const prevBtn = document.querySelector(".prev");
+  const nextBtn = document.querySelector(".next");
+  
+  if (!slides || slideImages.length === 0) return;
+
+  let index = 0;
+  const totalSlides = slideImages.length;
+
+  function showSlide(n) {
+    index = (n + totalSlides) % totalSlides;
+    slides.style.transform = `translateX(-${index * 100}%)`;
+  }
+
+  prevBtn.addEventListener("click", () => showSlide(index - 1));
+  nextBtn.addEventListener("click", () => showSlide(index + 1));
+
+  // Cambio automático cada 5 segundos
+  setInterval(() => {
+    showSlide(index + 1);
+  }, 5000);
+});
 
 
 
