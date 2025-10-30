@@ -1668,23 +1668,13 @@ h4 {
 }
 
 /* Flechas */
-.slider button {
+.slider > .button {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(232, 168, 68, 0.8);
-  border: none;
-  color: white;
-  font-size: 2rem;
   cursor: pointer;
-  padding: 10px 15px;
-  border-radius: 50%;
-  transition: background 0.3s ease;
   z-index: 2;
-}
-
-.slider button:hover {
-  background: rgba(232, 168, 68, 1);
+  width: 5%;
 }
 
 .prev { left: 15px; }
