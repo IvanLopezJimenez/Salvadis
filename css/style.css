@@ -1606,7 +1606,7 @@ h4 {
 
 .text-slider-section {
   background-color: #fff;
-  padding: 80px 20px;
+  padding: 80px 60px;
 }
 
 .text-slider-content {
@@ -1616,6 +1616,8 @@ h4 {
   justify-content: space-between;
   max-width: 1300px;
   margin: 0 auto;
+  padding-left: 60px;
+  padding-right: 60px;
   gap: 40px;
 }
 
@@ -1623,6 +1625,7 @@ h4 {
 .text-column {
   flex: 1 1 45%;
   color: #303030;
+  
 }
 
 .text-column h3 {
@@ -1680,6 +1683,76 @@ h4 {
 .prev { left: 15px; }
 .next { right: 15px; }
 
+.stats-list-section-orange {
+    background-color: #feddb6 !important;
+    color: #303030 !important;
+    
+}
+
+.stats-list-section-orange p{
+    color: #303030 !important;
+    font-size: 1rem !important;
+}
+
+.stats-list-section-orange h2{
+    color: #303030 !important;
+}
+/* Ventajas */
+#cards-section-white {
+    background-color: #fff;
+}
+#cards-section-white h2 {
+    color: #303030;
+}
+#cards-section-white h4{
+    font-size: 1.2rem;
+}
+
+#cards-section-white img{
+    width: 15%;
+}
+.ventaja-logistica{
+    flex: 1 1 calc(22.222% - 10px);
+    position: relative;
+    padding: 30px 20px 0px;
+    border-radius: 12px;
+    overflow: hidden;
+    color: #fff !important; 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: transform 0.3s ease;
+    background-color: #fff;
+
+}
+
+.ventaja-logistica::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: 1;
+    transition: background 0.3s ease;
+}
+
+.ventaja-logistica:hover {
+    transform: translateY(-5px);
+}
+.ventaja-logistica p , .mvv li p{
+    color: #242424;
+}
+.ventaja-logistica h4{
+    font-size: 3rem;
+}
+.ventaja-logistica span {
+    display: inline-block;
+}
+.ventaja-logistica img {
+    width: 100px !important;
+    height: auto !important;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
 
 
 
@@ -2033,8 +2106,11 @@ h4 {
         font-size: 1.8rem;
         line-height: 1.2;
     }
-    .hero h2 {
-        font-size: 1rem;
+    h2 {
+        font-size: 1.5rem !important;
+    }
+    h3 {
+        font-size: 1rem !important;
     }
     .btn-hero {
         padding: 10px 20px;
@@ -2165,8 +2241,24 @@ h4 {
     }
 
     /*Sistema de trabajo */
+    .hero-small h1 {
+        font-size: 2.5rem;
+        margin-left: -13px;
+    }
+    .breadcrumbs {
+        margin-left: -13px;
+
+    }
+    
     #texto-seo{
         padding: 20px 20px !important;
+    }
+    #texto-seo p{
+        text-align:left;
+    }
+
+    #texto-seo h2{
+        text-align:left;
     }
     .timeline::before {
         left: 47px;
@@ -2183,6 +2275,13 @@ h4 {
         left: 8px;
     }
 
+    .process-section h2 {
+        text-align: left;
+    }
+    .process-list {
+        margin-left: -30px;
+    }
+
     /* Service */
 
     .servicios-portafolio {
@@ -2191,6 +2290,16 @@ h4 {
 
     .galeria-index{
         display: none;
+    }
+
+    /* Almacenes */
+    .text-slider-content {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .text-slider-section {
+        padding: 30px 30px;
     }
 
     /* Contact */
