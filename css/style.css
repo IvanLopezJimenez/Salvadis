@@ -1754,6 +1754,16 @@ h4 {
     margin-bottom: 40px;
 }
 
+#cta-almacenes {
+    position: relative;
+    background-image: url('../images/almacenes/industrial-logistics-coordination.webp');
+    background-size: cover;
+    background-position: center;
+    padding: 80px 20px;
+    text-align: center;
+    color: white;
+}
+
 
 
 /* Contact */
