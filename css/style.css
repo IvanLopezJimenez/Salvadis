@@ -1765,8 +1765,16 @@ h4 {
     color: white;
 }
 
+/* --------------------------- INDUSTRIAS ----------------------------- */
 
+.servicios-portafolio h2{
+    color: #303030;
+    text-align: center;
+}
 
+#ind-black h2{
+    color: white !important;
+}
 /* Contact */
 
 .contact{
