@@ -1010,6 +1010,9 @@ h4 {
     flex-wrap: wrap;
     justify-content: space-between;
 }
+.copy{
+    text-align: right;
+}
 
 
 /*----SLIDEANIME----*/
@@ -1865,6 +1868,16 @@ h4 {
   margin: 0;
 }
 
+#cta-esg {
+    position: relative;
+    background-image: url('../images/cta-esg.webp');
+    background-size: cover;
+    background-position: center;
+    padding: 80px 20px;
+    text-align: center;
+    color: white;
+}
+
 
 
 /* Contact */
@@ -2168,6 +2181,9 @@ h4 {
 
     .slides img {
         height: 300px;
+    }
+    .copy{
+    text-align: left;
     }
 }
 

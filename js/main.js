@@ -5,6 +5,15 @@ $(document).ready(function () {
     })
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+  const yearSpan = document.getElementById("year");
+  if (yearSpan) {
+    yearSpan.textContent = new Date().getFullYear();
+  } else {
+    console.warn("No se encontró el elemento #year en el DOM");
+  }
+});
+
 
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -140,6 +149,5 @@ document.addEventListener("DOMContentLoaded", () => {
     showSlide(index + 1);
   }, 5000);
 });
-
 
 
