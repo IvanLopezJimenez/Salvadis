@@ -882,7 +882,7 @@ h4 {
 /*Call to action*/
 #cta-home {
     position: relative;
-    background-image: url('../images/fondo-preguntas.jpg');
+    background-image: url('../images/cta-home.webp');
     background-size: cover;
     background-position: center;
     padding: 80px 20px;
