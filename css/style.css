@@ -484,7 +484,7 @@ h4 {
 
 /* SALVADIS EN CIFRAS */
 .stats-section {
-    background-color: #feddb6; /* Fondo similar al de la imagen */
+    background-color: #feddb6;
     padding: 60px 20px;
     display: flex;
     align-items: flex-start !important; /* Alinea la primera columna arriba */
@@ -1878,7 +1878,51 @@ h4 {
     color: white;
 }
 
+/* --------------------------- ESG ----------------------------- */
 
+.stats-section-contact {
+    background-color: #303030;
+    padding: 60px 20px;
+    display: flex;
+    align-items: flex-start !important; /* Alinea la primera columna arriba */
+    justify-content: center;
+    gap: 10px; /* Reduce la distancia entre las columnas */
+}
+.stats-title-contact {
+    flex: 1;
+    margin-right: 0;
+    text-align: left;
+}
+.stats-title-contact h2 {
+    font-size: 2.5rem;
+    color: #fff;
+    font-weight: 700;
+    text-align: left;
+    padding-right: 50px;
+}
+.stats-title-contact h2 em {
+    font-family: 'Parisienne', cursive;
+    font-size: 4rem;
+    color: #E8A844; /* Color del texto en cursiva */
+}
+.stats-content-contact {
+    flex: 2;
+    text-align: left;
+}
+
+.stats-content-contact h3 {
+    color: #fff;
+}
+
+.stats-content-contact p {
+    margin-top: 10px;
+    color: #fff;
+    font-size: 1rem;
+}
+.stats-content-contact li {
+    color: #fff;
+    font-size: 0.9rem;
+}
 
 /* Contact */
 
