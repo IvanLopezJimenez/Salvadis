@@ -1878,10 +1878,10 @@ h4 {
     color: white;
 }
 
-/* --------------------------- ESG ----------------------------- */
+/* --------------------------- CONTACT ----------------------------- */
 
 .stats-section-contact {
-    background-color: #303030;
+    background-color: #fff;
     padding: 60px 20px;
     display: flex;
     align-items: flex-start !important; /* Alinea la primera columna arriba */
@@ -1895,7 +1895,7 @@ h4 {
 }
 .stats-title-contact h2 {
     font-size: 2.5rem;
-    color: #fff;
+    color: #303030;
     font-weight: 700;
     text-align: left;
     padding-right: 50px;
@@ -1911,17 +1911,47 @@ h4 {
 }
 
 .stats-content-contact h3 {
-    color: #fff;
+    color: #303030;
 }
 
 .stats-content-contact p {
     margin-top: 10px;
-    color: #fff;
+    color: #303030;
     font-size: 1rem;
 }
 .stats-content-contact li {
-    color: #fff;
+    color: #303030;
     font-size: 0.9rem;
+}
+
+#black-text-img{
+    background-color:#fff;
+}
+
+#black-text-img h2 , #black-text-img p{
+    color: #242424;
+}
+
+.checklist-contact {
+  list-style: none;
+  padding: 0;
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px 30px; /* espacio entre filas y columnas */
+}
+
+.checklist-contact li {
+  display: flex;
+  align-items: flex-start;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.checklist-contact img {
+  width: 24px;
+  margin-right: 10px;
+  flex-shrink: 0;
 }
 
 /* Contact */
