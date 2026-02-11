@@ -81,12 +81,12 @@ $(document).ready(function () {
 });
 
 window.onload = function() {
-    // Retraso para esperar que cargue la página y permitir autoplay
     setTimeout(function() {
         var iframe = document.getElementById('hero-video');
+        if (!iframe) return; // ← evita error
         var src = iframe.src;
-        iframe.src = src + "&autoplay=1";  // Añadir autoplay después de un retraso
-    }, 1000);  // 1 segundo de retraso
+        iframe.src = src + "&autoplay=1";
+    }, 1000);
 };
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -121,8 +121,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     setInterval(showNextSlide, 4000); // cambia cada 4 segundos
 });
-src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js">
-    AOS.init();
+//src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js">
+    //AOS.init();
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -150,4 +150,24 @@ document.addEventListener("DOMContentLoaded", () => {
   }, 5000);
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  const faqItems = document.querySelectorAll(".faq-item");
+
+  if (!faqItems.length) return;
+
+  faqItems.forEach(item => {
+    const question = item.querySelector(".faq-question");
+
+    if (!question) return;
+
+    question.addEventListener("click", () => {
+
+      faqItems.forEach(el => {
+        if (el !== item) el.classList.remove("active");
+      });
+
+      item.classList.toggle("active");
+    });
+  });
+});
 

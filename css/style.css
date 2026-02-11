@@ -1926,7 +1926,7 @@ h4 {
 
 /* ======== SECCIÓN CONTACTO GENERAL ======== */
 #contacto {
-  background-color: #303030;
+  background-color: #fff;
   color: #303030;
   padding: 80px 20px;
 }
@@ -1939,7 +1939,7 @@ h4 {
 .contacto-header h2 {
   font-size: 2.5rem;
   margin-bottom: 10px;
-  color: #fff;
+  color: #303030;
 }
 
 .contacto-header h3 {
@@ -1985,13 +1985,15 @@ h4 {
   margin-right: 10px;
   vertical-align: middle;
 }
-.direccion{
-    flex: 1 1 calc(33.333% - 20px);
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    text-align: left;
+.direccion-line {
+  display: flex;
+  align-items: flex-start; /* icono alineado arriba */
+  gap: 10px;
+  margin-left: 15px;
+}
+
+.direccion-line span {
+  display: block;
 }
 
 /* === GRID DE CONTACTOS === */
@@ -2006,8 +2008,6 @@ h4 {
   flex: 1 1 calc(33.333% - 20px);
   background-color: #fff;
   padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   text-align: left;
 }
 
@@ -2059,6 +2059,93 @@ h4 {
     padding: 80px 20px;
     text-align: center;
     color: white;
+}
+
+/* ----------------------------- FAQ SECTION ---------------------------- */
+
+.faq-section {
+  padding: 80px 20px;
+  background-color: #f8f8f8;
+}
+
+.faq-container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.faq-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.faq-header h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #303030;
+}
+
+.faq-header h3 {
+  font-size: 1rem;
+  font-weight: normal;
+  color: #E8A844;
+}
+
+/* ======== ACORDEÓN ======== */
+
+.faq-item {
+  border-bottom: 1px solid #ddd;
+}
+
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  outline: none;
+  text-align: left;
+  padding: 20px 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #303030;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.faq-question:hover {
+  color: #E8A844;
+}
+
+.faq-icon {
+  font-size: 1.5rem;
+  color: #E8A844;
+  transition: transform 0.3s ease;
+}
+
+/* Respuesta */
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.faq-answer p {
+  padding-bottom: 20px;
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Activo */
+
+.faq-item.active .faq-answer {
+  max-height: 300px;
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(45deg); /* convierte + en X */
 }
 
 
