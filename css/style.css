@@ -2064,8 +2064,9 @@ h4 {
 /* ----------------------------- FAQ SECTION ---------------------------- */
 
 .faq-section {
-  padding: 80px 20px;
-  background-color: #f8f8f8;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #fff;
 }
 
 .faq-container {
@@ -2075,7 +2076,6 @@ h4 {
 
 .faq-header {
   text-align: center;
-  margin-bottom: 50px;
 }
 
 .faq-header h2 {
@@ -2088,6 +2088,17 @@ h4 {
   font-size: 1rem;
   font-weight: normal;
   color: #E8A844;
+}
+
+.faq-container h4 {
+  font-size: 1rem;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  color: #303030;
+}
+
+.faq-heading {
+  margin: 0; /* 🔹 elimina el margen automático del h3 */
 }
 
 /* ======== ACORDEÓN ======== */
@@ -2137,6 +2148,9 @@ h4 {
   font-size: 0.95rem;
   line-height: 1.6;
 }
+.faq-answer a {
+    color: #E8A844;
+}
 
 /* Activo */
 
@@ -2148,69 +2162,48 @@ h4 {
   transform: rotate(45deg); /* convierte + en X */
 }
 
+/* ---------------------------- LEGAL PAGINAS ----------------------- */
 
-/* Aviso Legal */
-
-.legal{
-
-    width: 100%;
-
-    height: 600px;
-
-    background: #303030;
-
-    /* fallback for old browsers */
-
-    background: -webkit-linear-gradient(to right, #303030, hsla(60, 2%, 25%, 0.664)), url(../images/legal.jpg);
-
-    /* Chrome 10-25, Safari 5.1-6 */
-
-    background: linear-gradient(to right, hsla(40, 8%, 16%, 0.459), hsla(48, 6%, 15%, 0.664)), url(../images/legal.jpg);
-
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-    background-size: cover;
-
-    background-attachment: fixed;
-
-    position: relative;
-
+.legal-section {
+  background-color: #ffffff;
+  padding-left: 20px;
+  color: #303030;
 }
 
-#legal {
-
-    margin: 0% 10%;
-
+.legal-container {
+  max-width: 1300px;
+  margin: 0 auto;
 }
 
-#legal h2 {
+/* Contenido */
 
-    font-size: 30px;
-
+.legal-content {
+  max-width: 900px; /* mejor legibilidad */
 }
 
-#legal li {
-
-    font-size: 30px;
-
-    color: #242424;
-
+.legal-content h2 {
+  font-size: 1.4rem;
+  margin-top: 40px;
+  margin-bottom: 15px;
+  color: #303030;
 }
 
-#legal strong {
-
-    color: #242424;
-
+.legal-content p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: 15px;
+  color: #555;
 }
 
-#legal ul li{
-
-    color: #818181;
-
-    font-size: 15px;
-
+.legal-content ul {
+  padding-left: 20px;
+  margin-bottom: 20px;
 }
 
+.legal-content li {
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
 
 
 @keyframes slide {
