@@ -2204,6 +2204,52 @@ h4 {
   margin-bottom: 8px;
   font-size: 0.95rem;
 }
+.legal-content a {
+  color: #E8A844;
+}
+
+/* ======== TABLA COOKIES ======== */
+
+.tabla-cookies-wrapper {
+  overflow-x: auto; /* responsive en móvil */
+  margin-top: 20px;
+}
+
+.tabla-cookies {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8rem;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Cabecera */
+
+.tabla-cookies thead {
+  background-color: #E8A844;
+  color: #fff;
+}
+
+.tabla-cookies th {
+  text-align: left;
+  padding: 15px;
+  font-weight: 600;
+}
+
+/* Cuerpo */
+
+.tabla-cookies td {
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+  color: #555;
+}
+
+/* Última fila sin borde */
+
+.tabla-cookies tbody tr:last-child td {
+  border-bottom: none;
+}
 
 
 @keyframes slide {
@@ -2584,80 +2630,10 @@ h4 {
         padding: 30px 30px;
     }
 
-    /* Contact */
-
-    .contact{
-
-        width: 100%;
-
-        height: 400px;
-
-        background: -webkit-linear-gradient(to right, #303030, hsla(60, 2%, 25%, 0.664)), url(../images/contact-us-movil.png) !important;
-
-        background: linear-gradient(to right, hsla(40, 8%, 16%, 0.459), hsla(48, 6%, 15%, 0.664)), url(../images/contact-us-movil.png) !important;
-
-    }
-
-    .direccion {
-
-        margin-left: 10px;
-
-    }
-
-    /* Legal */
-
-    .legal{
-
-        width: 100%;
-
-        height: 400px;
-
-        background: -webkit-linear-gradient(to right, #303030, hsla(60, 2%, 25%, 0.664)), url(../images/legal-movil.png) !important;
-
-        background: linear-gradient(to right, hsla(40, 8%, 16%, 0.459), hsla(48, 6%, 15%, 0.664)), url(../images/legal-movil.png) !important;
-
-    }
-
-    #legal {
-
-        margin: 0% !important;
-
-    }
-
-    /* Almacenes */
-
-    .almacen{
-
-        width: 100%;
-
-        height: 400px;
-
-        background: -webkit-linear-gradient(to right, #303030, hsla(60, 2%, 25%, 0.664)), url(../images/almacen-movil.png) !important;
-
-        background: linear-gradient(to right, hsla(40, 8%, 16%, 0.459), hsla(48, 6%, 15%, 0.664)), url(../images/almacen-movil.png) !important;
-
-    }
-
-    /*Footer*/
-
-    .social {     /*logos redes sociales*/
-
-        width: 11%;
-
-        padding: 0;
-
-        margin: 0;
-
-    }
-
-    .social-insta {
-
-        width: 12%;
-
-        padding: 0;
-
-        margin: 0;
-
+    .tabla-cookies th,
+    .tabla-cookies td {
+        padding: 12px;
+        font-size: 0.9rem;
     }
 
 }
