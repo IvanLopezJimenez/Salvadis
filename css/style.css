@@ -808,6 +808,52 @@ h4 {
     color: #505050;
     font-size: 1rem;
 }
+/*PRESENCIA INTERNACIONAL*/
+.map-section {
+    position: relative;
+    background-color: #fff;
+    background-position: center;
+    padding: 80px;
+    color: #303030;
+}
+.map-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1300px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    height: auto;
+}
+.map-left {
+    flex: 1 1 50%;
+    margin-left: -15px;
+    padding-right: 15px;
+}
+.map-left h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #303030;
+}
+.map-left h2 em {
+    font-family: 'Parisienne', cursive;
+    font-size: 4rem;
+    color: #E8A844; /* Color del texto en cursiva */
+}
+.map-left p {
+    font-size: 1rem;
+    color: #303030;
+}
+.map-right {
+    flex: 1 1 50%;
+    text-align: center;
+    padding-left: 30px;
+    margin-right: -175px;
+}
+
 /* Economia Circular */
 .stats-list-section {
     position: relative;
@@ -1599,7 +1645,7 @@ h4 {
 
 #cta-servicios {
     position: relative;
-    background-image: url('../images/oficinas.png');
+    background-image: url('../images/oficinas-escritorios.webp');
     background-size: cover;
     background-position: center;
     padding: 80px 20px;
@@ -2354,6 +2400,21 @@ h4 {
     width: 40px;
     height: 40px;
     }
+    /* Mapa Internaional */
+    .map-left {
+    margin-right: -100px;
+    }
+    .map-right {
+    margin-left: 30px;
+    margin-right: -100px;
+    }
+    /* Economia Circular */
+    .stats-list-right {
+    margin-left: -20px;
+    }
+    .stats-list-right img {
+    width: 80%;
+    }
 
 }
 
@@ -2395,6 +2456,7 @@ h4 {
     .contacto-item {
         width: 100%;
     }
+
 }
 
 
