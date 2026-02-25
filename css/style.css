@@ -2414,11 +2414,18 @@ h4 {
     height: 40px;
     }
     /* Mapa Internaional */
+    .map-section {
+    padding: 30px;
+    }
     .map-left {
     margin-right: -100px;
     }
     .map-right {
     margin-left: 30px;
+    margin-right: -100px;
+    }
+    .map-right-bout-us {
+    padding-left: 0px;
     margin-right: -100px;
     }
     /* Economia Circular */
