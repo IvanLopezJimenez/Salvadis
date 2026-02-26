@@ -860,11 +860,21 @@ h4 {
     padding-left: 30px;
     margin-right: -175px;
 }
-.map-right-bout-us {
+.map-right-about-us {
     flex: 1 1 50%;
     text-align: center;
     padding-left: 30px;
     margin-right: -155px;
+}
+.map-right img {
+    width: 45%;
+    max-width: 500px;
+    height: auto;
+}
+.map-right-about-us img {
+    width: 50%;
+    max-width: 500px;
+    height: auto;
 }
 
 /* Economia Circular */
@@ -1186,15 +1196,40 @@ h4 {
 .breadcrumbs li:last-child::after {
   content: "";
 }
-
-
-
-#white-text-img{
-    background-color:#fff;
+.stats-list-section-about {
+    background-color: #fff !important;
+    color: #303030 !important;
+    
 }
 
-#white-text-img h2 , #white-text-img p{
-    color: #242424;
+.stats-list-section-about p{
+    color: #303030 !important;
+    font-size: 1rem;
+}
+
+.stats-list-section-about h2{
+    color: #303030 !important;
+}
+.stats-list-left-about{
+    padding-right: 20px;
+    margin-left: -20px;
+}
+.stats-list-right-about{
+    padding-left: 100px;
+}
+
+.stats-list-left-about, 
+.stats-list-right-about {
+  flex: 1 1 50%;
+  min-width: 300px; /* Permite que rompa antes */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+.stats-list-right-about img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    
 }
 
 
@@ -1517,69 +1552,75 @@ h4 {
 /* --------------------------- SERVICIOS ----------------------------- */
 
 
-.galeria-port{
+.galeria-port {
     display: flex;
-    justify-content: space-evenly;
     flex-wrap: wrap;
+    gap: 30px;
     max-width: 1100px;
     margin: 0 auto;
 }
 
-.imagen-port{
-    width: 30%;
-    margin-bottom: 30px;
-    overflow: hidden;
+.imagen-port {
+    flex: 0 0 calc(33.333% - 20px);
     position: relative;
-    cursor: pointer;
-    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
 }
 
-.imagen-port > img{
+.imagen-port img {
     width: 100%;
-    height: 100%;
+    height: 300px;
     object-fit: cover;
-    display: block;
+    transition: transform .6s ease;
 }
 
-.hover-galeria{
+/* Overlay base */
+.card-overlay {
     position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    transform: scale(0);
-    background: rgba(255, 166, 0, 0.7);
-    transition: transform .5s;
+    inset: 0;
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-start; /* Alinea a la izquierda */
     flex-direction: column;
-    padding: 30px;
-    text-align: left; /* Alinea el texto a la izquierda */
-
+    justify-content: space-between; /* 🔥 clave */
+    padding: 25px;
+    background: linear-gradient(to top, rgba(0,0,0,0.6), transparent 60%);
+    color: #fff;
 }
 
-.hover-galeria img{
-
-    width: 50px;
-
+/* Título siempre arriba */
+.title-card {
+    margin: 0;
+    font-size: 1.4rem;
+    font-weight: 600;
 }
 
-.hover-galeria p.title-card{
-    color: #303030;
-    font-weight: bold;
-    font-size: 1.5rem;
-    margin: 0 0 10px 0;
-}
-.hover-galeria p.p-card{
-    color: #303030;
-    font-size: 1rem;
-    opacity: 0.9;
+/* Hover overlay completo */
+.hover-content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all .4s ease;
 }
 
-.imagen-port:hover .hover-galeria{
+/* Texto inferior */
+.p-card {
+    font-weight: 500;
+    color: #fff;
+}
 
-    transform: scale(1);
+/* Hover efecto */
+.imagen-port:hover img {
+    transform: scale(1.05);
+}
 
+.imagen-port:hover .card-overlay {
+    background: rgba(232,168,68,0.95);
+}
+
+.imagen-port:hover .hover-content {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .stats-list-content-services {
@@ -1643,6 +1684,7 @@ h4 {
     flex: 1 1 50%;
     text-align: center;
     padding-right: 20px;
+    margin-left: -20px;
     min-width: 300px;
     word-wrap: break-word;
     overflow-wrap: break-word;
@@ -2403,6 +2445,16 @@ h4 {
     .timeline-item.right::after {
     left: 8px;
     }
+    .stats-list-right{
+        text-align: left;
+    }
+    .stats-list-left-about{
+        padding-right: 0px;
+        margin-left: 0px;
+    }
+    .stats-list-right-about{
+        padding-left: 0px;
+    }
 
     /*Proceso de colaboración */
 
@@ -2415,25 +2467,51 @@ h4 {
     }
     /* Mapa Internaional */
     .map-section {
-    padding: 30px;
+    padding: 50px 20px;
     }
-    .map-left {
-    margin-right: -100px;
+
+    .map-content {
+    flex-direction: column;      /* 🔹 texto arriba, mapa abajo */
+    align-items: center;
     }
+
+    .map-left,
     .map-right {
-    margin-left: 30px;
-    margin-right: -100px;
+    flex: 1 1 100%;
+    width: 100%;
+    margin: 0;                  /* 🔹 eliminamos márgenes negativos */
+    padding: 0;
     }
-    .map-right-bout-us {
-    padding-left: 0px;
-    margin-right: -100px;
+
+    .map-right {
+    margin-top: 40px;           /* espacio natural entre texto y mapa */
     }
-    /* Economia Circular */
-    .stats-list-right {
-    margin-left: -20px;
+
+    .map-right img {
+    width: 80%;                 /* más controlado en tablet */
+    max-width: 500px;
+    height: auto;
     }
-    .stats-list-right img {
-    width: 80%;
+    .map-section-about-us {
+        position: relative;
+        background-color: #feddb6;
+        background-position: center;
+        padding: 50px 20px;
+        color: #303030;
+    }
+    .map-right-about-us img {
+        width: 80%;                 /* más controlado en tablet */
+        max-width: 500px;
+        height: auto;
+    }
+    .map-right-about-us {
+        flex: 1 1 100%;
+        width: 100%;
+        margin: 0;                  /* 🔹 eliminamos márgenes negativos */
+        padding: 0;
+    }
+    .map-right-about-us {
+        margin-top: 40px;           /* espacio natural entre texto y mapa */
     }
 
 }
@@ -2447,6 +2525,9 @@ h4 {
 
     .timeline-item.right::after {
         left: 7px;
+    }
+    .imagen-port {
+        flex: 0 0 calc(50% - 15px);
     }
     /* Almacenes */
     .text-slider-content {
@@ -2587,11 +2668,12 @@ h4 {
         margin-bottom: 20px;
         padding-left: 0px !important;
         padding-right: 0px !important;
-    }    
+    }     
     .stats-list-right{
         margin: 0px;
         margin-top: 20px;
         margin-bottom: 20px;
+        text-align: left;
         padding-left: 0px !important;
         padding-right: 0px !important;
     }
@@ -2601,6 +2683,13 @@ h4 {
     .stats-list-right {
         flex: 1 1 100%;
         min-width: auto;
+    }
+    .stats-list-right-about img {
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+        margin-top: 20px;
+        
     }
 
     .stats-list-left-white{
