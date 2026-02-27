@@ -1078,6 +1078,8 @@ h4 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 .copy{
     text-align: right;
@@ -1309,13 +1311,13 @@ h4 {
     padding: 30px 20px;
     border-radius: 12px;
     overflow: hidden;
-    color: #fff; 
+    color: #242424; 
     font-size: 16px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     transition: transform 0.3s ease;
-    background-color: #242424;
+    background-color: #E8A844;
     margin: 30px;
 
 }
@@ -1551,14 +1553,19 @@ h4 {
 
 /* --------------------------- SERVICIOS ----------------------------- */
 
-
+.servicios-portafolio h2 {
+  color: #303030;
+  text-align: center;
+}
 .galeria-port {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
     max-width: 1100px;
     margin: 0 auto;
+    margin-top: -40px;
 }
+
 
 .imagen-port {
     flex: 0 0 calc(33.333% - 20px);
@@ -1569,7 +1576,7 @@ h4 {
 
 .imagen-port img {
     width: 100%;
-    height: 300px;
+    height: 240px;
     object-fit: cover;
     transition: transform .6s ease;
 }
@@ -1581,8 +1588,8 @@ h4 {
     display: flex;
     flex-direction: column;
     justify-content: space-between; /* 🔥 clave */
-    padding: 25px;
-    background: linear-gradient(to top, rgba(0,0,0,0.6), transparent 60%);
+    padding: 18px;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.6), transparent 60%);
     color: #fff;
 }
 
@@ -1591,6 +1598,8 @@ h4 {
     margin: 0;
     font-size: 1.4rem;
     font-weight: 600;
+    line-height: 1.15;
+    
 }
 
 /* Hover overlay completo */
@@ -1602,12 +1611,17 @@ h4 {
     transform: translateY(20px);
     transition: all .4s ease;
 }
-
-/* Texto inferior */
-.p-card {
-    font-weight: 500;
-    color: #fff;
+.card-overlay:hover {
+  text-decoration: none;
 }
+
+.card-overlay h3,
+.card-overlay p {
+  color: #fff;
+  text-decoration: none;
+}
+
+
 
 /* Hover efecto */
 .imagen-port:hover img {
@@ -1872,9 +1886,80 @@ h4 {
 
 /* --------------------------- INDUSTRIAS ----------------------------- */
 
-.servicios-portafolio h2{
-    color: #303030;
-    text-align: center;
+.industrias-section {
+  padding-bottom: 80px;
+  background: #fff;
+}
+.industrias-section h2 {
+  color: #303030;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.industrias-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center; /* 🔥 centra las 5 */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.industria-card {
+  flex: 0 0 calc(33.333% - 30px);
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.industria-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+/* Imagen arriba */
+.industria-img img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Parte inferior */
+.industria-content {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.industria-content h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  line-height: 1.2;
+  color: #303030;
+}
+
+.industria-content p {
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+  flex-grow: 1;
+  color: #555;
+}
+
+.btn-industria {
+  text-decoration: none;
+  font-weight: 600;
+  color: #E8A844;
+  transition: all .3s ease;
+}
+
+.btn-industria:hover {
+  color: #303030;
 }
 
 #ind-black h2{
@@ -2545,6 +2630,10 @@ h4 {
     .copy{
     text-align: left;
     }
+    /* Industrias */
+    .industria-card {
+        flex: 0 0 calc(50% - 20px);
+    }
     /* Contacto */
     .contacto-content {
     flex-direction: column;
@@ -2789,6 +2878,10 @@ h4 {
 
     .galeria-index{
         display: none;
+    }
+    /* Industrias */
+    .industria-card {
+        flex: 0 0 100%;
     }
 
     /* Almacenes */
