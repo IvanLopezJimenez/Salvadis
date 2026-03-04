@@ -2,13 +2,20 @@ html {
     font-size: 16px; /* Tamaño base */
 }
 body {
-    font-family: 'Work Sans', sans-serif;
-    line-height: 1.5;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    color: #303030;
 }
 
 h1, h2, h3, h4 {
     font-family: 'Poppins', sans-serif;
     
+}
+img {
+    border-radius: 8px !important;
+}
+strong{
+    font-weight: 600;
 }
 
 
@@ -23,36 +30,24 @@ h1 {
 }
 
 h2 {
-
     font-size: 2.5rem;
-
     color: #fff;
-
     font-weight: 600;
-
-    margin-bottom: 30px;
 
 }
 
 h3{
     font-size: 1rem;
-    margin-top: 10px;
     text-transform: uppercase;
     color: #E8A844;
     line-height: 1.5;
 }
 
 h4 {
-
     font-size: 19px;
-
     line-height: 1.375em;
-
     color: #303030;
-
     font-weight: 400;
-
-    margin-bottom: 30px;
 
 }
 /*Top bar*/
@@ -111,9 +106,8 @@ h4 {
     border: 0;
     font-size: 12px large !important;
     line-height: 1.42857143 !important;
-    letter-spacing: 2px;
     border-radius: 0;
-    font-family: "Work Sans", sans-serif;
+    font-family: 'Poppins', sans-serif;
     height: 70px;
 
 }
@@ -335,9 +329,9 @@ h4 {
 
 /* Evitar que el icono sea clickeable y evitar el subrayado */
 .btn-hero .material-symbols-outlined {
-    font-size: 1.5rem; /* Tamaño del icono */
-    transition: color 0.3s ease-in-out; /* Transición de color */
-    pointer-events: none; /* Evita que el icono sea clickeable */
+    font-size: 1.5rem;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+    pointer-events: none;
     text-decoration: none !important; /* Asegurar que el icono no se subraye */
 }
 
@@ -350,6 +344,7 @@ h4 {
 
 .btn-hero:hover .material-symbols-outlined {
     color: white; /* Cambia el color del icono en hover */
+    transform: translate(2px,-2px);
 }
 
 /* Botón circular con borde OSCURO y fondo transparente */
@@ -388,9 +383,10 @@ h4 {
 /* Evitar que el icono sea clickeable y evitar el subrayado */
 .btn-black .material-symbols-outlined {
     font-size: 1.5rem; /* Tamaño del icono */
-    transition: color 0.3s ease-in-out; /* Transición de color */
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
     pointer-events: none; /* Evita que el icono sea clickeable */
     text-decoration: none !important; /* Asegurar que el icono no se subraye */
+    
 }
 
 /* Efecto hover: cambia el color del botón y del icono */
@@ -402,6 +398,8 @@ h4 {
 
 .btn-black:hover .material-symbols-outlined {
     color: white; /* Cambia el color del icono en hover */
+    transform: translate(2px,-2px);
+
 }
 
 
@@ -432,17 +430,21 @@ h4 {
     color: #fff;
 
 }
-
+.texto-imagen {
+    padding: 20px;
+}
 .image-text-right img {
 
     width: 100%;
-    padding: 20px;
+    
+    border-radius: 8px;
     position: relative;
     display: inline-block;
     margin-left: auto;
     margin-right: auto;
 
 }
+
 
 .container-fluid {
 
@@ -549,13 +551,14 @@ h4 {
 }
 
 .stat {
-    text-align: left;
+    text-align: center;
 }
 
 .number {
     font-size: 2.5rem;
     font-weight: bold;
     color: #E8A844; /* Color principal de los números */
+    text-align: center !important;
 }
 
 .label {
@@ -576,12 +579,13 @@ h4 {
 .image-text-left {
     max-width: 1300px;
     margin: 0 auto;
+    padding: 20px;
 }
 
 /* Imagen */
 .text-left img {
-    width: 100%;
-    padding: 20px;
+    width: 85%;
+    border-radius: 8px;
     display: block;
     margin: auto;
 }
@@ -667,6 +671,8 @@ h4 {
     -webkit-text-fill-color: #fff;
     -webkit-text-stroke: 0.5px #303030;
     font-size: 40px;
+    margin-bottom: 0px !important;
+    margin-top: 0px !important;
 }
 /*Servicios*/
 
@@ -750,7 +756,7 @@ h4 {
     flex: 1 1 calc(22.222% - 20px);
     position: relative;
     padding: 30px 20px;
-    border-radius: 12px;
+    border-radius: 8px;
     overflow: hidden;
     color: white !important; 
     background-size: cover;
@@ -840,10 +846,15 @@ h4 {
     margin-left: -15px;
     padding-right: 15px;
 }
+.map-left h3 {
+    margin: 0px !important;
+    margin-bottom: -20px !important;
+}
 .map-left h2 {
     font-size: 2.5rem;
-    margin-bottom: 20px;
     color: #303030;
+    margin-top: 0px !important;
+    margin-bottom: 20px;
 }
 .map-left h2 em {
     font-family: 'Parisienne', cursive;
@@ -872,7 +883,7 @@ h4 {
     height: auto;
 }
 .map-right-about-us img {
-    width: 50%;
+    width: 55%;
     max-width: 500px;
     height: auto;
 }
@@ -1239,7 +1250,7 @@ h4 {
     flex: 1 1 calc(33.333% - 30px);
     position: relative;
     padding: 30px 20px;
-    border-radius: 12px;
+    border-radius: 8px;
     overflow: hidden;
     color: white !important; 
     background-size: cover;
@@ -1270,7 +1281,7 @@ h4 {
 }
 
 .mvv img{
-    width: 30%;
+    width: 25%;
 }
 
 .confian img{
@@ -1927,6 +1938,7 @@ h4 {
   height: 220px;
   object-fit: cover;
   display: block;
+  border-radius: 0px !important;
 }
 
 /* Parte inferior */
@@ -1977,6 +1989,46 @@ h4 {
 
 /* --------------------------- ESG ----------------------------- */
 
+.seo-section {
+    padding: 80px 20px;
+    background-color: #fff;
+}
+
+.seo-grid {
+    display: flex;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0;
+    align-items: flex-start;
+}
+
+/* Columna izquierda (más protagonista) */
+.seo-left {
+    flex: 1 1 50%;
+}
+
+.seo-left p {
+    font-size: 1.35rem;
+    line-height: 1.6;
+    font-weight: 500;
+    color: #303030;
+    text-align: left;
+}
+
+/* Columna derecha (más técnica / secundaria) */
+.seo-right {
+    flex: 1 1 50%;
+}
+.seo-left p,
+.seo-right p {
+  text-align: left !important;
+}
+
+.seo-right p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #555;
+}
 .cards-section-transparent {
     background-color: #fff;
     padding: 80px 20px;
@@ -2024,6 +2076,7 @@ h4 {
 
 .esg img{
     width: 30%;
+    max-height: 108;
 }
 
 .checklist-cards {
@@ -2629,6 +2682,15 @@ h4 {
     }
     .copy{
     text-align: left;
+    }
+    /* Texto SEO */
+    .seo-grid {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .seo-left p {
+        font-size: 1.2rem;
     }
     /* Industrias */
     .industria-card {
