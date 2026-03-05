@@ -171,3 +171,32 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  if (document.querySelector(".back-to-top")) return;
+
+  const backToTopButton = document.createElement("button");
+  backToTopButton.className = "back-to-top";
+  backToTopButton.type = "button";
+  backToTopButton.setAttribute("aria-label", "Volver arriba");
+  backToTopButton.innerHTML = '<span aria-hidden="true">&uarr;</span>';
+  document.body.appendChild(backToTopButton);
+
+  function toggleBackToTop() {
+    if (window.scrollY > 300) {
+      backToTopButton.classList.add("is-visible");
+    } else {
+      backToTopButton.classList.remove("is-visible");
+    }
+  }
+
+  backToTopButton.addEventListener("click", function () {
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    window.scrollTo({
+      top: 0,
+      behavior: prefersReducedMotion ? "auto" : "smooth"
+    });
+  });
+
+  window.addEventListener("scroll", toggleBackToTop, { passive: true });
+  toggleBackToTop();
+});
