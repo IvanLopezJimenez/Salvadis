@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    // Carga con la animación solo abrir la página
+    // Carga con la animaciÃƒÂ³n solo abrir la pÃƒÂ¡gina
     $(".animOnDisplay").each(function () {
         $(this).addClass("slide");
     })
@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
   if (yearSpan) {
     yearSpan.textContent = new Date().getFullYear();
   } else {
-    console.warn("No se encontró el elemento #year en el DOM");
+    console.warn("No se encontrÃƒÂ³ el elemento #year en el DOM");
   }
 });
 
@@ -25,15 +25,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
         toggle.addEventListener("click", function (e) {
             if (window.innerWidth < 992) {
-                e.preventDefault(); // solo en móviles
+                e.preventDefault(); // solo en mÃƒÂ³viles
 
-                // Alternar clase para mostrar/ocultar el submenú
+                // Alternar clase para mostrar/ocultar el submenÃƒÂº
                 dropdown.classList.toggle("show-submenu");
             }
         });
     });
 
-    // Cerrar todos los submenús al hacer clic fuera
+    // Cerrar todos los submenÃƒÂºs al hacer clic fuera
     document.addEventListener("click", function (e) {
         if (window.innerWidth < 992) {
             const isClickInside = e.target.closest(".navbar-nav .dropdown");
@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 $(window).scroll(function () {
-    // Sólo aparecerá cuando se haga scroll y se vea en la pantalla.
+    // SÃƒÂ³lo aparecerÃƒÂ¡ cuando se haga scroll y se vea en la pantalla.
     $(".slideanim").each(function () {
         var pos = $(this).offset().top;
         var winTop = $(window).scrollTop();
@@ -61,7 +61,7 @@ $(window).scroll(function () {
 });
 
 $(document).ready(function () {
-    // Evita que el menú se cierre automáticamente en desktop
+    // Evita que el menÃƒÂº se cierre automÃƒÂ¡ticamente en desktop
     $('.navbar-nav .dropdown').hover(
         function () {
             $(this).find('.dropdown-menu').stop(true, true).delay(100).fadeIn(200);
@@ -71,7 +71,7 @@ $(document).ready(function () {
         }
     );
 
-    // Permite abrir el menú en clic en móviles
+    // Permite abrir el menÃƒÂº en clic en mÃƒÂ³viles
     $('.dropdown-toggle').click(function (e) {
         if ($(window).width() < 992) {
             e.preventDefault();
@@ -83,7 +83,7 @@ $(document).ready(function () {
 window.onload = function() {
     setTimeout(function() {
         var iframe = document.getElementById('hero-video');
-        if (!iframe) return; // ← evita error
+        if (!iframe) return; // Ã¢â€ Â evita error
         var src = iframe.src;
         iframe.src = src + "&autoplay=1";
     }, 1000);
@@ -91,34 +91,86 @@ window.onload = function() {
 
 document.addEventListener("DOMContentLoaded", () => {
     const counters = document.querySelectorAll(".num");
-    const speed = 200; // Velocidad de la animación (menor número = más rápido)
+    if (!counters.length) return;
 
-    counters.forEach(counter => {
+    const speed = 200;
+    const statsSection = document.querySelector(".stats-section");
+    let hasAnimated = false;
+
+    const animateCounter = (counter) => {
+        const target = Number(counter.getAttribute("data-target")) || 0;
+        const step = Math.max(1, Math.ceil(target / speed));
+
         const updateCount = () => {
-            const target = +counter.getAttribute("data-target"); // Obtiene el valor final
-            const count = +counter.innerText;
-            const increment = target / speed;
-
-            if (count < target) {
-                counter.innerText = Math.ceil(count + increment);
-                setTimeout(updateCount, 20); // Controla la velocidad de incremento
+            const current = Number(counter.innerText) || 0;
+            if (current < target) {
+                counter.innerText = Math.min(target, current + step);
+                window.setTimeout(updateCount, 20);
             } else {
-                counter.innerText = target; // Asegura que el número final se establezca correctamente
+                counter.innerText = target;
             }
         };
 
         updateCount();
-    });
+    };
+
+    const startCounters = () => {
+        if (hasAnimated) return;
+        hasAnimated = true;
+        counters.forEach(animateCounter);
+    };
+
+    if (!statsSection || !("IntersectionObserver" in window)) {
+        startCounters();
+        return;
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                startCounters();
+                observer.disconnect();
+            }
+        });
+    }, { threshold: 0.3 });
+
+    observer.observe(statsSection);
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-    const slides = document.querySelectorAll(".carousel-slide");
-    let current = 0;
-    function showNextSlide() {
-        slides[current].classList.remove("active");
-        current = (current + 1) % slides.length;
-        slides[current].classList.add("active");
+    const slides = document.querySelectorAll("#myCarousel .carousel-slide");
+    if (!slides.length) return;
+
+    if (slides.length === 1) {
+        slides[0].classList.add("active");
+        return;
     }
+
+    let current = 0;
+
+    slides.forEach((slide, index) => {
+        slide.classList.remove("active", "exit");
+        if (index === 0) slide.classList.add("active");
+    });
+
+    function showNextSlide() {
+        const currentSlide = slides[current];
+        const next = (current + 1) % slides.length;
+        const nextSlide = slides[next];
+
+        currentSlide.classList.remove("active");
+        currentSlide.classList.add("exit");
+
+        nextSlide.classList.remove("exit");
+        nextSlide.classList.add("active");
+
+        window.setTimeout(() => {
+            currentSlide.classList.remove("exit");
+        }, 700);
+
+        current = next;
+    }
+
     setInterval(showNextSlide, 4000); // cambia cada 4 segundos
 });
 //src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js">
@@ -127,27 +179,103 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.addEventListener("DOMContentLoaded", () => {
   const slides = document.querySelector(".slides");
-  const slideImages = document.querySelectorAll(".slides img");
+  const slider = slides ? slides.closest(".slider") : null;
   const prevBtn = document.querySelector(".prev");
   const nextBtn = document.querySelector(".next");
-  
-  if (!slides || slideImages.length === 0) return;
 
-  let index = 0;
-  const totalSlides = slideImages.length;
+  if (!slides || !slider || !prevBtn || !nextBtn) return;
 
-  function showSlide(n) {
-    index = (n + totalSlides) % totalSlides;
+  const originalSlides = Array.from(slides.querySelectorAll("img"));
+  if (originalSlides.length < 2) return;
+
+  const firstClone = originalSlides[0].cloneNode(true);
+  const lastClone = originalSlides[originalSlides.length - 1].cloneNode(true);
+
+  firstClone.setAttribute("aria-hidden", "true");
+  lastClone.setAttribute("aria-hidden", "true");
+
+  slides.appendChild(firstClone);
+  slides.insertBefore(lastClone, originalSlides[0]);
+
+  let allSlides = Array.from(slides.querySelectorAll("img"));
+  let index = 1;
+  let isTransitioning = false;
+  const transitionTime = 800;
+  const totalRealSlides = originalSlides.length;
+
+  const dotsContainer = document.createElement("div");
+  dotsContainer.className = "slider-dots";
+  const dots = originalSlides.map((_, realIndex) => {
+    const dot = document.createElement("button");
+    dot.type = "button";
+    dot.className = "slider-dot";
+    dot.setAttribute("aria-label", `Ir a la imagen ${realIndex + 1}`);
+    dot.addEventListener("click", () => moveTo(realIndex + 1));
+    dotsContainer.appendChild(dot);
+    return dot;
+  });
+  slider.appendChild(dotsContainer);
+
+  const setTransition = (enabled) => {
+    slides.style.transition = enabled ? `transform ${transitionTime}ms ease-in-out` : "none";
+  };
+
+  const applyPosition = () => {
     slides.style.transform = `translateX(-${index * 100}%)`;
-  }
+  };
 
-  prevBtn.addEventListener("click", () => showSlide(index - 1));
-  nextBtn.addEventListener("click", () => showSlide(index + 1));
+  const getRealIndex = () => {
+    return (index - 1 + totalRealSlides) % totalRealSlides;
+  };
 
-  // Cambio automático cada 5 segundos
-  setInterval(() => {
-    showSlide(index + 1);
-  }, 5000);
+  const updateDots = () => {
+    const activeRealIndex = getRealIndex();
+    dots.forEach((dot, dotIndex) => {
+      dot.classList.toggle("is-active", dotIndex === activeRealIndex);
+    });
+  };
+
+  const moveTo = (newIndex) => {
+    if (isTransitioning) return;
+    isTransitioning = true;
+    index = newIndex;
+    setTransition(true);
+    applyPosition();
+    updateDots();
+  };
+
+  setTransition(false);
+  applyPosition();
+  updateDots();
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => setTransition(true));
+  });
+
+  slides.addEventListener("transitionend", (event) => {
+    if (event.propertyName !== "transform") return;
+
+    if (index === allSlides.length - 1) {
+      setTransition(false);
+      index = 1;
+      applyPosition();
+      void slides.offsetWidth;
+      setTransition(true);
+    } else if (index === 0) {
+      setTransition(false);
+      index = allSlides.length - 2;
+      applyPosition();
+      void slides.offsetWidth;
+      setTransition(true);
+    }
+
+    updateDots();
+    isTransitioning = false;
+  });
+
+  prevBtn.addEventListener("click", () => moveTo(index - 1));
+  nextBtn.addEventListener("click", () => moveTo(index + 1));
+
+  setInterval(() => moveTo(index + 1), 5000);
 });
 
 document.addEventListener("DOMContentLoaded", function () {
