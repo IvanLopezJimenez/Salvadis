@@ -53,6 +53,14 @@ h3 + h2 {
     margin-top: 0;
 }
 
+/* Mantiene h2/h3 como un mismo bloque visual y separa el texto de debajo */
+h2 + h3 + p,
+h3 + h2 + p,
+h2 + p,
+h3 + p {
+    margin-top: 30px !important;
+}
+
 h4 {
     font-size: 19px;
     line-height: 1.375em;
@@ -103,6 +111,7 @@ h4 {
 .topbar-right a:hover i, .topbar-left a:hover i, .topbar-left a:hover {
     color: #303030;
 }
+
   
 
 /*Navbar*/
@@ -456,6 +465,14 @@ h4 {
 
 }
 
+@media (min-width: 768px) {
+    .text-image-right-section .image-text-right .row,
+    .text-image-left-section .image-text-left .row {
+        display: flex;
+        align-items: center;
+    }
+}
+
 
 .container-fluid {
 
@@ -724,6 +741,9 @@ h4 {
 #cards-section-white h2 {
     color: #303030;
 }
+.cards-section h3 {
+    margin-bottom: 0;
+}
 #cards-section-white h4{
     font-size: 1.2rem;
 }
@@ -786,12 +806,14 @@ h4 {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
+    margin-top: 40px;
     margin-bottom: 40px;
 }
 .cards-grid-white {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
+    margin-top: 40px;
 }
 
 .card-box {
@@ -1404,6 +1426,7 @@ h4 {
 .title-timeline{
     color: #242424;
     text-align: center;
+    margin-top: 80px;
 }
 .timeline h3 {
     color: #242424;
@@ -1970,7 +1993,7 @@ h4 {
     display: inline-block;
 }
 .ventaja-logistica img {
-    width: 100px !important;
+    width: 85px !important;
     height: auto !important;
     margin-top: 30px;
     margin-bottom: 40px;
@@ -2223,9 +2246,17 @@ h4 {
     font-size: 2rem;
 }
 
-.esg img{
+.esg > img{
+    display: block;
     width: 30%;
-    max-height: 108;
+    max-width: 108px;
+    height: 108px;
+    object-fit: contain;
+    margin: 0 0 12px;
+}
+
+.esg h4{
+    margin-top: 0;
 }
 
 .checklist-cards {
@@ -2417,9 +2448,10 @@ h4 {
   text-decoration: none;
 }
 
-.contacto-item a:hover {
+.contacto-item a:hover{
   color: #E8A844;
 }
+
 
 /* === COLUMNA DERECHA === */
 .contacto-mapa {
