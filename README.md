@@ -4,4 +4,5 @@ Salvadis is a web development project for a B2B supplying company.
 - Website development (HTML, CSS, Bootstrap, JavaScript).
 - Support in creating visual content, including images, infographics, and logos.
 
-  ![image](https://github.com/user-attachments/assets/a945f7db-1ba3-4fa0-9e4e-8f3716e6ea33)
+  <img width="4434" height="1876" alt="salvadis-web" src="https://github.com/user-attachments/assets/f775c885-b615-4580-bf87-fb7009b883c4" />
+
