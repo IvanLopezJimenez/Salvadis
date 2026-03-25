@@ -1,8 +1,12 @@
 ﻿html {
     font-size: 16px;
-    /* Tamaño base */
+    /* Tama�o base */
     scroll-behavior: smooth;
 
+}
+
+:root {
+    --header-offset: 107px;
 }
 
 body {
@@ -54,7 +58,7 @@ h3 {
 
 }
 
-/* Compacta la pareja subtítulo + título */
+/* Compacta la pareja subt�tulo + t�tulo */
 h3 + h2 {
     margin-top: 0;
 
@@ -90,7 +94,7 @@ h4 {
     left: 0;
     width: 100%;
     z-index: 10000;
-    /* MÁS alto que el navbar */
+    /* M�S alto que el navbar */
     padding-right: 30px;
 
 }
@@ -161,7 +165,7 @@ h4 {
 
 }
 
-/* Línea inferior animada en los botones principales */
+/* L�nea inferior animada en los botones principales */
 .navbar-nav > li > a::after, .dropdown-menu > li > a::after {
     content: "";
     position: absolute;
@@ -169,24 +173,24 @@ h4 {
     left: 50%;
     width: 0;
     height: 3px;
-    /* Grosor de la línea */
+    /* Grosor de la l�nea */
     background-color: #E8A844;
-    /* Color de la línea */
+    /* Color de la l�nea */
     transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
 
 }
 
-/* Cuando el usuario pasa el cursor, la línea se expande desde el centro */
+/* Cuando el usuario pasa el cursor, la l�nea se expande desde el centro */
 .navbar-nav > li > a:hover::after, .dropdown-menu > li > a:hover::after {
     width: 100%;
     left: 0;
 
 }
 
-/* Estilos para el menú desplegable */
+/* Estilos para el men� desplegable */
 .dropdown-menu {
     background-color: white;
-    /* Fondo del menú desplegable */
+    /* Fondo del men� desplegable */
     border: none;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     display: none;
@@ -210,14 +214,14 @@ to {
 
 }
 
-/* Estilos de los enlaces dentro del menú desplegable */
+/* Estilos de los enlaces dentro del men� desplegable */
 .dropdown-menu > li > a {
     position: relative;
     padding: 10px 20px;
     color: #303030 !important;
     transition: color 0.3s ease-in-out;
     white-space: normal;
-    /* Permite que el texto largo se ajuste en varias líneas */
+    /* Permite que el texto largo se ajuste en varias l�neas */
     text-align: left;
 
 }
@@ -228,19 +232,19 @@ to {
 
 }
 
-/* Estilo del ícono de flecha */
+/* Estilo del �cono de flecha */
 .dropdown-icon {
     font-size: 14px;
-    /* Tamaño del ícono */
+    /* Tama�o del �cono */
     color: #E8A844;
     /* Color de la flecha */
     margin-left: 5px;
-    /* Espaciado entre texto e ícono */
+    /* Espaciado entre texto e �cono */
     transition: transform 0.3s ease-in-out;
-    /* Animación de giro */
+    /* Animaci�n de giro */
 }
 
-/* Girar la flecha cuando el menú está abierto */
+/* Girar la flecha cuando el men� est� abierto */
 .navbar-nav li.dropdown:hover .dropdown-icon {
     transform: rotate(180deg);
 
@@ -254,7 +258,7 @@ to {
 
 .navbar-nav li.dropdown .dropdown-menu {
     left: 0;
-    /* Alinea el menú con el inicio del toggle */
+    /* Alinea el men� con el inicio del toggle */
     right: auto;
     /* Asegura que no quede forzado a la derecha */
     top: 100%;
@@ -291,6 +295,8 @@ to {
     width: 100%;
     height: 100vh;
     /* Ocupa toda la pantalla */
+    padding-top: var(--header-offset);
+    box-sizing: border-box;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -340,24 +346,33 @@ to {
     z-index: 2;
     color: white;
     max-width: 900px;
+    width: 100%;
     padding: 20px;
+    min-height: calc(100vh - var(--header-offset));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
 
 }
 
 .hero-content h1, .hero-content h3 {
     line-height: 1.2;
+    margin: 0;
 
 }
 .hero-content h3 {
-    margin-top: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 
 }
 .hero-content .btn-hero {
-    margin-top: 50px;
+    margin-top: 0px;
 }
 
 
-/* Botón circular con borde BLANCO y fondo transparente */
+/* Bot�n circular con borde BLANCO y fondo transparente */
 .btn-hero {
     display: inline-flex;
     /* Permite alinear texto e icono */
@@ -372,9 +387,9 @@ to {
     /* Color del texto e icono */
     background: transparent;
     border: 2px solid #fff;
-    /* Borde del botón */
+    /* Borde del bot�n */
     border-radius: 50px;
-    /* Hace el botón más redondo */
+    /* Hace el bot�n m�s redondo */
     text-decoration: none !important;
     transition: all 0.3s ease-in-out;
 
@@ -409,7 +424,7 @@ to {
     /* Asegurar que el icono no se subraye */
 }
 
-/* Efecto hover: cambia el color del botón y del icono */
+/* Efecto hover: cambia el color del bot�n y del icono */
 .btn-hero:hover {
     background-color: #E8A844;
     color: white;
@@ -424,7 +439,7 @@ to {
 
 }
 
-/* Botón circular con borde OSCURO y fondo transparente */
+/* Bot�n circular con borde OSCURO y fondo transparente */
 .btn-black {
     display: inline-flex;
     /* Permite alinear texto e icono */
@@ -439,9 +454,9 @@ to {
     /* Color del texto e icono */
     background: transparent;
     border: 2px solid #303030;
-    /* Borde del botón */
+    /* Borde del bot�n */
     border-radius: 50px;
-    /* Hace el botón más redondo */
+    /* Hace el bot�n m�s redondo */
     text-decoration: none !important;
     transition: all 0.3s ease-in-out;
 
@@ -470,7 +485,7 @@ to {
 /* Evitar que el icono sea clickeable y evitar el subrayado */
 .btn-black .material-symbols-outlined {
     font-size: 1.5rem;
-    /* Tamaño del icono */
+    /* Tama�o del icono */
     transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
     pointer-events: none;
     /* Evita que el icono sea clickeable */
@@ -478,7 +493,7 @@ to {
     /* Asegurar que el icono no se subraye */
 }
 
-/* Efecto hover: cambia el color del botón y del icono */
+/* Efecto hover: cambia el color del bot�n y del icono */
 .btn-black:hover {
     background-color: #E8A844;
     color: white;
@@ -588,7 +603,7 @@ to {
 
 }
 
-/* Columna Izquierda (Título) */
+/* Columna Izquierda (T�tulo) */
 .stats-title {
     flex: 1;
     margin-right: 0;
@@ -632,7 +647,7 @@ to {
 
 }
 
-/* Números y etiquetas */
+/* N�meros y etiquetas */
 .stats-grid {
     display: flex;
     justify-content: flex-start;
@@ -651,7 +666,7 @@ to {
     font-size: 2.5rem;
     font-weight: bold;
     color: #E8A844;
-    /* Color principal de los números */
+    /* Color principal de los n�meros */
     text-align: center !important;
 
 }
@@ -694,7 +709,7 @@ to {
 
 }
 
-/* Lista de características */
+/* Lista de caracter�sticas */
 .features-list {
     list-style: none;
     padding: 0;
@@ -706,7 +721,7 @@ to {
 .features-list li {
     display: flex;
     align-items: flex-start;
-    /* Alineación superior */
+    /* Alineaci�n superior */
     gap: 15px;
     /* Espacio entre el icono y el texto */
     margin-bottom: 20px;
@@ -730,7 +745,7 @@ to {
 
 .features-list strong {
     margin-bottom: 5px;
-    /* Espaciado entre título y texto */
+    /* Espaciado entre t�tulo y texto */
     font-size: 17px;
 
 }
@@ -1166,7 +1181,7 @@ to {
 .checklist li {
     display: flex;
     align-items: flex-start;
-    /* alinea el icono con la primera línea del texto */
+    /* alinea el icono con la primera l�nea del texto */
     margin-bottom: 10px;
     font-size: 1rem;
     line-height: 1.4;
@@ -1600,7 +1615,7 @@ to {
 }
 
 .timeline::before {
-    /* línea */
+    /* l�nea */
     content: "";
     position: absolute;
     left: 50%;
@@ -1692,7 +1707,7 @@ to {
 
 }
 
-/* Puntos en la línea */
+/* Puntos en la l�nea */
 .timeline-item::after {
     content: "";
     position: absolute;
@@ -1727,7 +1742,7 @@ to {
 
 }
 
-/* ------------------ PROCESO DE COLABORACIÓN --------------- */
+/* ------------------ PROCESO DE COLABORACI�N --------------- */
 /* Fases Proceso */ .process-section {
     background-color: #ffff;
     padding: 80px 20px;
@@ -1770,7 +1785,7 @@ to {
 
 }
 
-/* Números estilizados */
+/* N�meros estilizados */
 .process-list li::before {
     content: counter(process-counter);
     position: static;
@@ -1836,7 +1851,7 @@ to {
 
 }
 
-/* Proceso de Colaboración */
+/* Proceso de Colaboraci�n */
 #cards-section-orange {
     background-color: #ffedd9;
 
@@ -1964,14 +1979,14 @@ to {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /* ðŸ”¥ clave */
+    /* 🔥 clave */
     padding: 18px;
     background: linear-gradient(to bottom, rgba(0,0,0,0.6), transparent 60%);
     color: #fff;
 
 }
 
-/* Título siempre arriba */
+/* T�tulo siempre arriba */
 .title-card {
     margin: 0;
     font-size: 1.4rem;
@@ -2407,7 +2422,7 @@ to {
     flex-wrap: wrap;
     gap: 40px;
     justify-content: center;
-    /* ðŸ”¥ centra las 5 */
+    /* 🔥 centra las 5 */
     max-width: 1200px;
     margin: 0 auto;
 
@@ -2514,7 +2529,7 @@ to {
 
 }
 
-/* Columna izquierda (más protagonista) */
+/* Columna izquierda (m�s protagonista) */
 .seo-left {
     flex: 1 1 50%;
 
@@ -2529,7 +2544,7 @@ to {
 
 }
 
-/* Columna derecha (más técnica / secundaria) */
+/* Columna derecha (m�s t�cnica / secundaria) */
 .seo-right {
     flex: 1 1 50%;
 
@@ -2637,7 +2652,7 @@ to {
     gap: 30px;
     /* Espacio entre cards */
     flex-wrap: wrap;
-    /* Permite que bajen en pantallas pequeñas */
+    /* Permite que bajen en pantallas peque�as */
     text-align: left;
     /* Mantiene el texto alineado a la izquierda dentro */
 }
@@ -2692,7 +2707,7 @@ to {
 .checklist-cards li {
     display: flex;
     align-items: flex-start;
-    /* alinea el icono con la primera línea del texto */
+    /* alinea el icono con la primera l�nea del texto */
     margin-bottom: 10px;
     font-size: 1rem;
     line-height: 1.4;
@@ -2701,14 +2716,14 @@ to {
 
 .checklist-cards img {
     width: 22px;
-    /* Ajusta el tamaño según tu diseño */
+    /* Ajusta el tama�o seg�n tu dise�o */
     height: 22px;
-    /* Asegura proporción cuadrada */
+    /* Asegura proporci�n cuadrada */
     margin-top: -2px;
     margin-right: 8px;
     /* Reduce el espacio entre el icono y el texto */
     display: inline-block;
-    /* Asegura alineación precisa */
+    /* Asegura alineaci�n precisa */
     vertical-align: middle;
 
 }
@@ -2792,7 +2807,7 @@ to {
 
 }
 
-/* ======== SECCIÓN CONTACTO GENERAL ======== */
+/* ======== SECCI�N CONTACTO GENERAL ======== */
 #contacto {
     background-color: #fff;
     color: #303030;
@@ -2935,7 +2950,7 @@ to {
 
 .contacto-mapa iframe {
     display: block;
-    /* ðŸ”¹ evita el espacio blanco inferior */
+    /* 🔹 evita el espacio blanco inferior */
     width: 100%;
     height: 400px;
     border: 0;
@@ -2996,10 +3011,10 @@ to {
 
 .faq-heading {
     margin: 0;
-    /* ðŸ”¹ elimina el margen automático del h3 */
+    /* 🔹 elimina el margen autom�tico del h3 */
 }
 
-/* ======== ACORDEÓN ======== */
+/* ======== ACORDE�N ======== */
 .faq-item {
     border-bottom: 1px solid #ddd;
 
@@ -3123,7 +3138,7 @@ to {
 /* ======== TABLA COOKIES ======== */
 .tabla-cookies-wrapper {
     overflow-x: auto;
-    /* responsive en móvil */
+    /* responsive en m�vil */
     margin-top: 20px;
 
 }
@@ -3160,7 +3175,7 @@ to {
 
 }
 
-/* Última fila sin borde */
+/* �ltima fila sin borde */
 .tabla-cookies tbody tr:last-child td {
     border-bottom: none;
 
@@ -3288,7 +3303,7 @@ h3 {
 
 }
 
-/*Proceso de colaboración */
+/*Proceso de colaboraci�n */
 .process-list li {
     grid-template-columns: 34px 1fr;
     column-gap: 12px;
@@ -3309,7 +3324,7 @@ h3 {
 
 }
 
-/* Números estilizados */
+/* N�meros estilizados */
 .process-list li::before {
     content: counter(process-counter);
     position: static;
@@ -3353,7 +3368,7 @@ h3 {
 
 .map-content {
     flex-direction: column;
-    /* ðŸ”¹ texto arriba, mapa abajo */
+    /* 🔹 texto arriba, mapa abajo */
     align-items: center;
 
 }
@@ -3362,7 +3377,7 @@ h3 {
     flex: 1 1 100%;
     width: 100%;
     margin: 0;
-    /* ðŸ”¹ eliminamos márgenes negativos */
+    /* 🔹 eliminamos m�rgenes negativos */
     padding: 0;
 
 }
@@ -3374,7 +3389,7 @@ h3 {
 
 .map-right img {
     width: 80%;
-    /* más controlado en tablet */
+    /* m�s controlado en tablet */
     max-width: 500px;
     height: auto;
 
@@ -3391,7 +3406,7 @@ h3 {
 
 .map-right-about-us img {
     width: 80%;
-    /* más controlado en tablet */
+    /* m�s controlado en tablet */
     max-width: 500px;
     height: auto;
 
@@ -3401,7 +3416,7 @@ h3 {
     flex: 1 1 100%;
     width: 100%;
     margin: 0;
-    /* ðŸ”¹ eliminamos márgenes negativos */
+    /* 🔹 eliminamos m�rgenes negativos */
     padding: 0;
 
 }
@@ -3536,7 +3551,7 @@ h3 {
 
 .hero {
     background: url('images/hero-bg.jpg') center/cover no-repeat;
-    /* Imagen en móviles */
+    /* Imagen en m�viles */
 }
 
 .hero h1 {
