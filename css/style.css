@@ -9,6 +9,8 @@
     --header-offset: 107px;
     --topbar-height: 35px;
     --navbar-height: 72px;
+    --site-max-width: 1300px;
+    --site-gutter: 20px;
 }
 
 body {
@@ -85,7 +87,7 @@ h4 {
     background-color: #E8A844;
     color: #fff;
     font-size: 14px;
-    padding: 8px 20px;
+    padding: 8px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -97,15 +99,16 @@ h4 {
     width: 100%;
     z-index: 10000;
     /* M�S alto que el navbar */
-    padding-right: 30px;
 
 }
 
 .container-topbar {
     display: flex;
     justify-content: space-between;
-    width: 1200px;
-    max-width: 1300px;
+    width: 100%;
+    max-width: var(--site-max-width);
+    padding-left: var(--site-gutter);
+    padding-right: var(--site-gutter);
     margin: 0 auto;
     align-items: center;
     gap: 16px;
@@ -167,8 +170,15 @@ h4 {
 
 .navbar-brand img {
     margin-top: -15px;
-    margin-left: -30px;
+    margin-left: 0;
 
+}
+
+.navbar > .container {
+    width: 100%;
+    max-width: var(--site-max-width);
+    padding-left: var(--site-gutter);
+    padding-right: var(--site-gutter);
 }
 
 #myNavbar {
@@ -537,6 +547,14 @@ to {
     margin-bottom: 0px !important;
 }
 
+.cta-content .btn-hero:focus,
+.cta-content .btn-hero:focus-visible,
+.cta-content .btn-hero:active {
+    outline: none !important;
+    box-shadow: none !important;
+    border-color: #fff !important;
+}
+
 /*ABOUT SALVADIS*/
 .text-image-right-section {
     background-color: #303030;
@@ -548,7 +566,7 @@ to {
     margin: 0 auto;
     box-sizing: border-box;
     height: auto;
-    max-width: 1300px;
+    max-width: var(--site-max-width);
 
 }
 
@@ -627,7 +645,7 @@ to {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 1200px;
+    max-width: var(--site-max-width);
     margin: 0 auto;
 
 }
@@ -717,7 +735,7 @@ to {
 }
 
 .image-text-left {
-    max-width: 1300px;
+    max-width: var(--site-max-width);
     margin: 0 auto;
 
 }
@@ -727,7 +745,8 @@ to {
     width: 85%;
     border-radius: 8px;
     display: block;
-    margin: auto;
+    margin-left: 0;
+    margin-right: auto;
 
 }
 
@@ -1068,19 +1087,19 @@ to {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    max-width: 1300px;
+    max-width: var(--site-max-width);
     margin: 0 auto;
     box-sizing: border-box;
     height: auto;
-    margin-left: -15px;
-    margin-right: -15px;
+    margin-left: 0;
+    margin-right: 0;
 
 }
 
 .map-left {
     flex: 1 1 50%;
-    margin-left: -15px;
-    padding-right: 15px;
+    margin-left: 0;
+    padding-right: 20px;
 
 }
 
@@ -1107,17 +1126,18 @@ to {
 
 .map-right {
     flex: 1 1 50%;
-    text-align: center;
-    padding-left: 30px;
-    margin-right: -175px;
+    text-align: right;
+    padding-left: 0;
+    padding-right: 0;
+    margin-right: 0;
 
 }
 
 .map-right-about-us {
     flex: 1 1 50%;
-    text-align: center;
-    padding-left: 30px;
-    margin-right: -155px;
+    text-align: right;
+    padding-left: 20px;
+    margin-right: 0;
 
 }
 
@@ -1151,23 +1171,29 @@ to {
 
 }
 
-.stats-list-content {
+.stats-list-content,
+.stats-list-content-services {
     position: relative;
     z-index: 2;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    max-width: 1300px;
+    max-width: var(--site-max-width);
     margin: 0 auto;
     box-sizing: border-box;
     height: auto;
 
 }
 
+.stats-list-section .container {
+    width: 100%;
+    max-width: var(--site-max-width);
+}
+
 .stats-list-left {
     flex: 1 1 50%;
-    margin-left: -15px;
+    margin-left: 0;
     padding-right: 15px;
 
 }
@@ -1196,7 +1222,7 @@ to {
 .stats-list-right {
     flex: 1 1 50%;
     text-align: center;
-    padding-left: 15px;
+    padding-left: 50px;
 
 }
 
@@ -1222,6 +1248,18 @@ to {
     margin-top: -2px;
     margin-right: 15px;
 
+}
+
+/* Sobre Salvadis: desplaza solo la columna derecha sin alterar su texto */
+.stats-list-section-safety .stats-list-right {
+    display: flex;
+    justify-content: flex-end;
+    padding-left: 50px;
+}
+
+.stats-list-section-safety .stats-list-right .checklist {
+    width: 100%;
+    max-width: 460px;
 }
 
 /*Call to action*/
@@ -1251,7 +1289,7 @@ to {
 .cta-content {
     position: relative;
     z-index: 2;
-    max-width: 900px;
+    max-width: 500px;
     margin: 0 auto;
 
 }
@@ -1283,7 +1321,7 @@ to {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    max-width: 1200px;
+    max-width: var(--site-max-width);
     margin: 0 auto;
     border-top: 1px solid #818181;
 
@@ -1395,7 +1433,7 @@ to {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    max-width: 1200px;
+    max-width: var(--site-max-width);
     margin: 0 auto;
 
 }
@@ -1463,8 +1501,8 @@ to {
     bottom: 30px;
     left: 0;
     right: 0;
-    max-width: 1300px;
-    padding: 0 50px;
+    max-width: var(--site-max-width);
+    padding: 0 var(--site-gutter);
     margin: 0 auto;
     z-index: 2;
     color: white;
@@ -1481,7 +1519,7 @@ to {
 }
 
 .breadcrumbs {
-    max-width: 1220px;
+    max-width: var(--site-max-width);
     margin: 0 auto;
     /* Centra horizontalmente */
     font-size: 0.875rem;
@@ -1542,12 +1580,12 @@ to {
 
 .stats-list-left-about {
     padding-right: 20px;
-    margin-left: -20px;
+    margin-left: 0;
 
 }
 
 .stats-list-right-about {
-    padding-left: 100px;
+    padding-left: 20px;
 
 }
 
@@ -1561,9 +1599,12 @@ to {
 }
 
 .stats-list-right-about img {
+    display: block;
     width: 100%;
     max-width: 500px;
     height: auto;
+    margin-left: auto;
+    margin-right: 0;
 
 }
 
@@ -1993,7 +2034,7 @@ to {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
-    max-width: 1100px;
+    max-width: var(--site-max-width);
     margin: 0 auto;
     margin-top: -40px;
 
@@ -2084,20 +2125,6 @@ to {
 
 }
 
-.stats-list-content-services {
-    position: relative;
-    z-index: 2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    max-width: 1300px;
-    margin: 0 auto;
-    box-sizing: border-box;
-    height: auto;
-
-}
-
 .stats-list-content {
     display: flex;
     flex-wrap: wrap;
@@ -2152,7 +2179,7 @@ to {
     flex: 1 1 50%;
     text-align: center;
     padding-right: 20px;
-    margin-left: -20px;
+    margin-left: 0;
     min-width: 300px;
     word-wrap: break-word;
     overflow-wrap: break-word;
@@ -2174,7 +2201,8 @@ to {
     aspect-ratio: 1 / 1;
     object-fit: cover;
     display: block;
-    margin: 0 auto;
+    margin-left: 0;
+    margin-right: auto;
 
 }
 
@@ -2209,7 +2237,7 @@ to {
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    max-width: 1300px;
+    max-width: var(--site-max-width);
     margin: 0 auto;
     padding-left: 60px;
     padding-right: 60px;
@@ -2467,7 +2495,7 @@ to {
     gap: 40px;
     justify-content: center;
     /* 🔥 centra las 5 */
-    max-width: 1200px;
+    max-width: var(--site-max-width);
     margin: 0 auto;
 
 }
@@ -2567,8 +2595,8 @@ to {
 .seo-grid {
     display: flex;
     gap: 60px;
-    max-width: 1200px;
-    margin: 0;
+    max-width: var(--site-max-width);
+    margin: 0 auto;
     align-items: flex-start;
 
 }
@@ -2884,7 +2912,7 @@ to {
     display: flex;
     flex-wrap: wrap;
     gap: 40px;
-    max-width: 1300px;
+    max-width: var(--site-max-width);
     margin: 0 auto;
     align-items: flex-start;
 
@@ -3021,7 +3049,7 @@ to {
 }
 
 .faq-container {
-    max-width: 1300px;
+    max-width: var(--site-max-width);
     margin: 0 auto;
 
 }
@@ -3135,7 +3163,7 @@ to {
 }
 
 .legal-container {
-    max-width: 1300px;
+    max-width: var(--site-max-width);
     margin: 0 auto;
 
 }
@@ -3710,7 +3738,8 @@ h3 {
     width: 100%;
     border-radius: 8px;
     display: block;
-    margin: auto;
+    margin-left: 0;
+    margin-right: auto;
 
 }
 .text-left-text h3 {
@@ -3884,6 +3913,11 @@ h3 {
 
 }
 
+.back-to-top {
+    right: clamp(16px, 4vw, 28px);
+    bottom: calc(max(12px, env(safe-area-inset-bottom)) + 56px + 14px);
+}
+
 
 }
 
@@ -3974,6 +4008,24 @@ h3 {
 
 }
 
+@media screen and (max-width: 768px) {
+    .back-to-top {
+        right: max(12px, var(--header-edge, 12px));
+        bottom: calc(max(12px, env(safe-area-inset-bottom)) + 56px + 16px);
+        width: 44px;
+        height: 44px;
+        font-size: 22px;
+
+    }
+
+.process-section .process-list li::before {
+    margin-top: -4px !important;
+    transform: none !important;
+
+}
+
+}
+
 /*MOBILE*/
 @media screen and (max-width: 480px) {
     :root {
@@ -4034,6 +4086,7 @@ h3 {
 }
 .breadcrumbs {
     font-size: 0.75rem;
+    padding: 20px 20px 0px 20px !important;
 
 }
 
@@ -4119,11 +4172,22 @@ h3 {
     min-width: auto;
 
 }
+.stats-list-section .container {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+}
+
 
 .stats-list-content {
     flex-direction: column;
-    margin-left: -15px;
-    margin-right: -15px;
+    margin-left: 0;
+    margin-right: 0;
+
+}
+
+.stats-list-content-services {
+    margin-left: 0;
+    margin-right: 0;
 
 }
 
@@ -4153,10 +4217,13 @@ h3 {
 }
 
 .stats-list-right-about img {
+    display: block;
     width: 100%;
     max-width: 500px;
     height: auto;
     margin-top: 20px;
+    margin-left: auto;
+    margin-right: 0;
 
 }
 
@@ -4206,6 +4273,12 @@ h3 {
 
 .stats-grid {
     justify-content: center;
+
+}
+
+.map-right {
+    text-align: center;
+    padding-right: 0;
 
 }
 
@@ -4391,32 +4464,6 @@ h3 {
 
 }
 
-@media (max-width: 1024px) {
-    .back-to-top {
-        right: clamp(16px, 4vw, 28px);
-        bottom: calc(max(12px, env(safe-area-inset-bottom)) + 56px + 14px);
-    }
-}
-
-@media (max-width: 768px) {
-    .back-to-top {
-        right: max(12px, var(--header-edge, 12px));
-        bottom: calc(max(12px, env(safe-area-inset-bottom)) + 56px + 16px);
-        width: 44px;
-        height: 44px;
-        font-size: 22px;
-
-    }
-
-.process-section .process-list li::before {
-    margin-top: -4px !important;
-    transform: none !important;
-
-}
-
-
-}
-
 @media (prefers-reduced-motion: reduce) {
     html {
         scroll-behavior: auto;
@@ -4430,4 +4477,109 @@ h3 {
 }
 
 
+}
+
+/* Alineación lateral global de módulos (excepto páginas legales) */
+section:not(.legal-section) > .container,
+section:not(.legal-section) > .container-fluid,
+section:not(.legal-section) > .stats-container {
+    width: 100%;
+    max-width: var(--site-max-width);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--site-gutter) !important;
+    padding-right: var(--site-gutter) !important;
+    box-sizing: border-box;
+}
+
+/* CTA: más aire lateral en todos los bloques #cta-* */
+section[id^="cta-"] > .cta-content.container {
+    padding-left: clamp(28px, 4vw, 56px) !important;
+    padding-right: clamp(28px, 4vw, 56px) !important;
+}
+
+/* Excepción: CTA home con más margen lateral interno */
+#cta-home > .cta-content.container {
+    padding-left: clamp(44px, 7vw, 110px) !important;
+    padding-right: clamp(44px, 7vw, 110px) !important;
+}
+#cta-industrias > .cta-content.container {
+    padding-left: clamp(44px, 7vw, 110px) !important;
+    padding-right: clamp(44px, 7vw, 110px) !important;
+}
+#cta-almacenes > .cta-content.container {
+    padding-left: clamp(44px, 7vw, 110px) !important;
+    padding-right: clamp(44px, 7vw, 110px) !important;
+}
+#cta-contact > .cta-content.container {
+    padding-left: clamp(44px, 7vw, 110px) !important;
+    padding-right: clamp(44px, 7vw, 110px) !important;
+}
+#cta-proceso-colaboracion > .cta-content.container {
+    padding-left: clamp(44px, 7vw, 110px) !important;
+    padding-right: clamp(44px, 7vw, 110px) !important;
+}
+#cta-servicios > .cta-content.container {
+    padding-left: clamp(44px, 7vw, 110px) !important;
+    padding-right: clamp(44px, 7vw, 110px) !important;
+}
+#cta-system-work > .cta-content.container {
+    padding-left: clamp(44px, 7vw, 110px) !important;
+    padding-right: clamp(44px, 7vw, 110px) !important;
+}
+#cta-sobre-salvadis > .cta-content.container {
+    padding-left: clamp(44px, 7vw, 110px) !important;
+    padding-right: clamp(44px, 7vw, 110px) !important;
+}
+#cta-esg > .cta-content.container {
+    padding-left: clamp(44px, 7vw, 110px) !important;
+    padding-right: clamp(44px, 7vw, 110px) !important;
+}
+
+@media screen and (max-width: 480px) {
+    section[id^="cta-"] > .cta-content.container {
+        padding-left: 24px !important;
+        padding-right: 24px !important;
+    }
+
+#cta-home > .cta-content.container {
+    padding-left: 28px !important;
+    padding-right: 28px !important;
+}
+}
+
+/* Quitar borde/halo negro al hacer clic en cualquier elemento interactivo */
+a,
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+[role="button"],
+[tabindex] {
+    -webkit-tap-highlight-color: transparent;
+}
+
+a:focus,
+a:focus-visible,
+a:active,
+button:focus,
+button:focus-visible,
+button:active,
+input[type="button"]:focus,
+input[type="button"]:focus-visible,
+input[type="button"]:active,
+input[type="submit"]:focus,
+input[type="submit"]:focus-visible,
+input[type="submit"]:active,
+input[type="reset"]:focus,
+input[type="reset"]:focus-visible,
+input[type="reset"]:active,
+[role="button"]:focus,
+[role="button"]:focus-visible,
+[role="button"]:active,
+[tabindex]:focus,
+[tabindex]:focus-visible,
+[tabindex]:active {
+    outline: none !important;
+    box-shadow: none !important;
 }
