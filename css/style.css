@@ -1278,6 +1278,21 @@ to {
 .stats-list-section-adaptamos .stats-list-right .checklist {
     width: 100%;
     max-width: 460px;
+    margin-left: 0;
+    margin-right: 0;
+    text-align: left;
+}
+
+.stats-list-section-adaptamos .stats-list-right .checklist li {
+    width: 100%;
+    justify-content: flex-start;
+    text-align: left;
+}
+
+/* Sistema de trabajo: imagen ADR a la derecha */
+.stats-list-section-adr .stats-list-right > img {
+    margin-left: auto;
+    margin-right: 0;
 }
 
 /* Página Servicios: patrón fijo de posición de imágenes */
@@ -1892,8 +1907,9 @@ to {
     counter-reset: process-counter;
     /* Reinicia contador */
     list-style: none;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
+    max-width: 760px;
 
 }
 
@@ -1993,7 +2009,7 @@ to {
 }
 
 #cards-section-orange img {
-    width: 15%;
+    width: 50px;
 
 }
 
@@ -2044,14 +2060,6 @@ to {
 
 }
 
-.ventaja-proceso img {
-    width: 85px !important;
-    height: auto !important;
-    margin-top: 30px;
-    margin-bottom: 40px;
-
-}
-
 #cta-proceso-colaboracion {
     position: relative;
     background-image: url('../images/cta-proceso-colaboracion.jpg');
@@ -2067,6 +2075,7 @@ to {
 .servicios-portafolio h2 {
     color: #303030;
     text-align: center;
+    padding-bottom: 20px;
 
 }
 
@@ -2162,6 +2171,7 @@ to {
 .p-card:hover {
     margin-left: 5px;
     transition: all .4s ease;
+    color: #303030;
 
 }
 
@@ -2461,7 +2471,7 @@ to {
 }
 
 #cards-section-white img {
-    width: 15%;
+    width: 50px;
 
 }
 
@@ -2512,13 +2522,13 @@ to {
 
 }
 
-.ventaja-logistica img {
-    width: 85px !important;
+/*.ventaja-logistica img {
+    width: 50px !important;
     height: auto !important;
-    margin-top: 30px;
-    margin-bottom: 40px;
+    margin-top: 10px;
+    margin-bottom: 20px;
 
-}
+}*/
 
 #cta-almacenes {
     position: relative;
@@ -2541,7 +2551,7 @@ to {
 .industrias-section h2 {
     color: #303030;
     text-align: center;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
 
 }
 
@@ -4433,7 +4443,8 @@ h3 {
 }
 
 .process-list {
-    margin-left: -30px;
+    margin-left: 0;
+    margin-right: 0;
 
 }
 
