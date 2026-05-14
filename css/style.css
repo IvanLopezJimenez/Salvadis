@@ -3791,8 +3791,13 @@ h3 {
 
 }
 .texto-imagen img {
-    margin: -5px;
-    width: 103%;
+    margin: 0;
+    padding: 0px !important;
+    width: 100%;
+
+}
+.texto-imagen {
+    padding: 0px !important;
 
 }
 .stats-content h3 {
@@ -4296,6 +4301,22 @@ h3 {
 .stats-list-left-white {
     padding-left: 0px !important;
 
+}
+
+/* Home mobile: evitar desborde lateral del texto por márgenes negativos de .row */
+.text-image-right-section .image-text-right > .row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.text-image-right-section .section-text {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.text-image-right-section .section-text p {
+    overflow-wrap: anywhere;
+    word-break: normal;
 }
 
 .cards-grid {
