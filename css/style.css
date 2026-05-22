@@ -1309,6 +1309,11 @@ to {
     text-align: left;
 }
 
+/* Solo en Soluciones: alinea a la izquierda el texto de la derecha en esta sección */
+.page-servicios .stats-list-section-adaptamos .stats-list-right p {
+    text-align: left;
+}
+
 /* Sistema de trabajo: imagen ADR a la derecha */
 .stats-list-section-adr .stats-list-right > img {
     margin-left: auto;
@@ -2080,17 +2085,6 @@ to {
 
 }
 
-#cta-proceso-colaboracion {
-    position: relative;
-    background-image: url('../images/cta-proceso-colaboracion.jpg');
-    background-size: cover;
-    background-position: center;
-    padding: 80px 20px;
-    text-align: center;
-    color: white;
-
-}
-
 /* --------------------------- SERVICIOS ----------------------------- */
 .servicios-portafolio h2 {
     color: #303030;
@@ -2286,7 +2280,7 @@ to {
 
 #cta-servicios {
     position: relative;
-    background-image: url('../images/oficinas-escritorios.webp');
+    background-image: url('../images/almacenes/industrial-logistics-coordination.webp');
     background-size: cover;
     background-position: center;
     padding: 80px 20px;
@@ -2539,25 +2533,6 @@ to {
 
 .ventaja-logistica span {
     display: inline-block;
-
-}
-
-/*.ventaja-logistica img {
-    width: 50px !important;
-    height: auto !important;
-    margin-top: 10px;
-    margin-bottom: 20px;
-
-}*/
-
-#cta-almacenes {
-    position: relative;
-    background-image: url('../images/almacenes/industrial-logistics-coordination.webp');
-    background-size: cover;
-    background-position: center;
-    padding: 80px 20px;
-    text-align: center;
-    color: white;
 
 }
 
