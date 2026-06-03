@@ -17,6 +17,8 @@ body {
     font-family: 'Inter', sans-serif;
     font-weight: 400;
     color: #303030;
+    font-size: 1rem;
+    Line-height: 1.6;
 
 }
 
@@ -38,17 +40,20 @@ strong {
 /* myPage */
 h1 {
     font-size: 3rem;
-    font-weight: bold;
-    line-height: 1;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
 
 }
 
 h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: #fff;
     font-weight: 600;
     margin-top: 0;
     margin-bottom: 16px;
+    line-height: 1.25;
+    letter-spacing: -0.3px;
 
 }
 
@@ -59,6 +64,7 @@ h3 {
     line-height: 1.5;
     margin-top: 0;
     margin-bottom: 8px;
+    font-weight: 500;
 
 }
 
@@ -393,14 +399,15 @@ to {
 
 }
 
-.hero-content h1, .hero-content h3 {
+.hero-content h1, .hero-content p {
     line-height: 1.2;
     margin: 0;
 
 }
-.hero-content h3 {
-    margin-top: 20px;
-    margin-bottom: 20px;
+.hero-content p {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    color: #E8A844;
 
 }
 .hero-content .btn-hero {
@@ -661,9 +668,11 @@ to {
 .stats-title h2 {
     font-size: 2.5rem;
     color: #303030;
-    font-weight: 700;
+    font-weight: 600;
     text-align: left;
     padding-right: 50px;
+    line-height: 1.25;
+    Letter-spacing: -0.3px;
 
 }
 
@@ -673,6 +682,8 @@ to {
     font-size: 2.5rem;
     color: #E8A844;
     /* Color del texto en cursiva */
+    line-height: 1.25;
+    Letter-spacing: -0.3px;
 }
 
 /* Columna Derecha (Texto y Cifras) */
@@ -970,7 +981,7 @@ to {
 }
 
 .cards-section h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: #fff;
 
 }
@@ -1124,7 +1135,7 @@ to {
 }
 
 .map-left h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: #303030;
     margin-bottom: 20px;
 
@@ -1133,7 +1144,7 @@ to {
 .map-left h2 em {
     font-family: 'Poppins', sans-serif;
     font-style: italic;
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: #E8A844;
     /* Color del texto en cursiva */
 }
@@ -1219,7 +1230,7 @@ to {
 }
 
 .stats-list-left h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 20px;
     color: #303030;
 
@@ -1228,7 +1239,7 @@ to {
 .stats-list-left h2 em {
     font-family: 'Poppins', sans-serif;
     font-style: italic;
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: #E8A844;
     /* Color del texto en cursiva */
 }
@@ -1375,7 +1386,7 @@ to {
 }
 
 .cta-text h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 20px;
     color: #E8A844;
 
@@ -1547,7 +1558,7 @@ to {
     display: flex;
     align-items: flex-end;
     justify-content: left;
-    margin-top: 107px;
+    margin-top: 0px;
     padding-bottom: 20px;
     z-index: 1;
 
@@ -1591,10 +1602,11 @@ to {
 }
 
 .hero-small h1 {
-    font-size: 4rem;
-    font-weight: bold;
+    font-size: 3rem;
+    font-weight: 600;
     margin-bottom: 15px;
-    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.4);
+    line-height: 1.2;
+    letter-spacing: -0.5px;
 
 }
 
@@ -1765,13 +1777,6 @@ to {
 
 }
 
-#texto-seo h2 {
-    color: #242424;
-    text-align: center;
-    font-size: 2.5rem;
-
-}
-
 .timeline {
     position: relative;
     margin: 3rem 0;
@@ -1922,7 +1927,7 @@ to {
 
 .process-section h2 {
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 50px;
     color: #303030;
 
@@ -2323,7 +2328,7 @@ to {
 }
 
 .text-column h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 20px;
     color: #303030;
 
@@ -2765,7 +2770,7 @@ to {
 }
 
 .cards-section-transparent h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: #303030;
     text-align: center;
 
@@ -2902,7 +2907,7 @@ to {
 .stats-title-contact h2 {
     font-size: 2.5rem;
     color: #303030;
-    font-weight: 700;
+    font-weight: 600;
     text-align: left;
     padding-right: 50px;
 
@@ -2955,7 +2960,7 @@ to {
 }
 
 .contacto-header h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 10px;
     color: #303030;
 
@@ -3121,7 +3126,7 @@ to {
 }
 
 .faq-header h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 10px;
     color: #303030;
 
@@ -3242,7 +3247,7 @@ to {
 }
 
 .legal-content h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-top: 40px;
     margin-bottom: 15px;
     color: #303030;
@@ -4188,7 +4193,7 @@ h3 {
 }
 
 h1 {
-    font-size: 2rem !important;
+    font-size: 3rem !important;
     line-height: 1.2;
 
 }
