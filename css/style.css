@@ -598,12 +598,12 @@ to {
 }
 
 .image-text-right img {
-    width: 100%;
+    width: 80%;
     border-radius: 8px;
     position: relative;
-    display: inline-block;
+    display: block;
     margin-left: auto;
-    margin-right: auto;
+    margin-right: 0;
 
 }
 
@@ -1742,10 +1742,62 @@ to {
 
 }
 
-.mvv img {
-    width: 20%;
+/* myPage */
+h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
 
 }
+
+
+
+/* ====== Soluciones (cards blancas): unificar tamaño de iconos <img> e <i> ====== */
+#cards-section-white .cards-grid-white .mvv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#cards-section-white .cards-grid-white .mvv > span,
+#cards-section-white .cards-grid-white .mvv > i {
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 52px;
+
+}
+
+#cards-section-white .cards-grid-white .mvv img {
+    width: 52px;
+    height: 52px;
+
+    object-fit: contain;
+    object-position: center;
+    display: block;
+}
+
+/* Evita que el .mvv genérico afecte al carrusel de soluciones */
+#cta-sobre-salvadis .mvv img,
+#cta-servicios .mvv img,
+#cards-section-white .cards-grid-white .mvv img,
+#cards-section-white .cards-grid .mvv img {
+    /* no-op */
+}
+
+
+#cards-section-white .cards-grid-white .mvv i.material-symbols-outlined {
+
+    font-size: 52px;
+
+    line-height: 1;
+    margin: 0;
+}
+
 
 .confian img {
     width: 15%;
@@ -2387,6 +2439,8 @@ to {
     flex-shrink: 0;
 
 }
+
+
 
 /* Flechas */
 .slider > .button {
