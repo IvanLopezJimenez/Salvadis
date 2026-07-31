@@ -1003,6 +1003,12 @@ to {
 
 }
 
+.cards-grid .mvv img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
 .card-box {
     flex: 1 1 calc(22.222% - 20px);
     position: relative;
@@ -1727,11 +1733,6 @@ to {
 
 }
 
-.mvv:hover {
-    transform: translateY(-5px);
-
-}
-
 .mvv p , .mvv li p {
     color: #242424;
 
@@ -1967,7 +1968,7 @@ h1 {
 /* ------------------ PROCESO DE COLABORACI�N --------------- */
 /* Fases Proceso */ .process-section {
     background-color: #ffff;
-    padding: 0px 20px 80px 20px;
+    padding: 0px 20px 60px 20px;
 
 }
 
@@ -3874,8 +3875,12 @@ h3 {
 
 }
 .text-left-text h3 {
-    margin-top: 30px;
+    margin-top: 16px;
     margin-bottom: 30px;
+
+}
+.text-left-text h2 {
+    margin-top: 30px;
 
 }
 
@@ -4144,6 +4149,7 @@ h3 {
 
 .contacto-grid {
     flex-direction: column;
+    gap: 0px;
 
 }
 
@@ -4151,7 +4157,9 @@ h3 {
     width: 100%;
 
 }
-
+#contacto {
+    padding-top: 0;
+}
 #contacto .stats-list-content.container {
     display: block;
     width: 100%;
@@ -4570,7 +4578,7 @@ h3 {
 }
 
 .tech-doc-section {
-    padding: 40px 20px;
+    padding: 80px 20px;
 
 }
 
