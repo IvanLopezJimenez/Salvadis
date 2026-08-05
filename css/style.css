@@ -753,7 +753,7 @@ to {
 
 /* Imagen */
 .text-left img {
-    width: 85%;
+    width: 75%;
     border-radius: 8px;
     display: block;
     margin-left: 0;
@@ -1046,8 +1046,8 @@ to {
 
 }
 
-.ind-limpieza {
-    background-image: url('../images/industria/limpieza.jpg');
+.ind-aduanas {
+    background-image: url('../images/industria/puerto-aduanas.jpg');
 
 }
 
