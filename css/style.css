@@ -817,7 +817,7 @@ to {
 .carousel-questions {
     position: relative;
     overflow: hidden;
-    background-image: url('../images/background_questions.png');
+    background-image: url('../images/background_questions.webp');
     background-size: cover;
     background-position: center;
     min-height: 170px;
@@ -1807,7 +1807,7 @@ h1 {
 
 #cta-sobre-salvadis {
     position: relative;
-    background-image: url('../images/cta-sobre-salvadis.jpg');
+    background-image: url('../images/cta-sobre-salvadis.webp');
     background-size: cover;
     background-position: center;
     padding: 80px 20px;
@@ -1956,7 +1956,7 @@ h1 {
 
 #cta-system-work {
     position: relative;
-    background-image: url('../images/cta-system-work.jpg');
+    background-image: url('../images/cta-system-work.webp');
     background-size: cover;
     background-position: center;
     padding: 80px 20px;
