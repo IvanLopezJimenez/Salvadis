@@ -1037,17 +1037,17 @@ to {
 }
 
 .ind-logistica {
-    background-image: url('../images/industria/transporte.jpg');
+    background-image: url('../images/industria/transporte.webp');
 
 }
 
 .ind-alimentaria {
-    background-image: url('../images/industria/agroquimica.jpg');
+    background-image: url('../images/industria/agroquimica.webp');
 
 }
 
 .ind-aduanas {
-    background-image: url('../images/industria/puerto-aduanas.jpg');
+    background-image: url('../images/industria/puerto-aduanas.webp');
 
 }
 
@@ -2697,7 +2697,7 @@ h1 {
 
 #cta-industrias {
     position: relative;
-    background-image: url('../images/industria/industria-cta.jpg');
+    background-image: url('../images/industria/industria-cta.webp');
     background-size: cover;
     background-position: center;
     padding: 80px 20px;
