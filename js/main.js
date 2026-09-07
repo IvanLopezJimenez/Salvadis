@@ -144,6 +144,17 @@ document.addEventListener("DOMContentLoaded", function () {
     cta.innerHTML = '<i class="bi bi-telephone"></i><span>Llamar ahora</span>';
 
     document.body.appendChild(cta);
+
+    function toggleMobileCta() {
+        if (window.scrollY > 300) {
+            cta.classList.add("is-visible");
+        } else {
+            cta.classList.remove("is-visible");
+        }
+    }
+
+    window.addEventListener("scroll", toggleMobileCta, { passive: true });
+    toggleMobileCta();
 });
 
 $(window).scroll(function () {
